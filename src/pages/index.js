@@ -1,26 +1,31 @@
 import React from "react"
 import Layout from "../components/layout"
 import Link from "gatsby-link"
+import styles from "./index.module.css"
 
-const IndexPage = ({data}) => (
+const IndexPage = ({ data }) => (
   <>
-  <Layout>
-    <h1>Latest Posts</h1>
-    {data.allMarkdownRemark.edges.map(post => (
-      <div key={post.node.id}>
-        <h3>{post.node.frontmatter.title}</h3>
-        <small>
-          Published by {post.node.frontmatter.author} on{" "}
-          {post.node.frontmatter.date}
-        </small>
-        <br />
-        <br />
-        <Link to={post.node.frontmatter.path}>Read More</Link>
-        <br />
-        <br />
-        <hr />
-      </div>
-    ))}
+    <Layout>
+      {data.allMarkdownRemark.edges.map(post => (
+        <Link key={post.node.id} to={post.node.frontmatter.path}>
+          <div className={styles.container}>
+            <div className={styles.subcontainer}>
+              {/* <img className={styles.img} src={imgurl} alt={title.rendered} /> */}
+
+              <div className={styles.content}>
+                <h1 className={styles.title}>{post.node.frontmatter.title}</h1>
+                <small className={styles.date}>
+                  Published: {post.node.frontmatter.date}
+                </small>
+                <div
+									className={styles.excerpt}
+									dangerouslySetInnerHTML={{ __html: post.node.excerpt }}
+								/>
+              </div>
+            </div>
+          </div>
+        </Link>
+      ))}
     </Layout>
   </>
 )
@@ -37,11 +42,11 @@ export const pageQuery = graphql`
             date
             path
           }
+          excerpt
         }
       }
     }
   }
 `
-
 
 export default IndexPage

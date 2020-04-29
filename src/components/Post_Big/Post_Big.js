@@ -47,7 +47,7 @@ class Post_Big extends Component {
 		// const shorterExcerpt = excerpt.rendered.split(" ").slice(0, 30).join(" ").concat(" ...");
 		if (isLoaded) {
 			return (
-				<Link to={`/post/${id}`}>
+				// <Link to={`/post/${id}`}>
 					<div className={styles.container}>
 						<div className={styles.subcontainer}>
 							<img className={styles.img} src={imgurl} alt={title.rendered} />
@@ -63,7 +63,7 @@ class Post_Big extends Component {
 							</div>
 						</div>
 					</div>
-				</Link>
+				// </Link>
 			);
 		}
 		return null;
