@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header_Simple from "./Header_Simple/Header_Simple";
 import Menu from "./../components/menu"
 import "./layout.css"
 
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <Header_Simple siteTitle={data.site.siteMetadata.title} />
       <Menu />
       <div
         style={{

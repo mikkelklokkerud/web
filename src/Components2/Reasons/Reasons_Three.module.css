@@ -1,0 +1,56 @@
+.container {
+    min-height: 75vh;
+    color: white;
+    text-align: center;
+    background-color: white;
+    padding: 0 0 5rem 0rem;
+}
+
+.radius {
+    background-color: black;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    border-radius: 400px 0 0 400px;
+    margin-left: 15vw;
+}
+
+.content {
+    margin: auto;
+}
+
+.container__title {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+.container__reasons {
+    display: flex;
+    justify-content: center;
+}
+
+.reasons__reason {
+    margin: 2rem;
+    padding: 2rem 2rem 0 2rem;
+    width: 300px;
+}
+
+.reason__title {
+    color: white;
+    margin: 0;
+    padding: 0;
+    color: orange;
+}
+
+.reason__text {
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid orange;
+    padding-top: 1rem;
+}
+
+.content__subtitle {
+    display: none;
+}
