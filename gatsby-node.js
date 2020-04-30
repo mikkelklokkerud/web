@@ -1,37 +1,29 @@
 const path = require("path");
 
-exports.createPages = ({boundActionCreators, graphql}) => {
-    const { createPage } = boundActionCreators;
-
-    const postTemplate = path.resolve("src/templates/blog-post.js");
-
-    return graphql(`
-    {
-        allMarkdownRemark {
-            edges {
-              node {
-                html
-                id
-                frontmatter {
-                  title
-                  author
-                  date
-                  path
-                }
-              }
-            }
+module.exports.createPages = async ({ graphql, actions  }) => {
+  const { createPage } = actions
+  const blogTemplate = path.resolve("./src/templates/blog.js")
+  const res = await graphql(`
+    query {
+      allContentfulBlogPost {
+        edges {
+          node {
+            slug
           }
-    }
-    `).then(res => {
-        if(res.errors) {
-            return Promise.reject(res.errors)
         }
-        
-        res.data.allMarkdownRemark.edges.forEach(({node}) => {
-            createPage({
-                path: node.frontmatter.path,
-                component: postTemplate
-            })
-        })
+      }
+    }
+  `)
+
+    res.data.allContentfulBlogPost.edges.forEach(edge => {
+      createPage({
+        component: blogTemplate,
+        path: `/blog/${edge.node.slug}`,
+        context: {
+          slug: edge.node.slug
+        }
+      })
     })
+
+
 }

@@ -5,10 +5,10 @@ import Link from "gatsby-link"
 
 class Post extends Component {
   render() {
-      const { published, title } = this.props;
+      const { published, title, slug } = this.props;
 
     return (
-      <Link to={`/`}>
+      <Link to={`/blog/${slug}`}>
         <div className={styles.container}>
         <div className={styles.subcontainer}>
           {/* <img className={styles.img} src={imgUrl} alt={title.rendered} /> */}
