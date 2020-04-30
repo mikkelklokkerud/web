@@ -1,21 +1,19 @@
 .container {
-    min-height: 80vh;
+    min-height: 70vh;
     display: flex;
-    padding: 0 16rem 5rem 16rem;
-    margin: 0 0 5rem 0;
+    justify-content: center;
+    padding: 0 16rem;
+    margin: 0 0 0rem 0;
 }
 
 .subcontainer {
     display: flex;
-    padding: 5rem 5rem;
-    margin: 0 20vw;
+    padding: 5rem 8rem;
     transition: all 0.1s ease-out;
+    width: 1200px;
     justify-content: center;
 }
 
-.content a {
-    text-decoration: none !important;
-}
 
 .img {
     height: 60vh;
@@ -24,7 +22,6 @@
 }
 
 .content {
-    height: 60vh;
     display: flex;
     flex-direction: column;
     padding: 0 0 0 4rem;
@@ -32,7 +29,6 @@
 
 .subcontainer:hover {
     box-shadow:rgba(0, 0, 0, 0.15) 0px 0px 40px 0px;
-    height: 10% !important;
 }
 
 .title {

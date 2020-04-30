@@ -5,9 +5,11 @@ import Link from "gatsby-link"
 
 class Post extends Component {
   render() {
-      const { key, date, title, excerpt, html, path } = this.props;
+      const { date, title, excerpt, html, path } = this.props;
+
     return (
-      <Link key={key} to={`${path}`}>
+      <Link to={`${path}`}>
+        <div className={styles.container}>
         <div className={styles.subcontainer}>
           {/* <img className={styles.img} src={imgurl} alt={title.rendered} /> */}
           <div className={styles.content}>
@@ -18,9 +20,10 @@ class Post extends Component {
     <div>{excerpt}</div>
             <div
               className={styles.excerpt}
-              dangerouslySetInnerHTML={{ __html: html }}
+              // dangerouslySetInnerHTML={{ __html: html }}
             />
-          </div>
+          {excerpt}</div>
+        </div>
         </div>
       </Link>
     )

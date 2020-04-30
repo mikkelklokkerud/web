@@ -11,9 +11,10 @@ class Header_Simple extends Component {
                 </div>
                 <nav className={styles.nav}>
                     <ul>
-                        <Link to={"/"}><a className={styles.link}>ARCHIVE</a></Link>
-                        <Link to={"/about/"}><a className={styles.link}>ABOUT</a></Link>
-                        <Link to={"/contact/"}><a className={styles.link}>CONTACT</a></Link>
+                        <Link to={"/"}><p className={styles.link}>ARCHIVE</p></Link>
+                        <Link to={"/"}><p className={styles.link}>USE MY STUFF</p></Link>
+                        <Link to={"/about/"}><p className={styles.link}>TUTORIALS</p></Link>
+                        <Link to={"/about/"}><p className={styles.link}>ABOUT</p></Link>
                     </ul>
                 </nav>
             </div>
