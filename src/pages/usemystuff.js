@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import Layout from "./../components/layout";
-import Hero_Featured from "./../components/Hero_featured/Hero_Featured";
 
 
-class AboutPage extends Component {
+class UseMyStuffPage extends Component {
   state = {}
   render() {
     return (
     <Layout>
-      {/* <Hero_Featured /> */}
       <div>
-        <h1>About</h1>
+        <h1>Stuff</h1>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -28,4 +26,4 @@ class AboutPage extends Component {
   }
 }
 
-export default AboutPage
+export default UseMyStuffPage

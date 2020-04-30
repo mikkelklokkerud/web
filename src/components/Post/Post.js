@@ -5,24 +5,20 @@ import Link from "gatsby-link"
 
 class Post extends Component {
   render() {
-      const { date, title, excerpt, html, path } = this.props;
+      const { published, title } = this.props;
 
     return (
-      <Link to={`${path}`}>
+      <Link to={`/`}>
         <div className={styles.container}>
         <div className={styles.subcontainer}>
-          {/* <img className={styles.img} src={imgurl} alt={title.rendered} /> */}
+          {/* <img className={styles.img} src={imgUrl} alt={title.rendered} /> */}
           <div className={styles.content}>
             <h1 className={styles.title}>{title}</h1>
             <small className={styles.date}>
-              Published: {date}
+              Published: {published}
             </small>
-    <div>{excerpt}</div>
-            <div
-              className={styles.excerpt}
-              // dangerouslySetInnerHTML={{ __html: html }}
-            />
-          {excerpt}</div>
+            <div className={styles.excerpt}/>
+          Excerpt comes here</div>
         </div>
         </div>
       </Link>
