@@ -6,7 +6,7 @@ class UseMyStuffPage extends Component {
 
   render() {
 
-    const featuredTutorial = {}
+
 
     return (
     <Layout>

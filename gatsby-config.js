@@ -28,6 +28,16 @@ module.exports = {
         name: "src"
       }
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `baskerville\:400`,
+          `muli\:300,700`,
+          `baloo tamudu 2\:400,700`
+        ]
+      }
+    },
 
     "gatsby-transformer-remark",
     `gatsby-transformer-sharp`,

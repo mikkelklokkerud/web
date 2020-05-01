@@ -29,7 +29,14 @@
     margin-right: 3vw;
 }
 
-.link {
+.link__inactive {
+    line-height: 1;
+    padding-bottom: 1px;
+}
+.link__active {
+    border-top: 3px solid black;
+    padding-bottom: 1px;
+    padding-top: 2px;
     border-bottom: 3px solid black;
     line-height: 1;
 }

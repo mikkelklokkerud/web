@@ -1,6 +1,5 @@
 import React from "react"
 import styles from "./blog.module.css"
-import Link from "gatsby-link"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "./../components/layout"
 

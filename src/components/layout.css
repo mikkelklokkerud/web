@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600&display=swap");
 
 html {
-	font-family: "Open Sans";
+	font-family: "muli";
 	font-weight: 300;
 	font-size: 18px;
 }
@@ -10,6 +10,7 @@ body {
 	padding: 0;
 	line-height: 1.5;
 	font-size: 18px;
+	
 }
 
 h1 {
@@ -30,6 +31,7 @@ h3 {
 h4 {
 	font-size: 1rem;
 	line-height: 1.5;
+	font-size: 18px;
 }
 
 p,
