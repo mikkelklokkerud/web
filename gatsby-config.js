@@ -14,8 +14,8 @@ module.exports = {
     {
         resolve: "gatsby-source-contentful",
         options: {
-          spaceId: process.env.CONTENTFUL_SPACE_ID,
-          accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+          spaceId: "5mq881xgkjc9",
+          accessToken: "Qz-aq3c76aeaaIQHKsIgJ1paSUn7WuD3Am5yeGxP77k"
         }
     },
     `gatsby-plugin-react-helmet`,

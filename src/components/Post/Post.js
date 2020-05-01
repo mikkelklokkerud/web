@@ -13,7 +13,7 @@ class Post extends Component {
         <div className={styles.subcontainer}>
           {/* <img className={styles.img} src={imgUrl} alt={title.rendered} /> */}
           <div className={styles.content}>
-            <h1 className={styles.title}>{title}</h1>
+            <h2 className={styles.title}>{title}</h2>
             <small className={styles.date}>
               Published: {published}
             </small>

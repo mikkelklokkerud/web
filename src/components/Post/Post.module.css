@@ -1,5 +1,5 @@
 .container {
-    min-height: 60vh;
+    min-height: 30vh;
     display: flex;
     justify-content: center;
     padding: 0 16rem;
@@ -12,6 +12,8 @@
     transition: all 0.1s ease-out;
     width: 1200px;
     justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 
