@@ -14,9 +14,14 @@ class Post extends Component {
           {/* <img className={styles.img} src={featuredImage} alt={title.rendered} /> */}
           <div className={styles.content}>
             <h2 className={styles.title}>{title}</h2>
+            <div className={styles.writtenByDate}>
             <small className={styles.date}>
               Published: {published}
             </small>
+            <small className={styles.date}>
+              Written by: Mikkel Klokkerud
+            </small>
+            </div>
             <div className={styles.excerpt}/>
           {shortDescription}</div>
         </div>
