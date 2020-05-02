@@ -19,9 +19,6 @@
     margin-right: 3rem;
     font-weight: bold;
     text-decoration: none;
-    cursor: pointer;
-    
-    
 }
 
 .nav {
@@ -29,14 +26,20 @@
     margin-right: 3vw;
 }
 
-.link__inactive {
-    line-height: 1;
-    padding-bottom: 1px;
-}
 .link__active {
     border-top: 3px solid black;
     padding-bottom: 1px;
     padding-top: 2px;
     border-bottom: 3px solid black;
     line-height: 1;
+}
+
+.link__inactive:hover {
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    padding-bottom: 1px;
+    padding-top: 2px;
+   
+    line-height: 1;
+
 }

@@ -1,41 +1,70 @@
 import React from "react"
-import Layout from "../components/layout"
-import { graphql, useStaticQuery } from "gatsby"
-import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
 import Post from "./../components/Post/Post"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
 
-const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
-        edges {
-          node {
-            title
-            slug
-            publishedDate(formatString: "MMMM Do, YYYY")
-            featured
-          }
-        }
-      }
-    }
-  `)
+const IndexPage = ({ data }) => {
+
+  let featured = data.allContentfulBlogPost.edges.filter(edge => edge.node.featured)
+  
+  console.log(featured[0].node.featuredImage.fluid.src)
+
+  const allPosts = data.allContentfulBlogPost.edges;
 
   return (
     <>
       <Layout>
-        <Hero_Featured />
-
-        {data.allContentfulBlogPost.edges.map(post => (
+        <Hero_Featured 
+          key={featured[0].node.id}
+          title={featured[0].node.title}
+          slug={featured[0].node.slug}
+          publishedDate={featured[0].node.publishedDate}
+          shortDescription={featured[0].node.shortDescription}
+        />
+        {allPosts.map(post => (
           <Post
+            key={post.node.id}
             title={post.node.title}
             slug={post.node.slug}
             published={post.node.publishedDate}
-            featured={post.node.publishedDate}
+            shortDescription={post.node.shortDescription}
+            publishedDate={post.node.publishedDate}
           />
         ))}
       </Layout>
     </>
   )
-}
+
+        }
+
+export const pageQuery = graphql`
+  query BlogPostsQuery {
+      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+        edges {
+          node {
+            id
+            title
+            slug
+            publishedDate(formatString: "MMMM Do, YYYY")
+            featured
+            featuredImage {
+              fluid {
+                src
+              }
+            }           
+          }
+        }
+      }
+    }
+
+`
+
+
+// (
+//   limit: 1
+//   sort: { fields: [createdAt], order: DESC }
+//   filter: { node_locale: { eq: "en-US" }, featured: { eq: true } }
+// )
 
 export default IndexPage
