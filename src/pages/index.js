@@ -7,9 +7,6 @@ import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
 const IndexPage = ({ data }) => {
 
   let featured = data.allContentfulBlogPost.edges.filter(edge => edge.node.featured)
-  
-  console.log(featured[0].node.featuredImage.fluid.src)
-
   const allPosts = data.allContentfulBlogPost.edges;
 
   return (
@@ -48,6 +45,7 @@ export const pageQuery = graphql`
             slug
             publishedDate(formatString: "MMMM Do, YYYY")
             featured
+            shortDescription
             featuredImage {
               fluid {
                 src

@@ -5,8 +5,8 @@ import Link from "gatsby-link"
 
 class Hero_Featured extends React.Component {
   render() {
+      
   const { key, publishedDate, title, slug, shortDescription } = this.props;
-  console.log(slug);
 
   return (
     <div className={styles.container}>
