@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from "./Header_Simple.module.css";
 import Link  from "gatsby-link";
 import { window } from "browser-monads";
+import logo from "./MikkelCodes.png";
 
 // class Header_Simple extends Component {
 //     render() { 
@@ -30,7 +31,7 @@ class Header_Simple extends Component {
         return ( 
             <div className={styles.container}>
                 <div className={styles.logocontainer}>
-                    
+                    <img className={styles.logo} src={logo} />
                 </div>
                 <nav className={styles.nav}>
                     <ul>

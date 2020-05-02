@@ -29,7 +29,6 @@ h3 {
 }
 
 h4 {
-	font-size: 1rem;
 	line-height: 1.5;
 	font-size: 18px;
 }
@@ -38,10 +37,10 @@ p,
 button,
 input,
 img {
-	line-height: 1.5;
-	padding-top: 1rem;
+	line-height: 27px;
+	padding-top: 27px;
 	margin-top: 0;
-	margin-bottom: 1rem;
+	margin-bottom: 27px;
 	font-size: 18px;
 }
 
@@ -95,3 +94,28 @@ small {
 .link-more {
 	display: none;
 }
+
+
+@media only screen and (max-width: 1600px) {
+
+
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+
+}
+
+@media only screen and (max-width: 1250px) {
+
+
+	p {
+		font-size: 16px;
+	}
+
+}
+

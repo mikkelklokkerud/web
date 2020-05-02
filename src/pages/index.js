@@ -55,14 +55,9 @@ export const pageQuery = graphql`
         }
       }
     }
-
 `
 
 
-// (
-//   limit: 1
-//   sort: { fields: [createdAt], order: DESC }
-//   filter: { node_locale: { eq: "en-US" }, featured: { eq: true } }
-// )
+
 
 export default IndexPage

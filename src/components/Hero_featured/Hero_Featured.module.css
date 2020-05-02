@@ -13,6 +13,11 @@
     flex-direction: column;
     font-weight: thin;
     background: none;
+    flex: 1.5;
+}
+
+.right {
+    flex: 1;
 }
 
 .left img {
@@ -27,15 +32,14 @@
 
 .role {
     margin: 0;
-    font-size: 1.5rem;
 }
 
 .content {
     border-left: 2px solid black;
-    border-bottom: 2px solid black;
     margin-left: 5px;
     padding-left: 12px;
     padding-right: 20px;
+    padding-bottom: 20px;
     
 }
 
@@ -65,7 +69,7 @@
 }
 
 .title {
-    margin: 1rem 0 1rem -4px;
+    margin: 27px 0 27px -4px;
 }
 
 p.link-more {
@@ -73,3 +77,31 @@ p.link-more {
 }
 
 
+@media only screen and (max-width: 1000px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        display: none;
+    }
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .subcontainer {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+
+    .content {
+        border-left: none;
+    }
+
+
+}
