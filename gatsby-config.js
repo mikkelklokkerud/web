@@ -29,6 +29,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-163172180-1",
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
@@ -59,3 +66,4 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
