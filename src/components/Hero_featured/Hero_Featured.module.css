@@ -13,21 +13,17 @@
     flex-direction: column;
     font-weight: thin;
     background: none;
-    flex: 1.5;
+
 }
 
 .right {
-    flex: 1;
-}
 
-.left img {
-    width: 50vw;
-    margin: 0;
-    padding: 0;
 }
 
 .logo {
-    /* filter: drop-shadow(10px 10px 10px rgba(126, 65, 8, 0.5)); */
+    max-width: 45vw;
+    margin: 0;
+    padding: 0;
 }
 
 .role {
@@ -40,7 +36,8 @@
     margin-left: 5px;
     padding-left: 12px;
     padding-right: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
+
     
 }
 
@@ -58,6 +55,7 @@
     align-items: center;
     flex-direction: column;
     max-width: 33vw;
+
 }
 
 .btns button {
