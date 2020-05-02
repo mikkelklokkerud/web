@@ -35,10 +35,14 @@ class Header_Simple extends Component {
                 </div>
                 <nav className={styles.nav}>
                     <ul>
+                        <div className={styles.ul__first}>
                         <Link to={"/"}><p className={window.location.href.length < 30 ? styles.link__active : styles.link__inactive}>ARCHIVE</p></Link>
                         <Link to={"/usemystuff"}><p className={window.location.href.indexOf("usemystuff") > 0 ? styles.link__active : styles.link__inactive}>USE MY STUFF</p></Link>
+                        </div>
+                        <div className={styles.ul__second}>
                         <Link to={"/tutorials"}><p className={window.location.href.indexOf("tutorials") > 0 ? styles.link__active : styles.link__inactive}>TUTORIALS</p></Link>
                         <Link to={"/about"}><p className={window.location.href.indexOf("about") > 0 ? styles.link__active : styles.link__inactive}>ABOUT</p></Link>
+                        </div>
                     </ul>
                 </nav>
             </div>
