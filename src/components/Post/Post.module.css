@@ -8,24 +8,34 @@
 
 .subcontainer {
     display: flex;
-    align-items: center;
+
     height: 100%;
-    padding: 15% 15%;
+    padding: 7%;
     transition: all 0.1s ease-out;
+    max-width: 1100px;
 }
 
+.writtenByDate {
+    margin-top: 0;
+    margin-bottom: 27px;
+    padding-top: 0;
+}
 
 .img {
-    display: none;
-    height: 50vh;
-    width: 450px;
+    margin-right: 5%;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
+    padding-top: 0;
+    margin-bottom: 0;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     padding: 0;
+
+    
 }
 
 .subcontainer:hover {
@@ -34,6 +44,7 @@
 
 .title {
     margin-bottom: 2rem;
+    margin-top: 0;
 }
 
 .subtitle {
@@ -54,11 +65,7 @@
         padding: 5% 0%;
     }
 
-    .writtenByDate {
-        margin-top: 0;
-        margin-bottom: 27px;
-        padding-top: 0;
-    }
+    
 
     .title {
         margin-bottom: 27px;
