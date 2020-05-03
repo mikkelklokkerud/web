@@ -3,6 +3,7 @@ import styles from "./Header_Simple.module.css";
 import Link  from "gatsby-link";
 import { window } from "browser-monads";
 import logo from "./MikkelCodes.png";
+import Headroom from "react-headroom";
 
 // class Header_Simple extends Component {
 //     render() { 
@@ -29,6 +30,7 @@ import logo from "./MikkelCodes.png";
 class Header_Simple extends Component {
     render() { 
         return ( 
+            <Headroom>
             <div className={styles.container}>
                 <div className={styles.logocontainer}>
                     <img className={styles.logo} src={logo} />
@@ -47,6 +49,7 @@ class Header_Simple extends Component {
                     </ul>
                 </nav>
             </div>
+            </Headroom>
          );
     }
 }
