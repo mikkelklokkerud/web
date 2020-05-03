@@ -8,7 +8,6 @@ const IndexPage = ({ data }) => {
 
   let featured = data.allContentfulBlogPost.edges.filter(edge => edge.node.featured)
   const allPosts = data.allContentfulBlogPost.edges;
-
   return (
     <>
       <Layout>
@@ -27,6 +26,7 @@ const IndexPage = ({ data }) => {
             published={post.node.publishedDate}
             shortDescription={post.node.shortDescription}
             publishedDate={post.node.publishedDate}
+            featuredImage={post.node.featuredImage.fluid.src}
           />
         ))}
       </Layout>

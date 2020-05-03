@@ -6,12 +6,12 @@ import Link from "gatsby-link"
 class Post extends Component {
   render() {
       const { published, title, slug, featuredImage, shortDescription } = this.props;
-
+console.log(featuredImage);
     return (
       <Link to={`/blog/${slug}`}>
         <div className={styles.container}>
         <div className={styles.subcontainer}>
-          {/* <img className={styles.img} src={featuredImage} alt={title.rendered} /> */}
+          <img className={styles.img} src={featuredImage} alt={title.rendered} />
           <div className={styles.content}>
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.writtenByDate}>

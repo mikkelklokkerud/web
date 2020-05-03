@@ -31,10 +31,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
         trackingId: "UA-163172180-1",
       },
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: `<form action="https://mikkelcodes.us19.list-manage.com/subscribe/post?u=a6380a8628ee8997c2d6805c7&amp;id=f0c9f84372" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>`,
+      },
+  },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
