@@ -3,6 +3,7 @@ import Post from "./../components/Post/Post"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
+import SEO from "./../components/seo";
 
 const IndexPage = ({ data }) => {
 
@@ -11,6 +12,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Layout>
+      <SEO title="Blog" keywords={["web developer"], ["developer"], ["React"], ["gatsby"]} />
         <Hero_Featured 
           key={featured[0].node.id}
           title={featured[0].node.title}
