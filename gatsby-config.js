@@ -9,6 +9,7 @@ module.exports = {
     title: `MikkelCodes`,
     description: `This is a blog about web development, react, gatsby and more. It contains tutorials, blog posts and resources on the topic, created by Mikkel Klokkerud.`,
     author: `Mikkel Klokkerud`,
+    url: "https://mikkelcodes.com",
   },
   plugins: [
     {
@@ -25,7 +26,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/`,
-        name: "src"
+        name: "src",
       }
     },
     {

@@ -12,7 +12,10 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Layout>
-      <SEO title="Blog" keywords={["web developer"], ["developer"], ["React"], ["gatsby"]} />
+        <SEO 
+          title="Blog" 
+          keywords={["web developer"], ["developer"], ["React"], ["gatsby"]}
+        />
         <Hero_Featured 
           key={featured[0].node.id}
           title={featured[0].node.title}
