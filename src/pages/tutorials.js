@@ -1,30 +1,70 @@
-import React, { Component } from "react";
-import Layout from "./../components/layout";
+import React from "react"
+import Post from "../components/Post/Post"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import Hero_Featured from "../components/Hero_featured/Hero_Featured"
+import SEO from "../components/seo";
 
-
-class UseMyStuffPage extends Component {
-
-  render() {
-
-
-
-    return (
-    <Layout>
-        <h1>Tutorials</h1>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
+const TutorialsPage = ({ data }) => {
+  const featuredType = "Tutorial";
+  const featured = data.allContentfulBlogPost.edges.filter(edge => edge.node.featured);
+  const allPosts = data.allContentfulBlogPost.edges;
+  return (
+    <>
+      <Layout>
+        <SEO 
+          title="Blog" 
+          keywords={["web developer"], ["developer"], ["React"], ["gatsby"]}
+        />
+        <Hero_Featured 
+          key={featured[0].node.id}
+          title={featured[0].node.title}
+          slug={featured[0].node.slug}
+          publishedDate={featured[0].node.publishedDate}
+          shortDescription={featured[0].node.shortDescription}
+          featuredType={featuredType}
+        />
+        {allPosts.map(post => (
+          <Post
+            key={post.node.id}
+            title={post.node.title}
+            slug={post.node.slug}
+            published={post.node.publishedDate}
+            shortDescription={post.node.shortDescription}
+            publishedDate={post.node.publishedDate}
+            featuredImage={post.node.featuredImage.resize.src}
+          />
+        ))}
       </Layout>
-    )
-  }
-}
+    </>
+  )
 
-export default UseMyStuffPage
+        }
+
+export const pageQuery = graphql`
+  query TutorialsQuery {
+      allContentfulBlogPost(filter: {category: {elemMatch: {title: {eq: "Tutorial"}}}},
+                            sort: { fields: publishedDate, order: DESC }) {
+        edges {
+          node {
+            id
+            title
+            slug
+            publishedDate(formatString: "MMMM Do, YYYY")
+            featured
+            shortDescription
+            featuredImage {
+              resize (width: 420, height: 420) {
+                src
+              }
+            }           
+          }
+        }
+      }
+    }
+`
+
+
+
+
+export default TutorialsPage

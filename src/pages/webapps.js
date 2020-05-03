@@ -5,9 +5,9 @@ import Layout from "../components/layout"
 import Hero_Featured from "../components/Hero_featured/Hero_Featured"
 import SEO from "../components/seo";
 
-const IndexPage = ({ data }) => {
-
-  // let featured = data.allContentfulBlogPost.edges.filter(edge => edge.node.featured)
+const WebappsPage = ({ data }) => {
+  const featuredType = "Web App";
+  const featured = data.allContentfulBlogPost.edges.filter(edge => edge.node.featured);
   const allPosts = data.allContentfulBlogPost.edges;
   return (
     <>
@@ -16,13 +16,14 @@ const IndexPage = ({ data }) => {
           title="Blog" 
           keywords={["web developer"], ["developer"], ["React"], ["gatsby"]}
         />
-        {/* <Hero_Featured 
+        <Hero_Featured 
           key={featured[0].node.id}
           title={featured[0].node.title}
           slug={featured[0].node.slug}
           publishedDate={featured[0].node.publishedDate}
           shortDescription={featured[0].node.shortDescription}
-        /> */}
+          featuredType={featuredType}
+        />
         {allPosts.map(post => (
           <Post
             key={post.node.id}
@@ -42,7 +43,8 @@ const IndexPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query WebAppsQuery {
-      allContentfulBlogPost(filter: {category: {elemMatch: {title: {eq: "Web Apps"}}}}) {
+      allContentfulBlogPost(filter: {category: {elemMatch: {title: {eq: "Web Apps"}}}},
+                            sort: { fields: publishedDate, order: DESC }) {
         edges {
           node {
             id
@@ -65,4 +67,4 @@ export const pageQuery = graphql`
 
 
 
-export default IndexPage
+export default WebappsPage

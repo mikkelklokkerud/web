@@ -6,8 +6,8 @@ import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
 import SEO from "./../components/seo";
 
 const IndexPage = ({ data }) => {
-
-  let featured = data.allContentfulBlogPost.edges.filter(edge => edge.node.featured)
+  const featuredType = "Post";
+  const featured = data.allContentfulBlogPost.edges.filter(edge => edge.node.featured)
   const allPosts = data.allContentfulBlogPost.edges;
   return (
     <>
@@ -22,6 +22,7 @@ const IndexPage = ({ data }) => {
           slug={featured[0].node.slug}
           publishedDate={featured[0].node.publishedDate}
           shortDescription={featured[0].node.shortDescription}
+          featuredType={featuredType}
         />
         {allPosts.map(post => (
           <Post

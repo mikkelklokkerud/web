@@ -40,7 +40,7 @@
 }
 
 .link__active {
- color: rgb(0, 12, 143);
+ border-bottom: 2px solid black;
 }
 
 .link__inactive:hover {
