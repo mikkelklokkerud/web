@@ -37,13 +37,6 @@
   font-size: 20px;
 }
 
-.responsiveToolbar img {
-  padding: 0;
-  margin: 0;
-  display: none;
-
-}
-
 @media screen and (min-width: 1001px) {
     .responsiveToolbar {
         display: none;
@@ -73,20 +66,20 @@
     padding-right: 0;
     transition: 300ms ease all;
   }
+  
+  .imgcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
 
   .img {
-      width: 400px;
+      width: 300px;
       margin: 0;
       padding: 0;
 }
-
-
-
-  .responsiveToolbar figure {
-      margin: 0;
-
-      position: absolute;
-  }
 
    .responsiveToolbar .active {
     top: 0;
@@ -147,5 +140,9 @@
     height: 220px;
   }
 
+  .img {
+    width: 50%;
+    margin: auto;
+  }
   
 } 

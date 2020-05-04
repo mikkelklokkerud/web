@@ -10,11 +10,10 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor}) {
     const [ navOpen, setNavOpen ] = useState(false)
 
     console.log(navOpen)
-    return( <>
-                <figure 
-                    >
+    return( <> 
+                <div className={styles.imgcontainer}>
                     <img className={styles.img} src={logo} />
-                </figure>
+                </div>
         <nav
             class={styles.responsiveToolbar}
             style={{ background }}

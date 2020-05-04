@@ -37,7 +37,7 @@ blockquote {
 
     .content p, small, .content ul, .content ol, .content h1, .content h2, .content h3, .content h4, figure {
         margin: 0 auto;
-        max-width: 70%;
+        max-width: 90%;
     }
 
     .content img {
