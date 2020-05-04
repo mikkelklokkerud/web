@@ -48,7 +48,11 @@
     .responsiveToolbar {
         display: none;
     }
+    .img {
+        display: none;
+    }
 }
+
 
 @media screen and (max-width: 1000px) {
   .responsiveToolbar ul {
@@ -59,7 +63,8 @@
     position: fixed;
     flex-direction: column;
     transition: 300ms ease all;
-    background: #333333;
+    background-color: black;
+    color: #333;
     display: flex;
     justify-content: flex-start;
     padding-inline-start: 0;
@@ -67,6 +72,20 @@
     box-shadow: 2px 2px 2px #ccc;
     padding-right: 0;
     transition: 300ms ease all;
+  }
+
+  .img {
+      width: 400px;
+      margin: 0;
+      padding: 0;
+}
+
+
+
+  .responsiveToolbar figure {
+      margin: 0;
+
+      position: absolute;
   }
 
    .responsiveToolbar .active {
@@ -114,7 +133,7 @@
   }
 
   .responsiveToolbar {
-    background: #333333;
+    background: rgba(255, 255, 255, 0.413);
     height: 0;
     width: 100%;
     position: fixed;
@@ -122,3 +141,11 @@
     
   }
 }
+
+@media screen and (max-width: 759px) {
+  .responsiveToolbar ul {
+    height: 220px;
+  }
+
+  
+} 

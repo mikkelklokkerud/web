@@ -1,29 +1,53 @@
 .container {
-    display: flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 .content {
-    max-width: 610px;
-    color: black;   
+  max-width: 610px;
+  color: black;
 }
 
 .content img {
-    max-width: 610px;
-    height: auto;
+  max-width: 610px;
+  height: auto;
 }
 
-.content ul p, .content ol p {
-    margin: 0;
-    padding: 0;
+.content ul p,
+.content ol p {
+  margin: 0;
+  padding: 0;
 }
 
-.content h4, .content h3 {
-    margin-bottom: 0;
-    padding-top: 27px;
+.content h4,
+.content h3 {
+  margin-bottom: 0;
+  padding-top: 27px;
 }
 
 blockquote {
-    margin: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 759px) {
+
+    .content {
+        max-width: none;
+    }
+
+    .content p, small, .content ul, .content ol, .content h1, .content h2, .content h3, .content h4, figure {
+        margin: auto;
+        max-width: 70%;
+    }
+
+    .content img {
+        max-width: 70%;
+        margin: 5% 10%;
+    }
+
+    .content h1 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
 }

@@ -10,7 +10,11 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor}) {
     const [ navOpen, setNavOpen ] = useState(false)
 
     console.log(navOpen)
-    return(
+    return( <>
+                <figure 
+                    >
+                    <img className={styles.img} src={logo} />
+                </figure>
         <nav
             class={styles.responsiveToolbar}
             style={{ background }}
@@ -36,7 +40,7 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor}) {
                 
             </ul>
         </nav>
-    )
+   </>)
 }
 
 export default ResponsiveNav;

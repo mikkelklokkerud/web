@@ -71,12 +71,21 @@
   .container {
     min-height: none;
     display: flex;
-    justify-content: center;
-    padding: 5% 0;
-    margin: auto;
+    justify-content: unset;
+    padding: 5%;
     position: relative;
-    max-width: 90%;
+    max-width: 630px;
     
+  }
+
+  .writtenByDate {
+    margin-bottom: 4px;
+    font-size: 16px;
+
+  }
+
+  .date {
+    display: none;
   }
 
   .title {
