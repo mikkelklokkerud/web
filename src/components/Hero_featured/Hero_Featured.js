@@ -10,6 +10,7 @@ class Hero_Featured extends React.Component {
       <div className={styles.container}>
         <div className={styles.left}>
           <img className={styles.logo} src={logo} />
+          <p></p>
           <div className={styles.btns}></div>
         </div>
         <div className={styles.right}>

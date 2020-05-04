@@ -22,7 +22,7 @@ class Header_Simple extends Component {
                 <div className={styles.subcontainer}>
                     <div className={styles.logocontainer}>
                         <img className={styles.logo} src={logo} />
-                        <p className={styles.tagline}>Cybersecure and Effective Apps...</p>
+                        <p className={styles.tagline}>Front-End Wizard</p>
                     </div>
                     <nav className={styles.nav}>
                         <ul className={styles.list}>
@@ -30,6 +30,7 @@ class Header_Simple extends Component {
                             <Link to={"/webapps"}><p className={window.location.href.indexOf("webapps") > 0 ? styles.link__active : styles.link__inactive}>WEB APPS</p></Link>
                             <Link to={"/tutorials"}><p className={window.location.href.indexOf("tutorials") > 0 ? styles.link__active : styles.link__inactive}>TUTORIALS</p></Link>
                             <Link to={"/usemystuff"}><p className={window.location.href.indexOf("usemystuff") > 0 ? styles.link__active : styles.link__inactive}>USE MY STUFF</p></Link>
+                            <Link to={"/about"}><p className={window.location.href.indexOf("about") > 0 ? styles.link__active : styles.link__inactive}>ABOUT</p></Link>
                         </ul>
                         <div className={styles.burgerMenu}>
                             
@@ -54,22 +55,24 @@ const navLinks = [
     {
         text: "Web Apps",
         path: "/webapps",
-        icon: "ion-ios-business"
+        icon: "ion-ios-hammer"
     },
     {
         text: "Tutorials",
         path: "/tutorials",
-        icon: "ion-ios-bonfire"
+        icon: "ion-ios-paper"
     },
     {
         text: "Use My Stuff",
         path: "/usemystuff",
         icon: "ion-ios-briefcase"
     },
-    // {
-    //     text: "CLOSE",
-    //     icon: "ion-ios-close"
-    // }
+    {
+        text: "About",
+        path: "/about",
+        icon: "ion-ios-mail"
+    },
+   
 ]
 
 export default Header_Simple;

@@ -16,6 +16,10 @@
   background: none;
 }
 
+.left p {
+  padding: 18px;
+}
+
 .logo {
   max-width: 45vw;
   margin: 0;
@@ -28,7 +32,7 @@
 
 .content {
   border-left: 2px solid black;
-  margin-left: 5px;
+  margin-left: 8px;
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
