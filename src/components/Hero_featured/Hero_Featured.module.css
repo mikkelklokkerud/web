@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -2vh;
+  margin-top: -5vh;
 }
 
 .left {
@@ -29,7 +29,7 @@
 .content {
   border-left: 2px solid black;
   margin-left: 5px;
-  padding-left: 14px;
+  padding-left: 20px;
   padding-right: 20px;
   display: flex;
   justify-content: center;
@@ -92,6 +92,7 @@ p.link-more {
     
   }
 
+
   .left {
     display: none;
   }
@@ -107,9 +108,15 @@ p.link-more {
     display: block;
   }
 
+  .title {
+    margin-left: -2px;
+  }
+
   .content {
     border-left: none;
     border-bottom: none;
+    margin-left: 0;
+    padding: 0;
   }
 }
 @media only screen and (max-width: 750px) {

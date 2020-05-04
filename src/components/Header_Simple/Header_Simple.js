@@ -4,53 +4,68 @@ import Link  from "gatsby-link";
 import { window } from "browser-monads";
 import logo from "./MikkelCodes.png";
 import Headroom from "react-headroom";
+import ResponsiveNav from "./../ResponsiveNav/ResponsiveNav";
 
-// class Header_Simple extends Component {
-//     render() { 
-//         return ( 
-//             <div className={styles.container}>
-//                 <div className={styles.logocontainer}>
-                    
-//                 </div>
-//                 <nav className={styles.nav}>
-//                     <ul>
-//                         <Link to={"/"}><p className={styles.link}>ARCHIVE</p></Link>
-//                         <Link to={"/usemystuff"}><p className={styles.link}>USE MY STUFF</p></Link>
-//                         <Link to={"/tutorials"}><p className={styles.link}>TUTORIALS</p></Link>
-//                         <Link to={"/about"}><p className={styles.link}>ABOUT</p></Link>
-//                     </ul>
-//                 </nav>
-//             </div>
-//          );
-//     }
-// }
- 
-// export default Header_Simple;
+
+
 
 class Header_Simple extends Component {
     render() { 
-        return ( 
-            <Headroom>
+        return ( <>
+            {/* <Headroom> */}
+            <ResponsiveNav
+                navLinks={ navLinks }
+                            />
+
+            <div className={styles.mainNav}>
             <div className={styles.container}>
-                <div className={styles.logocontainer}>
-                    <img className={styles.logo} src={logo} />
+                <div className={styles.subcontainer}>
+                    <div className={styles.logocontainer}>
+                        <img className={styles.logo} src={logo} />
+                        <p className={styles.tagline}>Cybersecure and Effective Apps...</p>
+                    </div>
+                    <nav className={styles.nav}>
+                        <ul className={styles.list}>
+                            <Link to={"/"}><p className={window.location.href.length < 30 ? styles.link__active : styles.link__inactive}>ARCHIVE</p></Link>
+                            <Link to={"/webapps"}><p className={window.location.href.indexOf("webapps") > 0 ? styles.link__active : styles.link__inactive}>WEB APPS</p></Link>
+                            <Link to={"/tutorials"}><p className={window.location.href.indexOf("tutorials") > 0 ? styles.link__active : styles.link__inactive}>TUTORIALS</p></Link>
+                            <Link to={"/usemystuff"}><p className={window.location.href.indexOf("usemystuff") > 0 ? styles.link__active : styles.link__inactive}>USE MY STUFF</p></Link>
+                        </ul>
+                        <div className={styles.burgerMenu}>
+                            
+                        </div>
+                    </nav>
                 </div>
-                <nav className={styles.nav}>
-                    <ul>
-                        <div className={styles.ul__first}>
-                        <Link to={"/"}><p className={window.location.href.length < 30 ? styles.link__active : styles.link__inactive}>ARCHIVE</p></Link>
-                        <Link to={"/webapps"}><p className={window.location.href.indexOf("webapps") > 0 ? styles.link__active : styles.link__inactive}>WEB APPS</p></Link>
-                        </div>
-                        <div className={styles.ul__second}>
-                        <Link to={"/tutorials"}><p className={window.location.href.indexOf("tutorials") > 0 ? styles.link__active : styles.link__inactive}>TUTORIALS</p></Link>
-                        <Link to={"/usemystuff"}><p className={window.location.href.indexOf("usemystuff") > 0 ? styles.link__active : styles.link__inactive}>USE MY STUFF</p></Link>
-                        </div>
-                    </ul>
-                </nav>
+
+            </div> 
             </div>
-            </Headroom>
+            {/* </Headroom> */}
+            </>
          );
     }
 }
- 
+
+const navLinks = [
+    {
+        text: "Archive",
+        path: "/",
+        icon: "ion-ios-megaphone"
+    },
+    {
+        text: "Web Apps",
+        path: "/webapps",
+        icon: "ion-ios-business"
+    },
+    {
+        text: "Tutorials",
+        path: "/tutorials",
+        icon: "ion-ios-bonfire"
+    },
+    {
+        text: "Use My Stuff",
+        path: "/usemystuff",
+        icon: "ion-ios-briefcase"
+    }
+]
+
 export default Header_Simple;

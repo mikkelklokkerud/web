@@ -1,11 +1,11 @@
 .container {
-    padding: 0 0 5vh 0;
-    width: 100%;
-    display: flex;
+  padding: 0 0 5vh 0;
+  width: 100%;
+  display: flex;
 }
 
 @media only screen and (max-wdith: 1000px) {
-    .container {
+  .container {
     justify-content: center;
-    }
+  }
 }
