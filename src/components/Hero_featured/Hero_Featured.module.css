@@ -1,9 +1,9 @@
 .container {
-  height: 100vh;
+  height: 88vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -80px;
+  margin-top: -2vh;
 }
 
 .left {
@@ -38,6 +38,10 @@
   height: 520px;
 }
 
+.content p {
+  margin-bottom: 0;
+}
+
 .author {
   padding: 0;
 }
@@ -64,10 +68,28 @@ p.link-more {
   display: none;
 }
 
+@media only screen and (max-width: 1300px) {
+  
+  .container {
+    justify-content: center;
+  }
+  
+  .content {
+    max-height: 450px;
+    height: 400px;
+    justify-content: center;
+  }
+  
+  .container p {
+    font-size: 16px;
+  }
+}
+
+
 @media only screen and (max-width: 1000px) {
   .container {
     flex-direction: column;
-    margin-top: -50px;
+    
   }
 
   .left {
@@ -90,7 +112,7 @@ p.link-more {
     border-bottom: none;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
   .subcontainer {
     max-width: 95%;
     margin-left: auto;

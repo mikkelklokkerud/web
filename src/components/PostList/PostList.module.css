@@ -2,9 +2,10 @@
     padding: 0 0 5vh 0;
     width: 100%;
     display: flex;
-    /* justify-content: center; */
 }
 
-@media only screen and (max-wdith: 1200) {
-    
+@media only screen and (max-wdith: 1000px) {
+    .container {
+    justify-content: center;
+    }
 }
