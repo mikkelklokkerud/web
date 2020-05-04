@@ -36,7 +36,7 @@ blockquote {
     }
 
     .content p, small, .content ul, .content ol, .content h1, .content h2, .content h3, .content h4, figure {
-        margin: auto;
+        margin: 0 auto;
         max-width: 70%;
     }
 
