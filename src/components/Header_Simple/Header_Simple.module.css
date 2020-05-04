@@ -72,7 +72,13 @@
     flex: 2;
   }
 
-  
+  .imgcontainer {
+    margin: 0;
+  }
+
+  .img {
+    margin: 0;
+  }
 
   .nav {
     flex: 1;
