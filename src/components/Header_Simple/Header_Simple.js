@@ -65,7 +65,11 @@ const navLinks = [
         text: "Use My Stuff",
         path: "/usemystuff",
         icon: "ion-ios-briefcase"
-    }
+    },
+    // {
+    //     text: "CLOSE",
+    //     icon: "ion-ios-close"
+    // }
 ]
 
 export default Header_Simple;

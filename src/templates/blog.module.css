@@ -35,19 +35,23 @@ blockquote {
         max-width: none;
     }
 
-    .content p, small, .content ul, .content ol, .content h1, .content h2, .content h3, .content h4, figure {
+    .content p, .content small, .content ul, .content ol, .content h1, .content h2, .content h3, .content h4, figure {
         margin: 0 auto;
         max-width: 90%;
     }
 
     .content img {
-        max-width: 70%;
-        margin: 5% 10%;
+        max-width: 100%;
+        margin: 5% 0%;
     }
 
     .content h1 {
         margin-bottom: 20px;
         margin-top: 20px;
+    }
+
+    .content small {
+        font-size: 14px;
     }
 
 }

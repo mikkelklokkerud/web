@@ -69,22 +69,20 @@ p.link-more {
 }
 
 @media only screen and (max-width: 1300px) {
-  
   .container {
     justify-content: center;
   }
-  
+
   .content {
     max-height: 450px;
     height: 400px;
     justify-content: center;
   }
-  
+
   .container p {
     font-size: 16px;
   }
 }
-
 
 @media only screen and (max-width: 1000px) {
   .container {
@@ -144,11 +142,16 @@ p.link-more {
   }
 
   .subtitle {
-    text-align: center;
+    text-align: left;
   }
 
   .content {
     margin: auto;
-}
+  }
 
+  .content small {
+
+    margin: 0;
+
+  }
 }
