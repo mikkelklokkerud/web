@@ -22,7 +22,7 @@ class Header_Simple extends Component {
                 <div className={styles.subcontainer}>
                     <div className={styles.logocontainer}>
                         <img className={styles.logo} src={logo} />
-                        <p className={styles.tagline}>Front-End Wizard</p>
+                        <p className={styles.tagline}><strong>Front-End Wizard / Web Consultant</strong></p>
                     </div>
                     <nav className={styles.nav}>
                         <ul className={styles.list}>

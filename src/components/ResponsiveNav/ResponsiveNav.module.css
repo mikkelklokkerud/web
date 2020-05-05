@@ -143,9 +143,11 @@
     opacity: 60%;
     
   }
+
+
   .img {
     width: 50%;
-    margin: auto;
+    display: none;
   }
 
   .imgcontainer {
@@ -165,6 +167,7 @@
     color: rgb(255, 255, 255);
     border-radius: 0 0 0 30px;
   }
+  
   .responsiveToolbar .active {
     top: 100px;
     right: 0;

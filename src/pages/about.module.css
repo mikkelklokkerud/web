@@ -1,13 +1,21 @@
 .container {
     height: 100%;
-    padding: 5vh 25vw 0 25vw;
+
     display: flex;
     justify-content: center;
+    text-align: left;
 }
 
 .container p {
     padding-top: 0;
-    font-size: 18px;
+    font-size: 22px;
+    line-height: 1.5;
+
+}
+
+.container h1, .container h2 {
+    text-align: left;
+    padding-top: 36px
 }
 
 .container li {
@@ -16,16 +24,18 @@
 
 .container ul {
     margin-bottom: 27px;
+    font-size: 22px;
+    line-height: 1.5;
 }
 
 .intro {
-    max-width: 700px;
+    max-width: 720px;
 }
 
 @media screen and (max-width: 1000px) {
 
 .container {
-    padding: 5vh 5%;
+    padding: 0vh 5% 5vh 5%;
 }
 
 

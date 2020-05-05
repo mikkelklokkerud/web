@@ -20,21 +20,12 @@ class AboutPage extends Component {
         <div className={styles.container}>
           
           <div className={styles.intro}>
-          <h1>About (extended)</h1>
-          {/* <p>
-            Hi, my name is Mikkel Klokkerud. I am a web developer from Norway.
-          </p>
-          <p>
-            Basically, I create web apps and blog about how I do it. Want to learn how to create a web app? Then, stick around - I'll teach you how!
-          </p>
-          <p>
-            Also, you can email me at: contact@mikkelcodes.com
-          </p> */}
-          <p>
-           For the extended version... Read on! :)
-          </p>
+   
+  
           
           <h2>The blog</h2>
+
+          <p>A couple questions:</p>
           <ul>
           <li>
             Are you dedicated to become the best web developer you can be?
@@ -44,7 +35,7 @@ class AboutPage extends Component {
           </li>
           </ul>
           <p>
-            If so, I am with you. And this blog is all about us developer
+            If so, I am with you! And this blog is all about us developer
             entrepreneurs.
           </p>
           <p>
@@ -52,12 +43,7 @@ class AboutPage extends Component {
             consultant and entrepreneur. This is also where share tools, tips
             and know-how as gathered along the way! 
           </p>
-          <p>
-            Tag along and share your
-            comments, and I promise to do my best to provide you with enabling
-            insights. I hope and think you will find it inspiring.
-          </p>
-
+          
           <h2>Built for me and you</h2>
           <p>
             On the page "Use My Stuff" I publish reusable code blocks
