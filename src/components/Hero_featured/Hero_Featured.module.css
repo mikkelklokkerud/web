@@ -6,6 +6,10 @@
   margin-top: -5vh;
 }
 
+.page {
+  display: none;
+}
+
 .left {
   display: flex;
   justify-content: center;
@@ -83,6 +87,8 @@ p.link-more {
     justify-content: center;
   }
 
+
+
   .container p {
     font-size: 16px;
   }
@@ -96,6 +102,13 @@ p.link-more {
     background-color: black;
     color: white;
     border-radius: 0 0 200px 0;
+  }
+
+  .page {
+    display: block;
+    text-align: center;
+    margin-top: -5vh;
+    margin-bottom: 54px;
   }
 
   .left {

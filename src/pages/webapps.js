@@ -23,6 +23,7 @@ const WebappsPage = ({ data }) => {
           publishedDate={featured[0].node.publishedDate}
           shortDescription={featured[0].node.shortDescription}
           featuredType={featuredType}
+          page={"WEB APPS"}
         />
         {allPosts.map(post => (
           <Post

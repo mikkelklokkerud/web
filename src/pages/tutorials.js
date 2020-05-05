@@ -23,6 +23,7 @@ const TutorialsPage = ({ data }) => {
           publishedDate={featured[0].node.publishedDate}
           shortDescription={featured[0].node.shortDescription}
           featuredType={featuredType}
+          page={"TUTORIALS"}
         />
         {allPosts.map(post => (
           <Post

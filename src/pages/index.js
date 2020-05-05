@@ -23,6 +23,7 @@ const IndexPage = ({ data }) => {
           publishedDate={featured[0].node.publishedDate}
           shortDescription={featured[0].node.shortDescription}
           featuredType={featuredType}
+          page={"ARCHIVE"}
         />
         {allPosts.map(post => (
           <Post

@@ -5,7 +5,7 @@ import Link from "gatsby-link"
 
 class Hero_Featured extends React.Component {
   render() {
-    const { key, publishedDate, title, slug, shortDescription, featuredType } = this.props
+    const { key, publishedDate, title, slug, shortDescription, featuredType, page } = this.props
     return (
       <div className={styles.container}>
         <div className={styles.left}>
@@ -16,6 +16,7 @@ class Hero_Featured extends React.Component {
         <div className={styles.right}>
           <Link key={key} to={`/blog/${slug}`}>
             <div className={styles.content}>
+              <h1 className={styles.page}>{page}</h1>
               <h4 className={styles.subtitle}>Featured {featuredType}</h4>
               <h2 className={styles.title}>{title}</h2>
               <small className={styles.date}>Published: {publishedDate}</small>

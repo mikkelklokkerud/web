@@ -9,7 +9,6 @@
 
 .mainNav {
   transition: all 300ms ease;
-  /* opacity: 100%; */
 }
 
 .subcontainer {
@@ -29,12 +28,13 @@
 }
 
 .logocontainer {
-  display: block;
   width: 50vw;
   height: 100%;
-  /* opacity: 0%; */
   flex: 1;
   height: 12vh;
+  display: flex;
+  align-items: center;
+  padding-left: 5vw;
 
 }
 

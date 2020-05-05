@@ -15,7 +15,8 @@ class Header_Simple extends Component {
             pageIsAbout: false,
             mainNavBg: "white",
             mainNavColor: "black",
-            mainNavPos: ""
+            mainNavPos: "",
+            displayTagline: "block"
         }
     }
 
@@ -25,13 +26,16 @@ class Header_Simple extends Component {
             this.setState({
                 pageIsAbout: true,
                 mainNavBg: "black",
-                mainNavColor: "white"
+                mainNavColor: "white",
+                displayTagline: "none"
             })
         } else if (this.state.pageIsAbout && window.location.href.indexOf("about") < 1) {
             this.setState({
                 pageIsAbout: false,
                 mainNavBg: "white",
-                mainNavColor: "black"
+                mainNavColor: "black",
+                displayTagline: "none"
+
             })
         }
     }
@@ -43,7 +47,7 @@ class Header_Simple extends Component {
         console.log("Color: " + this.state.mainNavColor)
 
         return ( <>
-            {/* <Headroom> */}
+            
             <ResponsiveNav
                 navLinks={ navLinks }
                             />
@@ -52,7 +56,7 @@ class Header_Simple extends Component {
                 <div className={styles.subcontainer}>
                     <div className={styles.logocontainer}>
                         <img className={styles.logo} src={logo} />
-                        <p className={styles.tagline}><strong>Front-End Wizard / Web Consultant</strong></p>
+                        <p className={styles.tagline} style={{ display: this.state.displayTagline }} ><strong>Mikkel Klokkerud // Front-End Wizard</strong></p>
                     </div>
                     <nav className={styles.nav} style={{ backgroundColor: this.state.mainNavBg, color: this.state.mainNavColor }} >
                         <ul className={styles.list}>
@@ -70,7 +74,6 @@ class Header_Simple extends Component {
 
             </div> 
             </div>
-            {/* </Headroom> */}
             </>
          );
     }
@@ -92,11 +95,11 @@ const navLinks = [
         path: "/tutorials",
         icon: "ion-ios-paper"
     },
-    {
-        text: "Use My Stuff",
-        path: "/usemystuff",
-        icon: "ion-ios-briefcase"
-    },
+    // {
+    //     text: "Use My Stuff",
+    //     path: "/usemystuff",
+    //     icon: "ion-ios-briefcase"
+    // },
     {
         text: "About",
         path: "/about",
