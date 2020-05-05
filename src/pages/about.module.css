@@ -1,0 +1,17 @@
+.container {
+    height: 100%;
+    padding: 5vh 25vw 0 25vw;
+}
+
+.container p {
+    padding-top: 0;
+    font-size: 18px;
+}
+
+.container li {
+    padding-bottom: 5px;
+}
+
+.container ul {
+    margin-bottom: 27px;
+}

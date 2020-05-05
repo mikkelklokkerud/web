@@ -1,28 +1,101 @@
-import React, { Component } from "react";
-import Layout from "./../components/layout";
-import Hero_Featured from "./../components/Hero_featured/Hero_Featured";
+import React, { Component } from "react"
+import Layout from "./../components/layout"
+import styles from "./about.module.css";
+import AboutIntro from "./../components/AboutIntro/AboutIntro";
 
+const introText1 = "Hi, my name is Mikkel Klokkerud. I am a web developer and tech blogger from Norway.";
+const introText2 = "Basically, I create web apps/sites and blog about how I do it. Want to learn how to create a web app? Then, stick around - I'll teach you how!";
+const introText3 = "Reach me at: contact@mikkelcodes.com";
+const introTitle = "About";
 
 class AboutPage extends Component {
   state = {}
   render() {
     return (
-    <Layout>
-      {/* <Hero_Featured /> */}
-      <div>
-        <h1>About</h1>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
-      </div>
+      <Layout>
+
+        <AboutIntro text1={introText1} text2={introText2} text3={introText3} title={introTitle} />
+
+
+        <div className={styles.container}>
+          
+          <div className={styles.intro}>
+          <h1>About (extended)</h1>
+          {/* <p>
+            Hi, my name is Mikkel Klokkerud. I am a web developer from Norway.
+          </p>
+          <p>
+            Basically, I create web apps and blog about how I do it. Want to learn how to create a web app? Then, stick around - I'll teach you how!
+          </p>
+          <p>
+            Also, you can email me at: contact@mikkelcodes.com
+          </p> */}
+          <p>
+           For the extended version... Read on! :)
+          </p>
+          </div>
+          <h2>The blog</h2>
+          <ul>
+          <li>
+            Are you dedicated to become the best web developer you can be?
+          </li>
+          <li>
+            Would you like to develop commercially viable apps and solutions?
+          </li>
+          </ul>
+          <p>
+            If so, I am with you. And this blog is all about us developer
+            entrepreneurs.
+          </p>
+          <p>
+            On this corner of the web I write about my journey as a web
+            consultant and entrepreneur. This is also where share tools, tips
+            and know-how as gathered along the way! 
+          </p>
+          <p>
+            Tag along and share your
+            comments, and I promise to do my best to provide you with enabling
+            insights. I hope and think you will find it inspiring.
+          </p>
+
+          <h2>Built for me and you</h2>
+          <p>
+            On the page "Use My Stuff" I publish reusable code blocks
+            from my personal library. Feel free to use whatever you want - I
+            built it with my email subscribers in mind.
+          </p>
+          <p>
+            Personally, I like creating my own little library of code blocks
+            (modules/components) to always have my past work handily available
+            to me when working on new projects. This makes me able to work more
+            efficiently by not having to rewrite blocks of code I have written
+            before. If you don't currently do this, I highly recommend adopting
+            this practice for yourself.
+          </p>
+
+          <h2>My background</h2>
+          <ul>
+            <li>2014-2017: Bachelor in Business and Entrepreneurship from Norwegian
+            Business School.</li>
+            <li>2017 - 2020: Worked as a project management consultant
+            in Kenya and Madagascar. Managed projects co-financed by Samsung Electronics and The World Bank.</li>
+            <li>Built websites as a hobby for around 5 years.</li>
+            <li>2020: Full throttle towards becoming a self-taught Full-Stack Developer. How far can I get in one year's time?</li>
+          </ul>
+          <h2>Web dev preferences</h2>
+          <ul>
+            <li><strong>JS library:</strong> React and Gatsby</li>
+            <li><strong>Styling:</strong> CSS Modules</li>
+            <li><strong>Back-end:</strong> Node.js and Express</li>
+            <li><strong>Headless CMS:</strong> Contentful or Wordpress</li>
+            <li><strong>Design:</strong> Sketch, Adobe Photoshop, Google SketchUp</li>
+            <li><strong>SSR:</strong> Netlify</li>
+          </ul>
+          <br/>
+          <p>
+            Thanks for checking out my about page!
+          </p>
+        </div>
       </Layout>
     )
   }
