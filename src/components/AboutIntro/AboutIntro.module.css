@@ -52,6 +52,7 @@
 .textcontainer__text {
   line-height: 1.5;
   font-size: 22px;
+  margin-bottom: 0;
 }
 
 .textcontainer__title {
@@ -64,6 +65,8 @@
 @media screen and (max-width: 1000px) {
   .belowcontainer__textcontainer {
     margin: 0 5%;
+    min-width: 20px;
+    width: auto;
   }
 
   .container h1,
@@ -91,6 +94,10 @@
         width: 100vw;
         padding: 0;
         margin: 0;
-        margin-bottom: 30px;
-      }
+        margin-bottom: 50px;
+    }
+    .rightcontainer__textcontainer {
+        margin-bottom: 20px;
+    }
+
 }
