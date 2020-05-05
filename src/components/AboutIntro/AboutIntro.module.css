@@ -1,95 +1,96 @@
 .container {
-    background-color: black;
-    display: flex;
-    height: auto;
-    color: white;
-    text-align: center;
+  background-color: black;
+  display: flex;
+  height: auto;
+  color: white;
+  text-align: center;
 }
 .containerbelow {
-    background-color: white;
-    display: flex;
-    height: auto;
-    color: black;
-    justify-content: center;
-    margin-top: 12vh;
-    text-align: left;
+  background-color: white;
+  display: flex;
+  height: auto;
+  color: black;
+  justify-content: center;
+  margin-top: 12vh;
+  text-align: left;
 }
 
 .leftcontainer__img {
-    height: auto;
-    width: 50vw;
-    padding: 0;
-    margin: 0;
+  height: auto;
+  width: 50vw;
+  padding: 0;
+  margin: 0;
 }
 .leftcontainer__img1 {
-    height: auto;
-    width: 50vw;
-    padding: 0;
-    margin: 0;
+  height: auto;
+  width: 50vw;
+  padding: 0;
+  margin: 0;
 }
 
-
-
 .container__rightcontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .rightcontainer__textcontainer {
-    
-    
-    width: 70%;
-    margin: 0;
-    padding: 0;
-    min-width: 440px;
-    max-width: 720px;
+  width: 70%;
+  margin: 0;
+  padding: 0;
+  min-width: 440px;
+  max-width: 720px;
 }
 .belowcontainer__textcontainer {
-    
-    
-
-    margin: 0;
-    padding: 0;
-    min-width: 440px;
-    max-width: 720px;
+  margin: 0;
+  padding: 0;
+  min-width: 440px;
+  max-width: 720px;
 }
 
 .textcontainer__text {
-    
-    line-height: 1.5;
-    font-size: 22px;
+  line-height: 1.5;
+  font-size: 22px;
 }
 
 .textcontainer__title {
-    
-    margin: 0;
+  margin: 0;
 
-    line-height: 1;
-    padding-bottom: 0.5em;
+  line-height: 1;
+  padding-bottom: 0.5em;
 }
-
 
 @media screen and (max-width: 1000px) {
-    .belowcontainer__textcontainer {
-        margin: 0 5%;
-    }
+  .belowcontainer__textcontainer {
+    margin: 0 5%;
+  }
 
-.container h1, .containerbelow h1 {
+  .container h1,
+  .containerbelow h1 {
     margin: 0;
     padding: 0;
+  }
+
+  .rightcontainer__textcontainer {
+    width: 70%;
+    margin: 0;
+
+    padding: 0;
+    min-width: 200px;
+    max-width: 720px;
+  }
 }
 
-    .rightcontainer__textcontainer {
-    
-    
-        width: 70%;
-        margin: 0;
-
-        padding: 0;
-        min-width: 200px;
-        max-width: 720px;
+@media screen and (max-width: 759px) {
+    .container {
+        flex-direction: column;
     }
-
+    .leftcontainer__img1 {
+        height: auto;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 30px;
+      }
 }
