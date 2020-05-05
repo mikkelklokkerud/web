@@ -22,7 +22,6 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor}) {
                 className={styles[navOpen ? "active" : ""]} >
                 {navLinks.map( (link, index) => 
                 <li
-                // onClick={ () => setNavOpen(!navOpen) } 
                     onMouseEnter={ () => setHoverIndex(index) }
                     onMouseLeave={ () => setHoverIndex(-1) }
                     style={{ background: hoverIndex === index ? hoverBackground || "#999" : "" }}
@@ -35,11 +34,9 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor}) {
                         <i className={link.icon} />
                     </Link>
                 </li> )}
-                {/* <div className={styles.closeContainer}> */}
                 <li className={styles.close}
                 >CLOSE
                 </li>
-                {/* </div> */}
                 
             </ul></div>
         </nav>
