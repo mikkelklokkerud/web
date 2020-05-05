@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import styles from "./ResponsiveNav.module.css";
 import Link from "gatsby-link";
 import logo from "./MikkelCodes.png";
+import { window } from "browser-monads";
 
 
 function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor}) {
     const [ hoverIndex, setHoverIndex ] = useState(-1)
     const [ navOpen, setNavOpen ] = useState(false)
 
-    console.log(navOpen)
     return( <> 
                 <div className={styles.imgcontainer}>
                     <img className={styles.img} src={logo} href="/" />

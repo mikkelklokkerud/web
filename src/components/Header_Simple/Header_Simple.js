@@ -7,17 +7,46 @@ import Headroom from "react-headroom";
 import ResponsiveNav from "./../ResponsiveNav/ResponsiveNav";
 
 
-
-
 class Header_Simple extends Component {
+
+    constructor (props) {
+        super(props);
+        this.state = {
+            pageIsAbout: false,
+            mainNavBg: "white",
+            mainNavColor: "black"
+        }
+    }
+
+    componentWillMount() {
+
+        if (!this.state.pageIsAbout && window.location.href.indexOf("about") > 0) {
+            this.setState({
+                pageIsAbout: true,
+                mainNavBg: "black",
+                mainNavColor: "white"
+            })
+        } else if (this.state.pageIsAbout && window.location.href.indexOf("about") < 1) {
+            this.setState({
+                pageIsAbout: false,
+                mainNavBg: "white",
+                mainNavColor: "black"
+            })
+        }
+    }
+
     render() { 
+
+        console.log("COLORS IN STATE:")
+        console.log("Background: " + this.state.mainNavBg)
+        console.log("Color: " + this.state.mainNavColor)
+
         return ( <>
             {/* <Headroom> */}
             <ResponsiveNav
                 navLinks={ navLinks }
                             />
-
-            <div className={styles.mainNav}>
+            <div className={styles.mainNav} style={{ backgroundColor: this.state.mainNavBg, color: this.state.mainNavColor,  }}>
             <div className={styles.container}>
                 <div className={styles.subcontainer}>
                     <div className={styles.logocontainer}>
@@ -26,11 +55,11 @@ class Header_Simple extends Component {
                     </div>
                     <nav className={styles.nav}>
                         <ul className={styles.list}>
-                            <Link to={"/"}><p className={window.location.href.length < 30 ? styles.link__active : styles.link__inactive}>ARCHIVE</p></Link>
-                            <Link to={"/webapps"}><p className={window.location.href.indexOf("webapps") > 0 ? styles.link__active : styles.link__inactive}>WEB APPS</p></Link>
-                            <Link to={"/tutorials"}><p className={window.location.href.indexOf("tutorials") > 0 ? styles.link__active : styles.link__inactive}>TUTORIALS</p></Link>
+                            <Link to={"/"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.length < 30 ? styles.link__active : styles.link__inactive}>ARCHIVE</p></Link>
+                            <Link to={"/webapps"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("webapps") > 0 ? styles.link__active : styles.link__inactive}>WEB APPS</p></Link>
+                            <Link to={"/tutorials"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("tutorials") > 0 ? styles.link__active : styles.link__inactive}>TUTORIALS</p></Link>
                             {/* <Link to={"/usemystuff"}><p className={window.location.href.indexOf("usemystuff") > 0 ? styles.link__active : styles.link__inactive}>USE MY STUFF</p></Link> */}
-                            <Link to={"/about"}><p className={window.location.href.indexOf("about") > 0 ? styles.link__active : styles.link__inactive}>ABOUT</p></Link>
+                            <Link to={"/about"}><p  style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("about") > 0 ? styles.link__active : styles.link__inactive}>ABOUT</p></Link>
                         </ul>
                         <div className={styles.burgerMenu}>
                             

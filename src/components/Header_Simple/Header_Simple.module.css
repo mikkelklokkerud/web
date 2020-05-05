@@ -3,6 +3,12 @@
   align-items: center;
   height: 12vh;
   width: 100%;
+  border-bottom: 2px solid white;
+}
+
+.mainNav {
+  transition: all 300ms ease;
+
 }
 
 .subcontainer {
