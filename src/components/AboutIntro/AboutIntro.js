@@ -6,6 +6,7 @@ import image2 from "../../images/about1r.jpg";
 class AboutIntro extends React.Component {
 	render() {
 		return (<>
+		<div className={styles.parent}>
 			<div  className={styles.container}>
 				<img className={styles.leftcontainer__img1} src={image1} alt="hello" />
 				<div className={styles.container__rightcontainer}>
@@ -25,6 +26,7 @@ class AboutIntro extends React.Component {
 					</div>
 		
 				
+			</div>
 			</div>
 			</>
 		);
