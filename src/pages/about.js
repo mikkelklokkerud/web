@@ -44,7 +44,7 @@ class AboutPage extends Component {
             and know-how as gathered along the way! 
           </p>
           
-          <h2>Built for me and you</h2>
+          {/* <h2>Built for me and you</h2>
           <p>
             On the page "Use My Stuff" I publish reusable code blocks
             from my personal library. Feel free to use whatever you want - I
@@ -57,7 +57,7 @@ class AboutPage extends Component {
             efficiently by not having to rewrite blocks of code I have written
             before. If you don't currently do this, I highly recommend adopting
             this practice for yourself.
-          </p>
+          </p> */}
 
           <h2>My background</h2>
           <ul>

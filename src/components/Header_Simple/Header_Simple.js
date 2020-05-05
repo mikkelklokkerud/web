@@ -14,7 +14,8 @@ class Header_Simple extends Component {
         this.state = {
             pageIsAbout: false,
             mainNavBg: "white",
-            mainNavColor: "black"
+            mainNavColor: "black",
+            mainNavPos: ""
         }
     }
 
@@ -46,20 +47,20 @@ class Header_Simple extends Component {
             <ResponsiveNav
                 navLinks={ navLinks }
                             />
-            <div className={styles.mainNav} style={{ backgroundColor: this.state.mainNavBg, color: this.state.mainNavColor,  }}>
+            <div className={styles.mainNav}>
             <div className={styles.container}>
                 <div className={styles.subcontainer}>
                     <div className={styles.logocontainer}>
                         <img className={styles.logo} src={logo} />
                         <p className={styles.tagline}><strong>Front-End Wizard / Web Consultant</strong></p>
                     </div>
-                    <nav className={styles.nav}>
+                    <nav className={styles.nav} style={{ backgroundColor: this.state.mainNavBg, color: this.state.mainNavColor }} >
                         <ul className={styles.list}>
                             <Link to={"/"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.length < 30 ? styles.link__active : styles.link__inactive}>ARCHIVE</p></Link>
                             <Link to={"/webapps"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("webapps") > 0 ? styles.link__active : styles.link__inactive}>WEB APPS</p></Link>
                             <Link to={"/tutorials"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("tutorials") > 0 ? styles.link__active : styles.link__inactive}>TUTORIALS</p></Link>
                             {/* <Link to={"/usemystuff"}><p className={window.location.href.indexOf("usemystuff") > 0 ? styles.link__active : styles.link__inactive}>USE MY STUFF</p></Link> */}
-                            <Link to={"/about"}><p  style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("about") > 0 ? styles.link__active : styles.link__inactive}>ABOUT</p></Link>
+                            <Link to={"/about"}><p  style={{ color: this.state.mainNavColor, borderBottom: "1px solid white" }} className={window.location.href.indexOf("about") > 0 ? styles.link__active : styles.link__inactive}>ABOUT</p></Link>
                         </ul>
                         <div className={styles.burgerMenu}>
                             
