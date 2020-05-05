@@ -1,6 +1,8 @@
 .container {
     height: 100%;
     padding: 5vh 25vw 0 25vw;
+    display: flex;
+    justify-content: center;
 }
 
 .container p {
@@ -14,4 +16,17 @@
 
 .container ul {
     margin-bottom: 27px;
+}
+
+.intro {
+    max-width: 700px;
+}
+
+@media screen and (max-width: 1000px) {
+
+.container {
+    padding: 5vh 5%;
+}
+
+
 }

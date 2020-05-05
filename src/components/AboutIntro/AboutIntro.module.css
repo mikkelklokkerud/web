@@ -60,3 +60,20 @@
     border: 1px solid black;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1100px) {
+    .rightcontainer__textcontainer p  {
+        font-size: 18px;
+    }
+    .rightcontainer__textcontainer h1  {
+        font-size: 54px;
+    }
+    .rightcontainer__textcontainer  {
+    padding: 10%;
+    height: 100%;
+    }
+    .leftcontainer__img {
+        height: 400px;
+        width: auto;
+    }
+}

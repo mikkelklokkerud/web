@@ -4,7 +4,7 @@ import styles from "./about.module.css";
 import AboutIntro from "./../components/AboutIntro/AboutIntro";
 
 const introText1 = "Hi, my name is Mikkel Klokkerud. I am a web developer and tech blogger from Norway.";
-const introText2 = "Basically, I create web apps/sites and blog about how I do it. Want to learn how to create a web app? Then, stick around - I'll teach you how!";
+const introText2 = "Basically, I create web apps/sites and write about how I do it. Want to learn how to create a web app? Then, stick around - I'll teach you how!";
 const introText3 = "Reach me at: contact@mikkelcodes.com";
 const introTitle = "About";
 
@@ -33,7 +33,7 @@ class AboutPage extends Component {
           <p>
            For the extended version... Read on! :)
           </p>
-          </div>
+          
           <h2>The blog</h2>
           <ul>
           <li>
@@ -95,6 +95,7 @@ class AboutPage extends Component {
           <p>
             Thanks for checking out my about page!
           </p>
+        </div>
         </div>
       </Layout>
     )
