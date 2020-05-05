@@ -73,7 +73,13 @@
     height: 100%;
     }
     .leftcontainer__img {
-        height: 400px;
-        width: auto;
+        width: 100%;
+        
     }
+    .container {
+        flex-direction: column;
+    }
+    
+
+    
 }
