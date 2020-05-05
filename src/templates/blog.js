@@ -3,7 +3,6 @@ import styles from "./blog.module.css"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "./../components/layout"
 import SEO from "./../components/seo"
-import Helmet from "gatsby-plugin-react-helmet"
 
 export const query = graphql`
   query($slug: String!) {
