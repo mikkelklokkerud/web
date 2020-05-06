@@ -56,7 +56,7 @@ class Header_Simple extends Component {
                 <div className={styles.subcontainer}>
                     <div className={styles.logocontainer}>
                         <img className={styles.logo} src={logo} />
-                        <p className={styles.tagline} style={{ display: this.state.displayTagline }} ><strong>Mikkel Klokkerud // Front-End Wizard</strong></p>
+                        <p className={styles.tagline} style={{ display: this.state.displayTagline }} ><strong>Mikkel Klokkerud // React Developer</strong></p>
                     </div>
                     <nav className={styles.nav} style={{ backgroundColor: this.state.mainNavBg, color: this.state.mainNavColor }} >
                         <ul className={styles.list}>
@@ -95,11 +95,6 @@ const navLinks = [
         path: "/tutorials",
         icon: "ion-ios-paper"
     },
-    // {
-    //     text: "Use My Stuff",
-    //     path: "/usemystuff",
-    //     icon: "ion-ios-briefcase"
-    // },
     {
         text: "About",
         path: "/about",
