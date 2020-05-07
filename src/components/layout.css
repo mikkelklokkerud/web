@@ -77,8 +77,12 @@ table td {
 	border: 1px solid black;
 }
 
-span {
+span.accent1 {
 	color: orange;
+}
+span.accent2 {
+	color: orange;
+	text-decoration: underline;
 }
 
 a {

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./AboutIntro.module.css";
-import image1 from "../../images/about2r.jpg";
+import image1 from "../../images/about2bw.jpg";
 import image2 from "../../images/about1r.jpg";
 
 class AboutIntro extends React.Component {

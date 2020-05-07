@@ -11,7 +11,7 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor}) {
 
     return( <> 
                 <div className={styles.imgcontainer}>
-                    <img className={styles.img} src={logo} href="/" />
+                    {/* <img className={styles.img} src={logo} href="/" /> */}
                 </div>
         <nav
             class={styles.responsiveToolbar}

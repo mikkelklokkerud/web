@@ -1,0 +1,87 @@
+.emailListForm {
+  display: flex;
+  flex-direction: column;
+
+  background: black;
+  color: white;
+
+  font-family: -apple-system, Helvetica, Arial, sans-serif;
+  padding: 6vw 15vw;
+}
+
+.thankYou {
+  padding-top: 0;
+}
+
+.emailListForm h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.emailListForm h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.emailListForm h1 {
+  margin-top: 18px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.emailListForm input {
+  color: #2a2a2a;
+  width: 100%;
+  border: none;
+}
+
+.emailListForm button,
+.emailListForm input {
+  padding: 0.8rem 1.5rem;
+  height: auto;
+}
+
+.emailListForm button {
+  display: inline-block;
+  width: 30%;
+  min-width: 141px;
+
+  border: none;
+  background-image: none;
+  background-color: orange;
+  color: white;
+
+  letter-spacing: 1px;
+  transition: all 0.1s linear;
+}
+.emailListForm button:hover {
+  cursor: pointer;
+  background: darken(orange, 15%);
+}
+
+@media screen and (max-width: 759px) {
+
+  .emailListForm {
+    padding: 5%;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  .subtitle {
+    letter-spacing: -1px;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  .emailListForm button,
+.emailListForm input {
+  padding: 0.5rem 1.2rem;
+  height: auto;
+}
+
+}

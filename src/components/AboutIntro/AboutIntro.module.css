@@ -93,10 +93,9 @@
 
 @media screen and (max-width: 759px) {
     .container {
-        flex-direction: column-reverse;
-        padding-top: 50px;
-    }
-    .leftcontainer__img1 {
+        flex-direction: column;
+      }
+      .leftcontainer__img1 {
         height: auto;
         width: 100vw;
         padding: 0;
@@ -105,7 +104,9 @@
     }
     .rightcontainer__textcontainer {
         margin-bottom: 20px;
+        margin-top: 20px;
         padding-bottom: 35px;
+        padding-top: 35px;
     }
 
 }

@@ -61,12 +61,12 @@ class AboutPage extends Component {
 
           <h2>My background</h2>
           <ul>
+            <li>2013: Started making Wordpress websites as a side hustle.</li>
             <li>2014-2017: Bachelor in Business and Entrepreneurship from Norwegian
             Business School.</li>
             <li>2017 - 2020: Worked as a project management consultant
             in Kenya and Madagascar. Managed projects co-financed by Samsung Electronics and The World Bank.</li>
-            <li>Built websites as a hobby for around 5 years.</li>
-            <li>2020: Full throttle towards becoming a self-taught Full-Stack Developer. How far can I get in one year's time?</li>
+            <li>2020: Web Development goes from being a side hustle to my main hustle! Jamstack for the win!</li>
           </ul>
           <h2>Web dev preferences</h2>
           <ul>

@@ -3,7 +3,6 @@ import styles from "./Header_Simple.module.css";
 import Link  from "gatsby-link";
 import { window } from "browser-monads";
 import logo from "./MikkelCodes.png";
-import Headroom from "react-headroom";
 import ResponsiveNav from "./../ResponsiveNav/ResponsiveNav";
 
 
@@ -63,12 +62,10 @@ class Header_Simple extends Component {
                             <Link to={"/"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.length < 30 ? styles.link__active : styles.link__inactive}>ARCHIVE</p></Link>
                             <Link to={"/webapps"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("webapps") > 0 ? styles.link__active : styles.link__inactive}>WEB APPS</p></Link>
                             <Link to={"/tutorials"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("tutorials") > 0 ? styles.link__active : styles.link__inactive}>TUTORIALS</p></Link>
-                            {/* <Link to={"/usemystuff"}><p className={window.location.href.indexOf("usemystuff") > 0 ? styles.link__active : styles.link__inactive}>USE MY STUFF</p></Link> */}
                             <Link to={"/about"}><p  style={{ color: this.state.mainNavColor, borderBottom: "1px solid white" }} className={window.location.href.indexOf("about") > 0 ? styles.link__active : styles.link__inactive}>ABOUT</p></Link>
                         </ul>
                         <div className={styles.burgerMenu}>
-                            
-                        </div>
+                    </div>
                     </nav>
                 </div>
 
