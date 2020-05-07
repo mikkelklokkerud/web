@@ -25,7 +25,7 @@ function SEO({ description, lang, meta, title, keywords, image, author, url }) {
       }
     `
   )
-console.log(image)
+
   const metaDescription = description || site.siteMetadata.description;
   const metaAuthor = author || site.siteMetadata.author;
   return (

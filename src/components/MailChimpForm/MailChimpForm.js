@@ -16,7 +16,6 @@ class MailChimpForm extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log(this.state.email)
         addToMailchimp(this.state.email)
         .then(data => console.log(data))
         .then( data => this.setState({
@@ -38,7 +37,7 @@ class MailChimpForm extends Component {
     
     return (
     <form onSubmit={this.handleSubmit} className={styles.emailListForm}>
-      <h1 className={styles.title}>Gatsby Kickstarter Course coming soon!</h1>
+      <h2 className={styles.title}>Gatsby Kickstarter Course coming soon!</h2>
       <h3 className={styles.subtitle}>Subscribers will get it for <span className="accent1">FREE</span> - Sign up now!<span className="accent1"></span></h3>
       <div className={styles.wrapper}>
         <input

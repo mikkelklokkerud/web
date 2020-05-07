@@ -1,6 +1,9 @@
 .emailListForm {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
 
   background: black;
   color: white;
@@ -13,22 +16,20 @@
   padding-top: 0;
 }
 
-.emailListForm h2 {
+.title {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 3rem;
 }
-.emailListForm h3 {
+.subtitle {
   margin-top: 0;
   margin-bottom: 1rem;
-}
-
-.emailListForm h1 {
-  margin-top: 18px;
 }
 
 .wrapper {
   display: flex;
   flex-direction: row;
+  width: 50%;
 }
 
 .emailListForm input {
@@ -41,6 +42,7 @@
 .emailListForm input {
   padding: 0.8rem 1.5rem;
   height: auto;
+  margin-bottom: 0;
 }
 
 .emailListForm button {
@@ -61,6 +63,22 @@
   background: darken(orange, 15%);
 }
 
+
+@media screen and (max-width: 1000px) {
+  .emailListForm button,
+  .emailListForm input {
+    padding: 0.5rem 1rem;
+    height: auto;
+    font-size: 16px;
+  }
+  .wrapper {
+    width: 90%;
+  }
+  .wrapper button {
+    min-width: 115px; 
+  }
+}
+
 @media screen and (max-width: 759px) {
 
   .emailListForm {
@@ -78,10 +96,6 @@
     font-weight: 300;
     font-size: 1.5rem;
   }
-  .emailListForm button,
-.emailListForm input {
-  padding: 0.5rem 1.2rem;
-  height: auto;
-}
+
 
 }

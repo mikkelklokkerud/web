@@ -41,10 +41,6 @@ class Header_Simple extends Component {
 
     render() { 
 
-        console.log("COLORS IN STATE:")
-        console.log("Background: " + this.state.mainNavBg)
-        console.log("Color: " + this.state.mainNavColor)
-
         return ( <>
             
             <ResponsiveNav
