@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Hero_Featured from "../components/Hero_featured/Hero_Featured"
 import SEO from "../components/seo";
+import MailChimpForm from "./../components/MailChimpForm/MailChimpForm";
 
 const WebappsPage = ({ data }) => {
   const featuredType = "Web App";
@@ -25,6 +26,9 @@ const WebappsPage = ({ data }) => {
           featuredType={featuredType}
           page={"WEB APPS"}
         />
+
+        <MailChimpForm />
+
         {allPosts.map(post => (
           <Post
             key={post.node.id}
