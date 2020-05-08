@@ -1,7 +1,7 @@
 import React from "react"
 import Post from "./../components/Post/Post"
 import Post_Smashing from "./../components/Post_Smashing/Post_Smashing";
-import { graphql } from "gatsby"
+import { graphql } from "gatsby";
 import Layout from "../components/layout"
 import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
 import SEO from "./../components/seo";
@@ -87,6 +87,8 @@ export const pageQuery = graphql`
       }
     }
 `
+
+
 
 
 

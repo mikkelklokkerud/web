@@ -14,7 +14,7 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor}) {
                     {/* <img className={styles.img} src={logo} href="/" /> */}
                 </div>
         <nav
-            class={styles.responsiveToolbar}
+            className={styles.responsiveToolbar}
             style={{ background }}
         >
             <div className={styles[!navOpen ? "burgerOverlay" : ""]} onClick={ () => setNavOpen(!navOpen) } ><ul 
@@ -22,6 +22,7 @@ function ResponsiveNav ({ navLinks, background, hoverBackground, linkColor}) {
                 className={styles[navOpen ? "active" : ""]} >
                 {navLinks.map( (link, index) => 
                 <li
+                    key={link.id}
                     onMouseEnter={ () => setHoverIndex(index) }
                     onMouseLeave={ () => setHoverIndex(-1) }
                     style={{ background: hoverIndex === index ? hoverBackground || "#999" : "" }}

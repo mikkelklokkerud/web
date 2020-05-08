@@ -1,19 +1,40 @@
 import React from "react";
 import styles from "./AboutIntro.module.css";
 import image1 from "../../images/about2bw.jpg";
-import image2 from "../../images/about1r.jpg";
+import { useStaticQuery, graphql } from "gatsby";
 
-class AboutIntro extends React.Component {
-	render() {
+const introText1 =
+"Hi, my name is Mikkel Klokkerud. I am a web developer and tech blogger from Norway."
+const introText2 =
+"In short, I create web apps/sites and write about how I do it. Want to learn how to create a web app? Then, stick around here!"
+const introText3 = "Reach me at: contact@mikkelcodes.com"
+const introTitle = "About";
+
+const AboutIntro = () => {	
+
+	const data = useStaticQuery(graphql`
+	query AboutIntroImageQuery {
+	  allContentfulAsset(filter: {title: {eq: "About-Photo-Bw-Gradient"}}) {
+		edges {
+		  node {
+			id
+			title
+			fluid {
+			  src
+			}
+		  }
+		}
+	  }
+	}
+	`)
 		return (<>
 		<div className={styles.parent}>
 			<div  className={styles.container}>
-				<img className={styles.leftcontainer__img1} src={image1} alt="hello" />
+				<img className={styles.leftcontainer__img1} src={`http:${data.allContentfulAsset.edges[0].node.fluid.src}`} alt="hello" />
 				<div className={styles.container__rightcontainer}>
 					<div className={styles.rightcontainer__textcontainer}>
-						<h1 className={styles.textcontainer__title}>{this.props.title}</h1>
-						<p className={styles.textcontainer__text}>{this.props.text1}</p>
-						{/* <p className={styles.textcontainer__text}>{this.props.text2}</p> */}
+						<h1 className={styles.textcontainer__title}>{introTitle}</h1>
+						<p className={styles.textcontainer__text}>{introText1}</p>
 					</div>
 				</div>
 			</div>
@@ -21,8 +42,8 @@ class AboutIntro extends React.Component {
 				
 					<div className={styles.belowcontainer__textcontainer}>
 						<h1 className={styles.textcontainer__title}>{`Sites'n Apps`}</h1>
-						<p className={styles.textcontainer__text}>{this.props.text2}</p>
-						<p className={styles.textcontainer__text}>{this.props.text3}</p>
+						<p className={styles.textcontainer__text}>{introText2}</p>
+						<p className={styles.textcontainer__text}>{introText3}</p>
 					</div>
 		
 				
@@ -31,6 +52,8 @@ class AboutIntro extends React.Component {
 			</>
 		);
 	}
-}
+
+
+
 
 export default AboutIntro;

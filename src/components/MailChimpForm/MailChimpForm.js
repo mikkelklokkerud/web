@@ -21,7 +21,7 @@ class MailChimpForm extends Component {
         .then( data => this.setState({
             email: "",
             setEmail: true,
-            thankYouMsg: data.msg
+            thankYouMsg: "Thank you for subscribing!"
         }))
 
         .catch(err => console.log(err))

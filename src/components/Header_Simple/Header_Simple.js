@@ -76,22 +76,26 @@ const navLinks = [
     {
         text: "Archive",
         path: "/",
-        icon: "ion-ios-megaphone"
+        icon: "ion-ios-megaphone",
+        id: 1
     },
     {
         text: "Web Apps",
         path: "/webapps",
-        icon: "ion-ios-hammer"
+        icon: "ion-ios-hammer",
+        id: 2
     },
     {
         text: "Tutorials",
         path: "/tutorials",
-        icon: "ion-ios-paper"
+        icon: "ion-ios-paper",
+        id: 3
     },
     {
         text: "About",
         path: "/about",
-        icon: "ion-ios-mail"
+        icon: "ion-ios-mail",
+        id: 4
     },
    
 ]
