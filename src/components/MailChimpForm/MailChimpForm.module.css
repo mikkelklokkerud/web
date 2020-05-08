@@ -13,7 +13,9 @@
 }
 
 .thankYou {
-  
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .title {

@@ -52,6 +52,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `mikkelcodes`
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

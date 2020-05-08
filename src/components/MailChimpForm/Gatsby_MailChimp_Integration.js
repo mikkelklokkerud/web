@@ -8,7 +8,7 @@ class MailChimpForm extends Component {
     this.state = {
       email: "",
       setEmail: false,
-      msg: " Sign Up Now!",
+      thankYouMsg: "",
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleEmailChange = this.handleEmailChange.bind(this)
@@ -22,7 +22,7 @@ class MailChimpForm extends Component {
         this.setState({
           email: "",
           setEmail: true,
-          msg: " SUBSCRIBED. THANKS!",
+          thankYouMsg: "Thank you for subscribing!",
         })
       )
 
@@ -42,7 +42,7 @@ class MailChimpForm extends Component {
         <h2 className={styles.title}>Gatsby Kickstarter Course coming soon!</h2>
         <h3 className={styles.subtitle}>
           Subscribers will get it for <span className="accent1">FREE</span> -
-          {this.state.msg}<span className="accent1"></span>
+          Sign up now!<span className="accent1"></span>
         </h3>
         <div className={styles.wrapper}>
           <input

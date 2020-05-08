@@ -3,6 +3,17 @@
   justify-content: center;
 }
 
+.disqus__container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.disqus__content {
+  width: 600px;
+}
+
 .content {
   max-width: 610px;
   color: black;
@@ -55,3 +66,5 @@ blockquote {
     }
 
 }
+
+

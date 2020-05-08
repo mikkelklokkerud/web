@@ -3,16 +3,20 @@ import styles from "./blog.module.css"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "./../components/layout"
 import SEO from "./../components/seo"
+import { DiscussionEmbed } from "disqus-react"
+import { node } from "prop-types"
 
 export const query = graphql`
   query($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
+      id
       title
       publishedDate(formatString: "MMMM Do, YYYY")
       body {
         json
       }
       seoUrl
+
       seoTitle
       seoKeywords
       seoAuthor
@@ -37,10 +41,17 @@ const Blog = props => {
     },
   }
 
+  const disqusShortname = `mikkelcodes`
+  const disqusConfig = {
+    identifier: props.data.contentfulBlogPost.id,
+    title: props.data.contentfulBlogPost.title.split(" ").join("-"),
+    url: "https://mikkelcodes.com",
+  }
+
+  console.log(props.data.contentfulBlogPost.title.split(" ").join("-"))
+
   return (
     <Layout>
-      
-
       <SEO
         title={props.data.contentfulBlogPost.seoTitle}
         description={props.data.contentfulBlogPost.seoDescription}
@@ -59,6 +70,12 @@ const Blog = props => {
             props.data.contentfulBlogPost.body.json,
             options
           )}
+        </div>
+      </div>
+
+      <div className={styles.disqus__container}>
+        <div className={styles.disqus__content}>
+          <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
         </div>
       </div>
     </Layout>

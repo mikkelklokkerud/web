@@ -13,10 +13,7 @@ const AboutPage = () => {
     <Layout>
 
       <AboutIntro
-        // text1={introText1}
-        // text2={introText2}
-        // text3={introText3}
-        // title={introTitle}
+
       />
 
       <div className={styles.container}>
