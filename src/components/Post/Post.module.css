@@ -7,9 +7,14 @@
 .subcontainer {
   display: flex;
   height: 100%;
-  padding: 4%;
+  padding: 7%;
   transition: all 0.1s ease-out;
   max-width: 800px;
+  border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+.date {
+  color: rgb(92, 92, 92);
 }
 
 .writtenByDate {

@@ -24,9 +24,8 @@ class Post extends Component {
               <div className={styles.respOverlay}>
               <h2 className={styles.title}>{title}</h2>
               <div className={styles.writtenByDate}>
-                <small>Published: {published}</small>
                 <small className={styles.date}>
-                  Written by: Mikkel Klokkerud
+                {published} | Mikkel Klokkerud 
                 </small>
               </div>
               <div className={styles.excerpt}>{shortDescription}</div>
