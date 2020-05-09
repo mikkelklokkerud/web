@@ -29,9 +29,9 @@ const IndexPage = ({ data }) => {
           featuredType={featuredType}
           page={"ARCHIVE"}
         />
-        {/* <Divider_Colors /> */}
+        <Divider_Colors />
         <MailChimpForm />
-        {/* <Divider_Colors /> */}
+        <Divider_Colors />
         <h1 style={{ textAlign: "center", marginTop: "100px", marginBottom: "30px" }}>Latest Posts</h1>    
         {allPosts.map(post => (
           <Post
