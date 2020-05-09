@@ -4,18 +4,6 @@ import styles from "./Divider_Colors.module.css"
 const Divider_Colors = () => {
   return (
     <div className={styles.container}>
-      {/* <div className={styles.container__block}>
-        <div className="theme-bg-main"></div>
-      </div>
-      <div className={styles.container__block}>
-        <div className="theme-bg-accent1"></div>
-      </div>
-      <div className={styles.container__block}>
-        <div className="theme-bg-main"></div>
-      </div>
-      <div className={styles.container__block}>
-        <div className="theme-bg-accent2"></div>
-      </div>
       <div className={styles.container__block}>
         <div className="theme-bg-main"></div>
       </div>
@@ -30,24 +18,18 @@ const Divider_Colors = () => {
       </div>
       <div className={styles.container__block}>
         <div className="theme-bg-main"></div>
-      </div> */}
-      <div className={styles.container__block}>
-        <div>Hello test</div>
       </div>
       <div className={styles.container__block}>
-        <div>Hello test</div>
+        <div className="theme-bg-accent1"></div>
       </div>
       <div className={styles.container__block}>
-        <div>Hello test</div>
+        <div className="theme-bg-main"></div>
       </div>
       <div className={styles.container__block}>
-        <div>Hello test</div>
+        <div className="theme-bg-accent2"></div>
       </div>
       <div className={styles.container__block}>
-        <div>Hello test</div>
-      </div>
-      <div className={styles.container__block}>
-        <div>Hello test</div>
+        <div className="theme-bg-main"></div>
       </div>
     </div>
   )
