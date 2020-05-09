@@ -3,7 +3,7 @@ import styles from "./Header_Simple.module.css";
 import Link  from "gatsby-link";
 import { window } from "browser-monads";
 import logo from "./MikkelCodes.png";
-import ResponsiveNav from "./../ResponsiveNav/ResponsiveNav";
+
 
 
 class Header_Simple extends Component {
@@ -43,9 +43,6 @@ class Header_Simple extends Component {
 
         return ( <>
             
-            <ResponsiveNav
-                navLinks={ navLinks }
-                            />
             <div className={styles.mainNav}>
             <div className={styles.container}>
                 <div className={styles.subcontainer}>
