@@ -48,7 +48,7 @@ class Header_Simple extends Component {
                 <div className={styles.subcontainer}>
                     <div className={styles.logocontainer}>
                         <img className={styles.logo} src={logo} />
-                        <p className={styles.tagline} style={{ display: "none" }} ><strong>Mikkel Klokkerud // Gatsby & GraphQL</strong></p>
+                        <p className={styles.tagline} style={{ display: "none" }} ><strong>Mikkel Klokkerud // Gatsby and GraphQL</strong></p>
                     </div>
                     <nav className={styles.nav} style={{ backgroundColor: this.state.mainNavBg, color: this.state.mainNavColor }} >
                         <ul className={styles.list}>
@@ -68,33 +68,5 @@ class Header_Simple extends Component {
          );
     }
 }
-
-const navLinks = [
-    {
-        text: "Archive",
-        path: "/",
-        icon: "ion-ios-megaphone",
-        id: 1
-    },
-    {
-        text: "Web Apps",
-        path: "/webapps",
-        icon: "ion-ios-hammer",
-        id: 2
-    },
-    {
-        text: "Tutorials",
-        path: "/tutorials",
-        icon: "ion-ios-paper",
-        id: 3
-    },
-    {
-        text: "About",
-        path: "/about",
-        icon: "ion-ios-mail",
-        id: 4
-    },
-   
-]
 
 export default Header_Simple;
