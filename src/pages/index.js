@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby";
 import Post from "./../components/Post/Post"
 import Layout from "../components/layout"
-import Post_Smashing from "./../components/Post_Smashing/Post_Smashing";
 import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
 import MailChimpForm from "./../components/MailChimpForm/MailChimpForm";
 import SEO from "./../components/seo";
