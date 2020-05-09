@@ -9,7 +9,7 @@
   color: white;
 
   font-family: -apple-system, Helvetica, Arial, sans-serif;
-  padding: 6vw 15vw;
+  padding: 7vw 10%;
 }
 
 .thankYou {
@@ -31,7 +31,8 @@
 .wrapper {
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: 580px;
+  margin-bottom: 20px;
 }
 
 .emailListForm input {
@@ -42,34 +43,51 @@
 
 .emailListForm button,
 .emailListForm input {
-  padding: 0.8rem 1.5rem;
-  height: auto;
+
   margin-bottom: 0;
+  padding: 12px 1rem;
+  font-size: 18px;
+
 }
 
 .emailListForm button {
   display: inline-block;
-  width: 30%;
-  min-width: 141px;
-
+  width: 5rem;
+  min-width: 160px;
   border: none;
-  background-image: none;
-  background-color: orange;
-  color: white;
-
+  color: #76eba5;
   letter-spacing: 1px;
   transition: all 0.1s linear;
+  background: black;
+  border: 2px solid #76eba5;
 }
 .emailListForm button:hover {
   cursor: pointer;
-  background: darken(orange, 15%);
 }
 
+@media screen and (max-width: 1300px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+  }
+  .emailListForm button,
+  .emailListForm input {
+    padding: 8px 1rem;
+    height: auto;
+    font-size: 16px;
+  }
+  .wrapper {
+    max-width: 60vw;
+    min-width: 45vw;
+  }
+}
 
 @media screen and (max-width: 1000px) {
   .emailListForm button,
   .emailListForm input {
-    padding: 0.5rem 1rem;
+    padding: 8px 12px;
     height: auto;
     font-size: 16px;
   }

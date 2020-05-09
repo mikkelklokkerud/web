@@ -17,14 +17,16 @@
   justify-content: space-between;
   width: 100%;
   padding: 0;
+  /* display: none; */
 }
 
 .nav {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   height: 12vh;
   align-items: center;
+
 }
 
 .logocontainer {
@@ -35,17 +37,19 @@
   display: flex;
   align-items: center;
   padding-left: 5vw;
+  /* display:none; */
 
 }
 
-.tagline {
+.tagline p {
   margin: 0;
   padding: 0;
+  display: none;
 }
 
 .list {
-  margin: 0;
   padding: 0;
+  margin-right: 10vw;
   }
 
 .burgerMenu {
@@ -59,8 +63,7 @@
 .list p {
   display: inline;
   padding: 0;
-  margin: 0;
-  margin-right: 3vw;
+  margin-left: 3vw;
 }
 
 .link__active {

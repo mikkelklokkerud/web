@@ -15,11 +15,11 @@ class Post extends Component {
       <Link to={`/blog/${slug}`}>
         <div className={styles.container}>
           <div className={styles.subcontainer}>
-            <img
+            {/* <img
               className={styles.img}
               src={`https:${featuredImage}`}
               alt={title.rendered}
-            />
+            /> */}
             <div className={styles.content}>
               <div className={styles.respOverlay}>
               <h2 className={styles.title}>{title}</h2>

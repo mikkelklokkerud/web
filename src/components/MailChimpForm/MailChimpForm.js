@@ -22,7 +22,7 @@ class MailChimpForm extends Component {
         this.setState({
           email: "",
           setEmail: true,
-          msg: " SUBSCRIBED. THANKS!",
+          msg: " Subscribed. THANKS!",
         })
       )
 
@@ -39,9 +39,9 @@ class MailChimpForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className={styles.emailListForm}>
-        <h2 className={styles.title}>Gatsby Kickstarter Course coming soon!</h2>
+        <h2 className={styles.title}>Gatsby Kickstarter Course coming 15.05.20</h2>
         <h3 className={styles.subtitle}>
-          Subscribers will get it for <span className="accent1">FREE</span> -
+          Subscribers will get it for <span className="accent2">FREE</span> -
           {this.state.msg}<span className="accent1"></span>
         </h3>
         <div className={styles.wrapper}>
@@ -52,7 +52,7 @@ class MailChimpForm extends Component {
             onChange={this.handleEmailChange}
             value={this.state.email}
           />
-          <button type="submit">Teach Me</button>
+          <button className="theme-bg-accent2" type="submit">Teach Me</button>
         </div>
         <p className={styles.thankYou}>{this.state.thankYouMsg}</p>
       </form>

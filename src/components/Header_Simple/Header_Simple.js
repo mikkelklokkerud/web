@@ -51,13 +51,13 @@ class Header_Simple extends Component {
                 <div className={styles.subcontainer}>
                     <div className={styles.logocontainer}>
                         <img className={styles.logo} src={logo} />
-                        <p className={styles.tagline} style={{ display: this.state.displayTagline }} ><strong>Mikkel Klokkerud // React Developer</strong></p>
+                        <p className={styles.tagline} style={{ display: "none" }} ><strong>Mikkel Klokkerud // Gatsby & GraphQL</strong></p>
                     </div>
                     <nav className={styles.nav} style={{ backgroundColor: this.state.mainNavBg, color: this.state.mainNavColor }} >
                         <ul className={styles.list}>
                             <Link to={"/"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.length < 30 ? styles.link__active : styles.link__inactive}>ARCHIVE</p></Link>
-                            <Link to={"/webapps"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("webapps") > 0 ? styles.link__active : styles.link__inactive}>WEB APPS</p></Link>
-                            <Link to={"/tutorials"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("tutorials") > 0 ? styles.link__active : styles.link__inactive}>TUTORIALS</p></Link>
+                            {/* <Link to={"/webapps"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("webapps") > 0 ? styles.link__active : styles.link__inactive}>WEB APPS</p></Link> */}
+                            {/* <Link to={"/tutorials"}><p style={{ color: this.state.mainNavColor }} className={window.location.href.indexOf("tutorials") > 0 ? styles.link__active : styles.link__inactive}>TUTORIALS</p></Link> */}
                             <Link to={"/about"}><p  style={{ color: this.state.mainNavColor, borderBottom: "1px solid white" }} className={window.location.href.indexOf("about") > 0 ? styles.link__active : styles.link__inactive}>ABOUT</p></Link>
                         </ul>
                         <div className={styles.burgerMenu}>

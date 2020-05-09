@@ -45,7 +45,7 @@ const Blog = props => {
   const disqusConfig = {
     identifier: props.data.contentfulBlogPost.id,
     title: props.data.contentfulBlogPost.title.split(" ").join("-"),
-    url: "https://mikkelcodes.com",
+    url: `https://mikkelcodes.com/blog/${props.data.contentfulBlogPost.title.split(" ").join("-")}`,
   }
 
   console.log(props.data.contentfulBlogPost.title.split(" ").join("-"))
@@ -63,7 +63,7 @@ const Blog = props => {
 
       <div className={styles.container}>
         <div className={styles.content}>
-          <h1>{props.data.contentfulBlogPost.title}</h1>
+          <h2>{props.data.contentfulBlogPost.title}</h2>
           <small>{props.data.contentfulBlogPost.publishedDate}</small>
           <small>Written by: Mikkel Klokkerud</small>
           {documentToReactComponents(

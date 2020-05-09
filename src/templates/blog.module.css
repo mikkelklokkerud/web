@@ -19,6 +19,11 @@
   color: black;
 }
 
+.content p {
+  padding: 0;
+  margin: 27px 0;
+}
+
 .content img {
   max-width: 610px;
   height: auto;
