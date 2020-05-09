@@ -4,7 +4,7 @@ import styles from "./Divider_Colors.module.css"
 const Divider_Colors = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.container__block}>
+      {/* <div className={styles.container__block}>
         <div className="theme-bg-main"></div>
       </div>
       <div className={styles.container__block}>
@@ -30,6 +30,24 @@ const Divider_Colors = () => {
       </div>
       <div className={styles.container__block}>
         <div className="theme-bg-main"></div>
+      </div> */}
+      <div className={styles.container__block}>
+        <div>Hello test</div>
+      </div>
+      <div className={styles.container__block}>
+        <div>Hello test</div>
+      </div>
+      <div className={styles.container__block}>
+        <div>Hello test</div>
+      </div>
+      <div className={styles.container__block}>
+        <div>Hello test</div>
+      </div>
+      <div className={styles.container__block}>
+        <div>Hello test</div>
+      </div>
+      <div className={styles.container__block}>
+        <div>Hello test</div>
       </div>
     </div>
   )
