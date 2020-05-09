@@ -6,13 +6,12 @@ import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
 import MailChimpForm from "./../components/MailChimpForm/MailChimpForm";
 import SEO from "./../components/seo";
 import styles from "./index.module.css";
-// import Divider_Colors from "../components/Divider/Divider_colors";
+import Divider_Colors from "../components/Divider/Divider_colors";
 
 const IndexPage = ({ data }) => {
   const featuredType = "Post";
   const featured = data.allContentfulBlogPost.edges.filter(edge => edge.node.featured)
   let allPosts = data.allContentfulBlogPost.edges;
-  // let latestPosts = data.allContentfulBlogPost.edges.slice(0, 2);
   return (
     <>
       <Layout>
@@ -30,9 +29,9 @@ const IndexPage = ({ data }) => {
           featuredType={featuredType}
           page={"ARCHIVE"}
         />
-        {/* <Divider_Colors /> */}
+        <Divider_Colors />
         <MailChimpForm />
-        {/* <Divider_Colors /> */}
+        <Divider_Colors />
         <h1 style={{ textAlign: "center", marginTop: "100px", marginBottom: "30px" }}>Latest Posts</h1>    
         {allPosts.map(post => (
           <Post

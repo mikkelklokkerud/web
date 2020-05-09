@@ -30,7 +30,7 @@ const AboutIntro = () => {
 		return (<>
 		<div className={styles.parent}>
 			<div  className={styles.container}>
-				<img className={styles.leftcontainer__img1} src={`http:${aboutImageUrl}`} alt="hello" />
+				<img className={styles.leftcontainer__img1} src={`https:${aboutImageUrl}`} alt="hello" />
 				<div className={styles.container__rightcontainer}>
 					<div className={styles.rightcontainer__textcontainer}>
 						<h1 className={styles.textcontainer__title}>{introTitle}</h1>
