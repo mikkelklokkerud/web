@@ -35,21 +35,3 @@
    
     }
 }
-@media only screen and (max-width: 759px) {
-    
-
-    .latest__title {
-        margin-top: 50px;
-    }
-
-    .latest__container {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5%;
-    }
-    .latest__postscontainer {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-}

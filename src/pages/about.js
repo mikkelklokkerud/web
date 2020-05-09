@@ -18,7 +18,7 @@ const AboutPage = () => {
 
       <div className={styles.container}>
         <div className={styles.intro}>
-          <h2>The blog</h2>
+          <h2 className="">The blog</h2>
 
           <p>A couple questions:</p>
           <ul>
