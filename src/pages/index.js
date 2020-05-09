@@ -33,25 +33,7 @@ const IndexPage = ({ data }) => {
         <Divider_Colors />
         <MailChimpForm />
         <Divider_Colors />
-        <h1 style={{ textAlign: "center", marginTop: "100px", marginBottom: "30px" }}>Latest Posts</h1>
-        {/* <div className={styles.latest__container}>
-          <h1 className={styles.latest__title}>Latest posts.</h1>
-          <div className={styles.latest__postscontainer}>
-        {latestPosts.map(post => (
-        <Post_Smashing
-            key={post.node.id}
-            title={post.node.title}
-            slug={post.node.slug}
-            published={post.node.publishedDate}
-            shortDescription={post.node.shortDescription}
-            publishedDate={post.node.publishedDate}
-            featuredImage={post.node.featuredImage.resize.src}
-          />
-          ))}
-          </div>
-          </div> */}
-        
-
+        <h1 style={{ textAlign: "center", marginTop: "100px", marginBottom: "30px" }}>Latest Posts</h1>    
         {allPosts.map(post => (
           <Post
             key={post.node.id}

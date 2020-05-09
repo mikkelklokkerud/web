@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./AboutIntro.module.css";
-import image1 from "../../images/about2bw.jpg";
 import { useStaticQuery, graphql } from "gatsby";
 
 const introText1 =
