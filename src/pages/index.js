@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
         <MailChimpForm />
         
         <Divider_Colors />
-        <h1 style={{ textAlign: "center", marginTop: "100px", marginBottom: "0px" }}>Archive</h1>    
+        <h1 className={styles.archive__Title} style={{ textAlign: "center", marginTop: "100px", marginBottom: "0px" }}>Archive</h1>    
         {allPosts.map(post => (
           <Post
             key={post.node.id}

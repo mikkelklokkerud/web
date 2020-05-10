@@ -109,4 +109,8 @@
         padding-top: 35px;
     }
 
+    .textcontainer__text{
+      margin-bottom: 20px;
+    }
+
 }

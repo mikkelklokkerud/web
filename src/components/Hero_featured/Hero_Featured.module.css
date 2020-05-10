@@ -130,7 +130,6 @@ p.link-more {
   .left {
     flex: 1.2;
   }
-
 }
 
 @media only screen and (max-width: 991px) {
@@ -138,42 +137,31 @@ p.link-more {
   .container {
     
     flex-direction: column;
-
     height: 50vh;
-
+    margin-top: 0;
   }
 
   .logo {
     max-width: 450px;
+    width: 65%;
+    margin-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  p.tagline {
+    position: relative;
+    margin: 0;
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
   }
 
   .left {
-    margin-top: -5vh;
-  }
+    margin-top: 0;   
+}
 
   .right {
-    width: 100%;
-    justify-content: center;
-    display: flex;
-  }
-
-  .left, .right {
-    flex: unset;
-  }
-
-  .tagline {
-    margin-top: 6vh;
-    font-size: 20px;
-  }
-
-  .content {
-    border: unset;
-    margin-top: 10vh;
-    padding: 0 5%;
-  }
-
-  .excerpt {
-    line-height: 1.5em;
+    display: none;
   }
 
 }
