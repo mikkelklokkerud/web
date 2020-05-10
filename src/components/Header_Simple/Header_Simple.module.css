@@ -50,6 +50,7 @@
 .list {
   padding: 0;
   margin-right: 10vw;
+  
   }
 
 .burgerMenu {
@@ -63,6 +64,7 @@
 .list p {
   display: inline;
   padding: 0;
+  font-size: 16px;
   margin-left: 3vw;
 }
 

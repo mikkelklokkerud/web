@@ -1,19 +1,24 @@
 
 
 .container {
-  height: 97vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: -12vh;
+  /* background-image: url("./../../images/strokes_bg2.png"); */
+  filter: contrast(110%);
+  background-blend-mode: lighten;
+  background-color: rgba(255, 255, 255, 0.303);
+  background-size: contain;
+
 }
 
 .tagline {
-  font-size: 20px;
+  font-size: 30px;
   position: absolute;
   padding:0;
   margin-top: 5rem;
-  
 }
 
 .page {
@@ -93,7 +98,6 @@ p.link-more {
   }
   .tagline {
     margin-top: 4rem;
-    font-size: 1rem; 
   }
   .content {
     padding-right: 50px;
@@ -105,14 +109,14 @@ p.link-more {
   .container {
     justify-content: center;
   }
-
+  
   .logo {
     max-width: 45vw;
     min-width: unset;
   }
-
+  
   .tagline {
-    font-size: 18px;
+    font-size: 20px; 
     margin-top: 70px;
   }
 
@@ -128,7 +132,7 @@ p.link-more {
   }
 
   .container p {
-    font-size: 18px;
+
   }
 }
 

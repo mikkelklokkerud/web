@@ -19,10 +19,7 @@ const IndexPage = ({ data }) => {
           title="Blog" 
           keywords={["web developer"], ["developer"], ["React"], ["gatsby"]}
         />
-
-        
-
-        <Hero_Featured 
+                <Hero_Featured 
           key={featured[0].node.id}
           title={featured[0].node.title}
           slug={featured[0].node.slug}
@@ -31,10 +28,12 @@ const IndexPage = ({ data }) => {
           featuredType={featuredType}
           page={"ARCHIVE"}
         />
+        
         <Divider_Colors />
         <MailChimpForm />
+        
         <Divider_Colors />
-        <h1 style={{ textAlign: "center", marginTop: "100px", marginBottom: "0px", textDecoration: "underline" }}>Archive</h1>    
+        <h1 style={{ textAlign: "center", marginTop: "100px", marginBottom: "0px" }}>Archive</h1>    
         {allPosts.map(post => (
           <Post
             key={post.node.id}
