@@ -6,12 +6,6 @@
   align-items: center;
   justify-content: center;
   margin-top: -12vh;
-  /* background-image: url("./../../images/strokes_bg2.png"); */
-  filter: contrast(110%);
-  background-blend-mode: lighten;
-  background-color: rgba(255, 255, 255, 0.303);
-  background-size: contain;
-
 }
 
 .tagline {
@@ -70,7 +64,11 @@
 }
 
 .date {
-  margin-bottom: 0;
+  margin-bottom: 10px;
+}
+
+.excerpt {
+  padding: 0;
 }
 
 .btns button {
@@ -84,8 +82,7 @@
 }
 
 .title {
-  margin: 30px 0 10px -2px;
-  text-decoration: underline;
+  margin: 30px 0 30px -2px;
 }
 
 p.link-more {

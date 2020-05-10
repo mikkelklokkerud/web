@@ -21,6 +21,7 @@
   margin-top: 0;
   margin-bottom: 9px;
   padding-top: 0;
+
 }
 
 .img {
@@ -39,9 +40,10 @@
 
 
 .title {
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   margin-top: -11px;
-  text-decoration: underline;
+  line-height: 1.25em;
+  /* text-decoration: underline; */
 }
 
 .subtitle {

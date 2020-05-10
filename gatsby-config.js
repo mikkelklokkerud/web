@@ -41,16 +41,25 @@ module.exports = {
           endpoint: `https://mikkelcodes.us19.list-manage.com/subscribe/post?u=a6380a8628ee8997c2d6805c7&amp;id=f0c9f84372`,
       },
   },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `baskerville\:400`,
-          `muli\:300,700`,
-          `baloo tamudu 2\:400,700`
-        ]
-      }
+  {
+    resolve: `gatsby-plugin-prefetch-google-fonts`,
+    options: {
+      fonts: [
+        {
+          family: `Source Sans Pro`,
+          variants: [`300`, `400`, `700`, `900`],
+        },
+        {
+          family: `Oswald`,
+          variants: [`300`, `400`, `700`, `200`],
+        },
+        {
+          family: `Playfair Display`,
+          variants: [`400`, `700`, `900`],
+        },
+      ],
     },
+  },
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
@@ -81,5 +90,6 @@ module.exports = {
       },
     },
   ],
+  
 }
 

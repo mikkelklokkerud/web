@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./AboutIntro.module.css";
 import { useStaticQuery, graphql } from "gatsby";
+// import image from "./../../images/about2bw.jpg"
+
 
 const introText1 =
 "Hi, my name is Mikkel Klokkerud. I am a web developer and tech blogger from Norway."
@@ -46,6 +48,7 @@ const AboutIntro = () => {
 						<p className={styles.textcontainer__text}>{introText2}</p>
 						<p className={styles.textcontainer__text}>{introText3}</p>
 						<p className={styles.textcontainer__text}>{introText4}</p>
+						{/* <img src={image} style={{ maxWidth: "600px" }} /> */}
 					</div>
 		
 				
