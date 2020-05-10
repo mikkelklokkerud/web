@@ -76,26 +76,56 @@
 @media only screen and (max-width: 1000px) {
 
   .mainNav {
-    display: none;
+    /* display: none; */
+  }
+
+  .container {
+    background: black;
   }
 
   .subcontainer {
-    width: 520px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .logo {
-    display: block;
+    display: none;
     width: 65%;
     padding-top: 0;
     margin: 0;
   }
 
   .list {
-    display: none;
+
+    margin:0;
+
+  }
+
+  .nav {
+    justify-content: center;
+    background: black !important;
+  }
+
+  .list p {
+    margin-left: 3vh;
+    margin-right: 3vh;
+    color: white !important;
+    border: 2px solid white;
+    border-radius: 5px;
+    min-width: 10vw;
+    padding: 5px 15px;
+  }
+  
+  
+  
+  .list li {
+    
+    min-width: 15vw;
   }
 
   .logocontainer {
-    flex: 2;
+    display: none;
   }
 
   .imgcontainer {
