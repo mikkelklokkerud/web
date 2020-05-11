@@ -73,3 +73,16 @@
 
 
 // export default TutorialsPage
+
+import React, { Component } from 'react';
+
+class PlaceholderComponent extends Component {
+    state = {  }
+    render() { 
+        return ( <div>
+            
+        </div> );
+    }
+}
+ 
+export default PlaceholderComponent;
