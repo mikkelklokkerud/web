@@ -31,7 +31,7 @@ const encode = (data) => {
     render() {
       const { name, email, message } = this.state;
       return (
-        <form  onSubmit={this.handleSubmit}>
+        <form netlify data-netlify="true"  onSubmit={this.handleSubmit}>
           <p>
             <label>
               Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
@@ -47,7 +47,9 @@ const encode = (data) => {
               Message: <textarea name="message" value={message} onChange={this.handleChange} />
             </label>
           </p>
-          <div ></div>
+          <div class="field">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
           <p>
             <button type="submit">Send</button>
           </p>
