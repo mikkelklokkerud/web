@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
           page={"ARCHIVE"}
         />
 
-        <ContactForm />
+        {/* <ContactForm /> */}
         
         <Divider_Colors />
         <MailChimpForm />
