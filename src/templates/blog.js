@@ -33,8 +33,11 @@ const Blog = props => {
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
+
+        console.log(node.data.target)
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
+
         return <img alt={alt} src={url} />
       },
     },
