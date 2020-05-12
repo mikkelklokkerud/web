@@ -1,19 +1,18 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
-import Layout from '../../components/Layout'
 import Recaptcha from 'react-google-recaptcha';
 import styles from "./NetlifyForm.module.css";
 
-// const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY
+const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY
 
-// if (typeof RECAPTCHA_KEY === 'undefined') {
-//   throw new Error(`
-//   Env var GATSBY_APP_SITE_RECAPTCHA_KEY is undefined! 
-//   You probably forget to set it in your Netlify build environment variables. 
-//   Make sure to get a Recaptcha key at https://www.netlify.com/docs/form-handling/#custom-recaptcha-2-with-your-own-settings
-//   Note this demo is specifically for Recaptcha v2
-//   `)
-// }
+if (typeof RECAPTCHA_KEY === 'undefined') {
+  throw new Error(`
+  Env var GATSBY_APP_SITE_RECAPTCHA_KEY is undefined! 
+  You probably forget to set it in your Netlify build environment variables. 
+  Make sure to get a Recaptcha key at https://www.netlify.com/docs/form-handling/#custom-recaptcha-2-with-your-own-settings
+  Note this demo is specifically for Recaptcha v2
+  `)
+}
 
 function encode(data) {
   return Object.keys(data)
@@ -46,9 +45,11 @@ export default class Index extends React.Component {
       .catch((error) => alert(error))
   }
 
+  
   render() {
+    const recaptchaRef = React.createRef()
     return (
-      // <Layout>
+
         <section className={styles.section}>
           <div className={styles.container}>
             <div className={styles.content}>
@@ -61,7 +62,7 @@ export default class Index extends React.Component {
                 action="/contact/thanks/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                // data-netlify-recaptcha="true"
+                data-netlify-recaptcha="true"
                 onSubmit={this.handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
@@ -114,7 +115,7 @@ export default class Index extends React.Component {
                       required={true}
                     />
                   </div>
-                  {/* <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} /> */}
+                  <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />
                 </div>
                 <div className="field">
                   <button className={styles.btn} type="submit">
@@ -125,7 +126,6 @@ export default class Index extends React.Component {
             </div>
           </div>
         </section>
-      // {/* </Layout> */}
     )
   }
 }
