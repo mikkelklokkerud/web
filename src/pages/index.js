@@ -7,7 +7,7 @@ import MailChimpForm from "./../components/MailChimpForm/MailChimpForm";
 import SEO from "./../components/seo";
 import styles from "./index.module.css";
 import Divider_Colors from "../components/Divider/Divider_Colors";
-import ContactForm from "./../components/ContactForm/ContactForm";
+
 
  
 
@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
           page={"ARCHIVE"}
         />
 
-        {/* <ContactForm /> */}
+        
         
         <Divider_Colors />
         <MailChimpForm />

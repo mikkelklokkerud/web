@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Layout from "./../components/layout"
 import styles from "./about.module.css"
 import AboutIntro from "./../components/AboutIntro/AboutIntro";
-
+import NetlifyForm from "./../components/NetlifyForm/NetlifyForm";
 
 
 
@@ -77,9 +77,12 @@ const AboutPage = () => {
             </li>
           </ul>
           <br />
-          <p>Thanks for checking out my about page!</p>
+          {/* <p>Thanks for checking out my about page!</p> */}
         </div>
       </div>
+      <div className={styles.container}>
+        <NetlifyForm />
+        </div>
     </Layout>
   )
 }
