@@ -13,7 +13,6 @@ const AboutPage = () => {
     <Layout>
 
       <AboutIntro
-
       />
 
       <div className={styles.container}>
