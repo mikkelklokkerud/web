@@ -54,12 +54,12 @@ export default function Index() {
               
               <h1>Contact</h1>
               <form
-                name="contact"
+                name="Contact-Form-MikkelCodes"
                 method="post"
-                action="/contact/thanks/"
+                action="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                data-netlify-recaptcha="true"
+                // data-netlify-recaptcha="true"
                 onSubmit={handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
