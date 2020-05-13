@@ -1,131 +1,32 @@
-import React from "react";
-import { navigate } from "gatsby";
-import Recaptcha from "react-google-recaptcha";
-import styles from "./NetlifyForm.module.css";
+import React from "react"
+import styles from "./NetlifyForm.module.css"
+import ReCAPTCHA from "react-google-recaptcha";
 
-// const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY
-
-// if (typeof RECAPTCHA_KEY === 'undefined') {
-//   throw new Error(`
-//   Env var GATSBY_APP_SITE_RECAPTCHA_KEY is undefined!
-//   You probably forget to set it in your Netlify build environment variables.
-//   Make sure to get a Recaptcha key at https://www.netlify.com/docs/form-handling/#custom-recaptcha-2-with-your-own-settings
-//   Note this demo is specifically for Recaptcha v2
-//   `)
-// }
-
-function encode(data) {
-	return Object.keys(data)
-		.map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-		.join("&");
-}
-
-export default function Index() {
-	const [state, setState] = React.useState({});
-	// const recaptchaRef = React.createRef()
-
-	const handleChange = (e) => {
-		setState({ ...state, [e.target.name]: e.target.value });
-	};
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		const form = e.target;
-		// const recaptchaValue = recaptchaRef.current.getValue()
-		fetch("/", {
-			method: "POST",
-			headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			body: encode({
-				"form-name": form.getAttribute("name"),
-				// 'g-recaptcha-response': recaptchaValue,
-				...state,
-			}),
-		})
-			.then(() => navigate(form.getAttribute("action")))
-			.catch((error) => alert(error));
-	};
-
-	return (
-
-			<section className={styles.section}>
-          <div className={styles.container}>
-            <div className={styles.content}>
-
-              
-              <h1>Contact</h1>
-              <form
-                name="Contact-Form-MikkelCodes"
-                method="post"
-                action="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                // data-netlify-recaptcha="true"
-                onSubmit={handleSubmit}
-              >
-                <input type="hidden" name="form-name" value="contact" />
-                <div hidden>
-                  <label>
-                    Don’t fill this out:{' '}
-                    <input name="bot-field" onChange={handleChange} />
-                  </label>
-                </div>
-                <div className="field">
-                  <label className="label" htmlFor={'name'}>
-                    Your name
-                  </label>
-                  <div className="control">
-                    <input
-                      className={styles.input}
-                      type={'text'}
-                      name={'name'}
-                      onChange={handleChange}
-                      id={'name'}
-                      required={true}
-                    />
-                  </div>
-                </div>
-                <div className="field">
-                  <label className="label" htmlFor={'email'}>
-                    Email
-                  </label>
-                  <div className={styles.field}>
-                    <input
-                      className={styles.input}
-                      type={'email'}
-                      name={'email'}
-                      onChange={handleChange}
-                      id={'email'}
-                      required={true}
-                    />
-                  </div>
-                </div>
-                <div className={styles.field}>
-                  <label className="label" htmlFor={'message'}>
-                    Message
-                  </label>
-                  <div className="control">
-                    <textarea
-                      className={styles.textarea}
-                      name={'message'}
-                      onChange={handleChange}
-                      id={'message'}
-                      required={true}
-                    />
-                  </div>
-                  {/* <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} /> */}
-                </div>
-                <div className="field">
-                  <button className={styles.btn} type="submit">
-                    Send
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </section>
-
-	);
-}
+const NetlifyForm = () => (<>
+  
+  <div className={styles.section}></div>
+  <div className={styles.container}></div>
+      <h1 className="accent1">#contact</h1>
+      <p style={{ paddingTop: 0, marginTop: -15 }}>Please reach out if there is anything at all! I will do my best to revert back ASAP.</p>
+      <form name="Contact Form" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+        <input type="hidden" name="form-name" value="Contact Form" />
+        <div className={styles.inputDiv}>
+          <label className={styles.label}>Your Name:</label>
+          <input className={styles.field} type="email" name="email" />
+        </div>
+        <div className={styles.inputDiv}>
+          <label className={styles.label}>Your Email:</label>
+          <input className={styles.field} type="email" name="email" />
+        </div>
+        <div>
+          <label className={styles.label}>Message:</label>
+          <textarea className={styles.textarea} name="message" />
+        </div>
+        <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} />
+        <button className={styles.btn} type="submit">Send</button>
+      </form>
+ </>
+  )
 
 
-
+export default NetlifyForm

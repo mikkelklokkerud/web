@@ -3,7 +3,6 @@ import Layout from "./../components/layout"
 import styles from "./about.module.css"
 import AboutIntro from "./../components/AboutIntro/AboutIntro";
 import NetlifyForm from "./../components/NetlifyForm/NetlifyForm";
-import ContactForm from "./../components/ContactForm";
 
 
 const AboutPage = () => {
@@ -22,7 +21,7 @@ const AboutPage = () => {
           <h2 className="">The blog</h2>
 
           <p>A couple questions:</p>
-      <ContactForm />
+      
           <ul>
             <li>
               Are you dedicated to become the best web developer you can be?
@@ -80,10 +79,10 @@ const AboutPage = () => {
           </ul>
           <br />
           {/* <p>Thanks for checking out my about page!</p> */}
+      <NetlifyForm />
         </div>
       </div>
       <div className={styles.container}>
-        <NetlifyForm />
         </div>
     </Layout>
   )
