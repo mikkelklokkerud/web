@@ -46,7 +46,14 @@ const Blog = props => {
       },
     },
   }
-
+  let markdown;
+  console.log(props.data.contentfulBlogPost)
+  if (!props.data.contentfulBlogPost.content) {
+    markdown = "<div></div>";
+  } else {
+    markdown = props.data.contentfulBlogPost.content.childMarkdownRemark.html; 
+  }
+  console.log(markdown)
   const disqusShortname = `mikkelcodes`
   const disqusConfig = {
     identifier: props.data.contentfulBlogPost.id,
@@ -76,7 +83,7 @@ const Blog = props => {
             props.data.contentfulBlogPost.body.json,
             options
           )}
-          <div dangerouslySetInnerHTML={{ __html: props.data.contentfulBlogPost.content.childMarkdownRemark.html}} />
+          <div dangerouslySetInnerHTML={{ __html: markdown }} />
         </div>
       </div>
 
