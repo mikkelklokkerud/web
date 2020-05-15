@@ -15,7 +15,11 @@ export const query = graphql`
         json
       }
       seoUrl
-
+      content {
+        childMarkdownRemark {
+          html       
+        }
+      }
       seoTitle
       seoKeywords
       seoAuthor
@@ -72,6 +76,7 @@ const Blog = props => {
             props.data.contentfulBlogPost.body.json,
             options
           )}
+          <div dangerouslySetInnerHTML={{ __html: props.data.contentfulBlogPost.content.childMarkdownRemark.html}} />
         </div>
       </div>
 

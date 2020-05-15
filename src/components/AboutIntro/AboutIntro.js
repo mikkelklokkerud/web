@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./AboutIntro.module.css"
 import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 // import image from "./../../images/about2bw.jpg"
 
 const introText1 =
@@ -12,32 +13,37 @@ const introText3 =
 const introText4 = "Reach me at: contact@mikkelcodes.com"
 const introTitle = "About"
 
+
 const AboutIntro = () => {
   const data = useStaticQuery(graphql`
-    query AboutIntroImageQuery {
-      allContentfulAsset(filter: { title: { eq: "About-Photo-Bw-Gradient" } }) {
-        edges {
-          node {
-            id
-            title
-            fluid {
-              src
-            }
+    query {
+      file(relativePath: { eq: "images/about2bw.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
           }
-        }
+          }
       }
     }
   `)
-  const aboutImageUrl = data.allContentfulAsset.edges[0].node.fluid.src
+  const aboutImageUrl = data
+  console.log(data)
   return (
     <>
       <div className={styles.parent}>
         <div className={styles.container}>
-          <img
+          <div
             className={styles.leftcontainer__img1}
-            src={`https:${aboutImageUrl}`}
-            alt="hello"
-          />
+            // src={`https:${aboutImageUrl}`}
+            // alt="hello"
+            
+          >
+            <Image 
+              fluid={data.file.childImageSharp.fluid}
+              className={styles.leftcontainer__img1}
+              backgroundColor={"black"}
+            />
+          </div>
           <div className={styles.container__rightcontainer}>
             <div className={styles.rightcontainer__textcontainer}>
               <h1 className={styles.textcontainer__title}>

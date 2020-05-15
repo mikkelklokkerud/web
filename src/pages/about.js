@@ -1,12 +1,11 @@
 import React, { Component } from "react"
 import Layout from "./../components/layout"
 import styles from "./about.module.css"
-import AboutIntro from "./../components/AboutIntro/AboutIntro";
-import NetlifyForm from "./../components/NetlifyForm/NetlifyForm";
-
+import AboutIntro from "./../components/AboutIntro/AboutIntro"
+import NetlifyForm from "./../components/NetlifyForm/NetlifyForm"
+import image from "./../images/about2bw.jpg"
 
 const AboutPage = () => {
-
 
   return (
     <Layout>
@@ -15,6 +14,7 @@ const AboutPage = () => {
       />
       
       <div className={styles.container}>
+
 
 
         <div className={styles.intro}>
@@ -78,7 +78,9 @@ const AboutPage = () => {
             </li>
           </ul>
           <br />
-          {/* <p>Thanks for checking out my about page!</p> */}
+
+
+
       <NetlifyForm />
         </div>
       </div>
