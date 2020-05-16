@@ -43,9 +43,9 @@
 }
 
 .btn {
-  color: rgb(73, 191, 255);
+  color: black;
   background: white;
-  border: 2px solid rgb(73, 191, 255);
+  border: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
