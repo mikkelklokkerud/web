@@ -129,6 +129,19 @@ module.exports = {
           family: `Playfair Display`,
           variants: [`400`, `700`, `900`],
         },
+        {
+          family: `Karla`,
+          variants: [`400`, `700`],
+        },
+        {
+          family: `Saira`,
+          variants: [`400`, `700`],
+        },
+        {
+          family: `Roboto`,
+          variants: [`400`, `700`],
+        },
+        
       ],
     },
   },

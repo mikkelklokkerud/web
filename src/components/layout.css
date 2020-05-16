@@ -5,7 +5,7 @@ html {
 
 * {
 	line-height: 1.5em;
-	font-family: "Source Sans Pro"
+
 }
 
 body {
@@ -15,34 +15,45 @@ body {
 }
 
 h1 {
-	font-size: 60px;
+	font-size: 54px;
 	line-height: 1;
 	letter-spacing: -2px !important;
 }
 h2 {
-	font-size: 40px;
+	font-size: 36px;
 	line-height: 50px;
 	letter-spacing: -1px !important;
 }
 h3 {
-	font-size: 30px;
+	font-size: 36px;
 	line-height: 1.25;
 }
 
 h4 {
 	line-height: 1.5;
-	font-size: 20px;
+	font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Saira";
+}
+
+p, button, input, small, a, li {
+	font-family: "Saira";
+	font-weight: 400;
+	font-size: 18px;
 }
 
 p,
 button,
 input,
-img {
+img
+ {
 	line-height: 30px;
 	padding-top: 30px;
 	margin-top: 0;
 	margin-bottom: 30px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 button,
