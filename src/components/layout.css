@@ -124,8 +124,19 @@ small {
 	font-weight: 700;
 }
 
+code.language-text {
+	font-size: 16px;
+}
 
-
+.gatsby-highlight-code-line {
+	background-color: #feb;
+	display: block;
+	margin-right: -1em;
+	margin-left: -1em;
+	padding-right: 1em;
+	padding-left: 0.75em;
+	border-left: 0.25em solid #f99;
+  }
 
 @media only screen and (max-width: 1300px) {
 
