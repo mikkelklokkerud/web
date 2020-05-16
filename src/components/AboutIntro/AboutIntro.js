@@ -9,7 +9,7 @@ const introText2 =
   "In short, I create blazing fast web apps and sites using JamStack and Server-Side Rendering technology. My preferred jam involves Gatsby.js and GraphQL, combined with Netlify for hosting and automation."
 const introText3 =
   "Want an ultra fast and reliable website, coupled with a headless CMS 2020-style? Then, this technology is likely your best bet. And I can help you out."
-const introText4 = "Reach me at: contact@mikkelcodes.com"
+const introText4 = `Contact`
 const introTitle = "About"
 
 
@@ -56,7 +56,7 @@ const AboutIntro = () => {
             </h1>
             <p className={styles.textcontainer__text}>{introText2}</p>
             <p className={styles.textcontainer__text}>{introText3}</p>
-            <p className={styles.textcontainer__text}>{introText4}</p>
+            <a href="#contact"><button className={styles.btn}>{introText4}</button></a>
           </div>
         </div>
       </div>

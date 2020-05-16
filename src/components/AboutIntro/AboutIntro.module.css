@@ -38,6 +38,22 @@
   flex-direction: column;
 }
 
+.btn {
+  padding: 2px;
+}
+
+.btn {
+  color: rgb(73, 191, 255);
+  background: white;
+  border: 2px solid rgb(73, 191, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-top: 1.5rem;
+
+}
+
 .rightcontainer__textcontainer {
   width: 70%;
   margin: 0;

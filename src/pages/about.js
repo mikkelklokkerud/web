@@ -77,11 +77,11 @@ const AboutPage = () => {
               <strong>SSR:</strong> Netlify
             </li>
           </ul>
-          <br />
+          <br id="contact" />
 
 
 
-      <NetlifyForm />
+      <NetlifyForm  />
         </div>
       </div>
       <div className={styles.container}>
