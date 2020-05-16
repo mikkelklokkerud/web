@@ -2,10 +2,9 @@ import React from "react"
 import styles from "./AboutIntro.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-// import image from "./../../images/about2bw.jpg"
 
 const introText1 =
-  "Hi, my name is Mikkel Klokkerud. I am a web developer and tech blogger from Norway."
+  "Hi, my name is Mikkel Klokkerud. I am a Gatsby/GraphQL Developer from Norway."
 const introText2 =
   "In short, I create blazing fast web apps and sites using JamStack and Server-Side Rendering technology. My preferred jam involves Gatsby.js and GraphQL, combined with Netlify for hosting and automation."
 const introText3 =
@@ -33,10 +32,7 @@ const AboutIntro = () => {
       <div className={styles.parent}>
         <div className={styles.container}>
           <div
-            className={styles.leftcontainer__img1}
-            // src={`https:${aboutImageUrl}`}
-            // alt="hello"
-            
+            className={styles.leftcontainer__img1}           
           >
             <Image 
               fluid={data.file.childImageSharp.fluid}
@@ -61,7 +57,6 @@ const AboutIntro = () => {
             <p className={styles.textcontainer__text}>{introText2}</p>
             <p className={styles.textcontainer__text}>{introText3}</p>
             <p className={styles.textcontainer__text}>{introText4}</p>
-            {/* <img src={image} style={{ maxWidth: "600px" }} /> */}
           </div>
         </div>
       </div>
