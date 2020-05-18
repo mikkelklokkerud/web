@@ -78,8 +78,7 @@ const Blog = props => {
         <div className={styles.content}>
           <h2>{props.data.contentfulBlogPost.title}</h2>
           <small>{props.data.contentfulBlogPost.publishedDate}</small>
-          <small>Written by: Mikkel Klokkerud</small>
-          {documentToReactComponents(
+           {documentToReactComponents(
             props.data.contentfulBlogPost.body.json,
             options
           )}

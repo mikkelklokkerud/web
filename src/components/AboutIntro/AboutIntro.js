@@ -2,9 +2,12 @@ import React from "react"
 import styles from "./AboutIntro.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
+
 
 const introText1 =
-  "Hi, my name is Mikkel Klokkerud. I am a Gatsby/GraphQL Developer from Norway."
+  "Hi, my name is Mikkel. I am a Gatsby/GraphQL Developer from Norway."
 const introText2 =
   "In short, I create blazing fast web apps and sites using JamStack and Server-Side Rendering technology. My preferred jam involves Gatsby.js and GraphQL, combined with Netlify for hosting and automation."
 const introText3 =
@@ -56,7 +59,7 @@ const AboutIntro = () => {
             </h1>
             <p className={styles.textcontainer__text}>{introText2}</p>
             <p className={styles.textcontainer__text}>{introText3}</p>
-            <a href="#contact"><button className={styles.btn}>{introText4}</button></a>
+            <button onClick={() => scrollTo('#contact')}>{introText4}</button>
           </div>
         </div>
       </div>

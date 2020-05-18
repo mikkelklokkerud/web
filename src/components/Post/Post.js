@@ -25,7 +25,7 @@ class Post extends Component {
               <h2 className={styles.title}>{title}</h2>
               <div className={styles.writtenByDate}>
                 <small className={styles.date}>
-                {published} | Mikkel Klokkerud 
+                {published}
                 </small>
               </div>
               <div className={styles.excerpt}>{shortDescription}</div>

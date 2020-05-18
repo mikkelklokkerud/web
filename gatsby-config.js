@@ -159,6 +159,7 @@ module.exports = {
         ]
       }
     },
+    `gatsby-plugin-smoothscroll`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
