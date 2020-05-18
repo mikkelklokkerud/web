@@ -18,7 +18,7 @@ class Hero_Featured extends React.Component {
               <h1 className={styles.page}>{page}</h1>
               <h4 className={styles.subtitle}>Featured {featuredType}</h4>
               <h2 className={styles.title}>{title}</h2>
-              <small className={styles.date}>{publishedDate} | Mikkel Klokkerud</small>
+              <small className={styles.date}>{publishedDate}</small>
               <p className={styles.excerpt}>{shortDescription}</p>
             </div>
           </Link>
