@@ -19,7 +19,7 @@ function SEO({ description, lang, meta, title, keywords, image, author, url }) {
             title
             description
             author
-            
+            image
           }
         }
       }
@@ -44,6 +44,11 @@ function SEO({ description, lang, meta, title, keywords, image, author, url }) {
           rel: "canonical",
           href: `https://${url}`
         },
+        {
+          rel: "alternate",
+          href: `https://${url}`,
+          hreflang: "en"
+        },
       ]}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
@@ -52,12 +57,16 @@ function SEO({ description, lang, meta, title, keywords, image, author, url }) {
           content: metaDescription,
         },
         {
-          property: `og:title`,
+          property: `og:title`, 
           content: title,
         },
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: `https:${image}`,
         },
         {
           property: `og:type`,

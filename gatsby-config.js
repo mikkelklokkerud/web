@@ -7,9 +7,10 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `MikkelCodes`,
-    description: `This is a blog about web development, react, gatsby and more. It contains tutorials, blog posts and resources on the topic, created by Mikkel Klokkerud.`,
+    description: `No more waiting with JAMstack apps. Learn how to create secure, dynamic and blazingly fast web apps with JAMstack technology.`,
     author: `Mikkel Klokkerud`,
     url: "https://mikkelcodes.com",
+    image: "src/images/MikkelCodes.png",
   },
   plugins: [
     {

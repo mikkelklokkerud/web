@@ -20,8 +20,6 @@ class Header_Simple extends Component {
             displayTagline: "none",
         }
     } else {
-        console.log("ABOUT PAGE IS CURRENT")
-        console.log(window.location.href.indexOf("-"))
       menuColors = {
         pageIsAbout: true,
         mainNavBg: "black",
