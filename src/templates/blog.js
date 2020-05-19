@@ -38,7 +38,6 @@ const Blog = props => {
     renderNode: {
       "embedded-asset-block": node => {
 
-        console.log(node.data.target)
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
 
@@ -47,13 +46,11 @@ const Blog = props => {
     },
   }
   let markdown;
-  console.log(props.data.contentfulBlogPost)
   if (!props.data.contentfulBlogPost.content) {
     markdown = "<div></div>";
   } else {
     markdown = props.data.contentfulBlogPost.content.childMarkdownRemark.html; 
   }
-  console.log(markdown)
   const disqusShortname = `mikkelcodes`
   const disqusConfig = {
     identifier: props.data.contentfulBlogPost.id,
@@ -61,7 +58,6 @@ const Blog = props => {
     url: `https://mikkelcodes.com/blog/${props.data.contentfulBlogPost.title.split(" ").join("-")}`,
   }
 
-  console.log(props.data.contentfulBlogPost.title.split(" ").join("-"))
 
   return (
     <Layout>

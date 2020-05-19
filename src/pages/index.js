@@ -34,6 +34,7 @@ const IndexPage = ({ data }) => {
 
         
         
+        <div  id="signup" />
         <Divider_Colors />
         <MailChimpForm />
         

@@ -88,6 +88,14 @@
     width: auto;
   }
 
+.container {
+  margin-top: 0;
+}
+
+  .leftcontainer__img1 img {
+    padding-top: 0;
+  }
+
   .container h1,
   .containerbelow h1 {
     margin: 0;
