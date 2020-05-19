@@ -43,11 +43,11 @@ function SEO({ description, lang, meta, title, keywords, image, author, url }) {
         },
         {
           rel: "canonical",
-          href: `https://${url}`
+          href: `https://mikkelcodes.com`
         },
         {
           rel: "alternate",
-          href: `https://${url}`,
+          href: `https://mikkelcodes.com`,
           hreflang: "en"
         },
       ]}
