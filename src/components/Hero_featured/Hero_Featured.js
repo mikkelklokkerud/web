@@ -27,7 +27,7 @@ class Hero_Featured extends React.Component {
                     file(name: { eq: "logo-white-bg" }) {
                       childImageSharp {
                         fluid {
-                          ...GatsbyImageSharpFluid
+                          ...GatsbyImageSharpFluid_tracedSVG
                         }
                       }
                     }
@@ -36,6 +36,8 @@ class Hero_Featured extends React.Component {
                 render={data => (
                 <Image fluid={data.file.childImageSharp.fluid}                 
                   style={{ width: "70%", marginLeft: "auto", marginRight: "auto" }}
+                  alt="MikkelCodes-logo"
+
                   />
                  
                 )}

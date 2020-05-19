@@ -22,7 +22,7 @@ const AboutIntro = () => {
       file(relativePath: { eq: "images/about2bw.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
           }
       }
