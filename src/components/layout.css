@@ -149,6 +149,10 @@ code.language-text {
 	border-left: 0.25em solid #f99;
   }
 
+  .gatsby-image-wrapper img {
+	  padding-top: 0;
+  }
+
 @media only screen and (max-width: 1300px) {
 
 

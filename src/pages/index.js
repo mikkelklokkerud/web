@@ -37,7 +37,6 @@ const IndexPage = ({ data }) => {
         <div  id="signup" />
         <Divider_Colors />
         <MailChimpForm />
-        
         <Divider_Colors />
         <h1 className={styles.archive__Title} style={{ textAlign: "center", marginTop: "100px", marginBottom: "0px" }}>Archive</h1>    
         {allPosts.map(post => (
