@@ -20,6 +20,7 @@ function SEO({ description, lang, meta, title, keywords, image, author, url }) {
             description
             author
             image
+            url
           }
         }
       }
