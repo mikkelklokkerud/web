@@ -9,6 +9,9 @@ import "./burger.css"
 class Header_Simple extends Component {
   render() {
     let menuColors = {}
+    console.log(window.location.href.indexOf("about") < 1);
+    console.log((window.location.href.indexOf("-") > 1 && window.location.href.indexOf("about") > 1));
+    console.log(window.location.href.indexOf("about"));
     if (
       window.location.href.indexOf("about") < 1 ||
       (window.location.href.indexOf("-") > 1 && window.location.href.indexOf("about") > 1)

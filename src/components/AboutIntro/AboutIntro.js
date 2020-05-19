@@ -28,7 +28,7 @@ const AboutIntro = () => {
       }
     }
   `)
-  const aboutImageUrl = data
+
   return (
     <>
       <div className={styles.parent}>
