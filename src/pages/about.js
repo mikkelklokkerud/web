@@ -12,16 +12,10 @@ const AboutPage = () => {
 
       <AboutIntro
       />
-      
       <div className={styles.container}>
-
-
-
         <div className={styles.intro}>
           <h2 className="">The blog</h2>
-
           <p>A couple questions:</p>
-      
           <ul>
             <li>
               Are you dedicated to become the best web developer you can be?
@@ -71,16 +65,13 @@ const AboutPage = () => {
               <strong>Headless CMS:</strong> Contentful or Wordpress
             </li>
             <li>
-              <strong>Design:</strong> Sketch, Adobe Photoshop, Google SketchUp
+              <strong>Design:</strong> Sketch and Adobe Photoshop
             </li>
             <li>
-              <strong>SSR:</strong> Netlify
+              <strong>Hosting:</strong> Netlify
             </li>
           </ul>
           <br id="contact" />
-
-
-
       <NetlifyForm  />
         </div>
       </div>
@@ -89,21 +80,5 @@ const AboutPage = () => {
     </Layout>
   )
 }
-
-// export const PageQuery = graphql`
-// query AboutImageQuery{
-//   allContentfulAsset(filter: {title: {eq: "About-Photo-Bw-Gradient"}}) {
-//     edges {
-//       node {
-//         id
-//         title
-//         fluid {
-//           src
-//         }
-//       }
-//     }
-//   }
-// }
-// `
 
 export default AboutPage

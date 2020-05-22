@@ -58,7 +58,6 @@ const AboutIntro = () => {
             </h1>
             <p className={styles.textcontainer__text}>{introText2}</p>
             <p className={styles.textcontainer__text}>{introText3}</p>
-            <button className={styles.btn} onClick={() => scrollTo('#contact')}>{introText4}</button>
           </div>
         </div>
       </div>

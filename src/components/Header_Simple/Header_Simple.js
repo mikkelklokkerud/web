@@ -6,12 +6,16 @@ import logo from "./MikkelCodes.png"
 import { slide as Menu } from 'react-burger-menu'
 import "./burger.css"
 
+let menuColors = {
+  pageIsAbout: false,
+  mainNavBg: "white",
+  mainNavColor: "black",
+  displayTagline: "none",
+} 
+
 class Header_Simple extends Component {
   render() {
     let menuColors = {}
-    console.log(window.location.href.indexOf("about") < 1);
-    console.log((window.location.href.indexOf("-") > 1 && window.location.href.indexOf("about") > 1));
-    console.log(window.location.href.indexOf("about"));
     if (
       window.location.href.indexOf("about") < 1 ||
       (window.location.href.indexOf("-") > 1 && window.location.href.indexOf("about") > 1)
