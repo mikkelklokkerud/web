@@ -39,7 +39,7 @@ class MailChimpForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className={styles.emailListForm}>
-        <h2 className={styles.title}>Gatsby Kickstarter Course coming 15.05.20!</h2>
+        <h2 className={styles.title}>Gatsby Kickstarter Course coming 30.06.20!</h2>
         <h3 className={styles.subtitle}>
           Subscribers will get <span className="accent2">FREE</span> Access -
           {this.state.msg}<span className="accent1"></span>
