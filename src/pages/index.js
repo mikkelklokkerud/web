@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Post from "./../components/Post/Post"
 import Layout from "../components/layout"
 import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
+import Services from "./../components/Services"
 import MailChimpForm from "./../components/MailChimpForm/MailChimpForm";
 import SEO from "./../components/seo";
 import styles from "./index.module.css";
@@ -32,12 +33,10 @@ const IndexPage = ({ data }) => {
           page={"ARCHIVE"}
         />
 
-        
+        <Services  />
         
         <div  id="signup" />
-        <Divider_Colors />
         <MailChimpForm />
-        <Divider_Colors />
         <h1 className={styles.archive__Title} style={{ textAlign: "center", marginTop: "100px", marginBottom: "0px" }}>Archive</h1>    
         {allPosts.map(post => (
           <Post

@@ -7,7 +7,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 
 const introText1 =
-  "Hi, my name is Mikkel. I am a Gatsby/GraphQL Developer from Norway."
+  "Hi, my name is Mikkel. I am a Gatsby Developer from Norway."
 const introText2 =
   "In short, I create blazing fast web apps and sites using JamStack and Server-Side Rendering technology. My preferred jam involves Gatsby.js and GraphQL, combined with Netlify for hosting and automation."
 const introText3 =

@@ -72,9 +72,9 @@ const AboutPage = () => {
             </li>
           </ul>
           <br id="contact" />
-      <NetlifyForm  />
         </div>
       </div>
+      <NetlifyForm  />
       <div className={styles.container}>
         </div>
     </Layout>

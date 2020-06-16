@@ -45,8 +45,6 @@ class Header_Simple extends Component {
                 <Menu right>
                     <Link to={"/"}>Archive</Link>
                     <Link to={"/about"}>About</Link>
-                    <Link to={"/about/#contact"}>Contact</Link>
-                    <Link to={"/#signup"}>Subscribe</Link>
                 </Menu>
                 </div>
               </div>

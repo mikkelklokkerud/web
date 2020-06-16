@@ -66,6 +66,13 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-background-image',
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: '/:',
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-163172180-1",
@@ -86,6 +93,7 @@ module.exports = {
           variants: [`400`, `700`],
         },
       ],
+      fontDisplay: "swap",
     },
   },
     {
@@ -105,6 +113,7 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
