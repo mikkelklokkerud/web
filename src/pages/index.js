@@ -6,6 +6,7 @@ import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
 import Services from "./../components/Services"
 import MailChimpForm from "./../components/MailChimpForm/MailChimpForm";
 import SEO from "./../components/seo";
+import NetlifyForm from "./../components/NetlifyForm/NetlifyForm";
 import styles from "./index.module.css";
 import Divider_Colors from "../components/Divider/Divider_Colors";
 
@@ -49,6 +50,7 @@ const IndexPage = ({ data }) => {
             featuredImage={post.node.featuredImage.resize.src}
           />
         ))}
+        <NetlifyForm />
       </Layout>
     </>
   )

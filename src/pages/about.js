@@ -35,37 +35,37 @@ const AboutPage = () => {
           </p>
           <h2>My background</h2>
           <ul>
-            <li>2013: Started making Wordpress websites as a side hustle.</li>
+            <li><strong>2013:</strong> Started making Wordpress websites as a side hustle.</li>
             <li>
-              2014-2017: Bachelor in Business and Entrepreneurship from
+              <strong>2014-2017:</strong> Bachelor in Business and Entrepreneurship from
               Norwegian Business School.
             </li>
             <li>
-              2017 - 2020: Worked as a project management consultant in Kenya
+              <strong>2017 - 2020:</strong> Worked as a project management consultant in Kenya
               and Madagascar. Managed projects co-financed by Samsung
               Electronics and The World Bank.
             </li>
             <li>
-              2020: Web Development goes from being a side hustle to my main
+              <strong>2020:</strong> Web Development goes from being a side hustle to my main
               hustle! Jamstack for the win!
             </li>
           </ul>
           <h2>Web dev preferences</h2>
           <ul>
             <li>
-              <strong>JS library:</strong> React and Gatsby
+              <strong>JS library:</strong>React and Gatsby
             </li>
             <li>
-              <strong>Styling:</strong> CSS Modules
+              <strong>Styling:</strong>TailwindCSS or CSS Modules
             </li>
             <li>
-              <strong>Back-end:</strong> Node.js and Express
+              <strong>Back-end:</strong> Node.js with Express
             </li>
             <li>
-              <strong>Headless CMS:</strong> Contentful or Wordpress
+              <strong>Headless CMS:</strong> Contentful or Sanity
             </li>
             <li>
-              <strong>Design:</strong> Sketch and Adobe Photoshop
+              <strong>Wireframing:</strong> Sketch
             </li>
             <li>
               <strong>Hosting:</strong> Netlify

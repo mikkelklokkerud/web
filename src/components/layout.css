@@ -125,6 +125,39 @@ code.language-text {
 	font-size: 16px;
 }
 
+ul li {
+	list-style-type: disc;
+	margin-left: 30px
+}
+ol li {
+	list-style-type: decimal;
+	margin-left: 30px
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+ul li li {
+	list-style-type: circle;
+	margin-top: 5px;
+}
+
+ul li a {
+	color: rgb(135, 40, 0)
+}
+
+ul li a:hover {
+	text-decoration: underline;
+}
+
+p a {
+	color: rgb(135, 40, 0);
+}
+p a:hover {
+	text-decoration: underline;
+}
+
 .gatsby-highlight-code-line {
 	background-color: #feb;
 	display: block;

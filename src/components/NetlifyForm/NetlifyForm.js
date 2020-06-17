@@ -17,7 +17,7 @@ const NetlifyForm = () => (<>
             id="contact"
             style={{ background: `black` }}
           >
-            <div className="max-w-twelve my-25 w-5/6 md:w-4/6 flex py-12 flex-col">
+            <div className="max-w-twelve my-12 w-5/6 md:w-4/6 flex py-12 flex-col">
               <h2 className="text-center text-white text-3xl">Reach out.</h2>
               <h2 className="text-center text-white mb-6 text-lg">I normally respond within 24hrs.</h2>
               <div className="flex flex-col md:flex-row min-w-full justify-center">
@@ -30,7 +30,7 @@ const NetlifyForm = () => (<>
                   }}
                 >
                   <input
-                    className="mb-5 rounded w-full"
+                    className="mb-3 rounded w-full"
                     style={{ padding: "6px 16px", minHeight: "47px" }}
                     placeholder="Name*"
                     type="text"
@@ -46,45 +46,11 @@ const NetlifyForm = () => (<>
                   }}
                 >
                   <input
-                    className="mb-5 rounded w-full"
+                    className="mb-3 rounded w-full"
                     style={{ padding: "6px 16px", minHeight: "47px" }}
                     placeholder="Email*"
                     type="email"
                     name="email"
-                  ></input>
-                </div>
-              </div>
-              <div className="flex flex-col md:flex-row min-w-full justify-center">
-                <div
-                  className="px-1 md:max-w-349px"
-                  style={{
-                    width: "100%",
-                    paddingRight: "5px",
-                    maxWidth: "349px",
-                  }}
-                >
-                  <input
-                    className="mb-5 rounded w-full"
-                    style={{ padding: "6px 16px", minHeight: "47px" }}
-                    placeholder="Business Name*"
-                    type="text"
-                    name="business"
-                  ></input>
-                </div>
-                <div
-                  className="px-1 md:max-w-349px"
-                  style={{
-                    width: "100%",
-                    paddingLeft: "5px",
-                    maxWidth: "349px",
-                  }}
-                >
-                  <input
-                    className="mb-5 rounded w-full"
-                    style={{ padding: "6px 16px", minHeight: "47px" }}
-                    placeholder="Phone Number*"
-                    type="text"
-                    name="telephone"
                   ></input>
                 </div>
               </div>
@@ -98,7 +64,7 @@ const NetlifyForm = () => (<>
                   }}
                 >
                   <textarea
-                    className="mb-5 rounded w-full min-h-25"
+                    className="mb-3 rounded w-full min-h-25"
                     rows="4"
                     style={{ padding: "6px 16px" }}
                     placeholder="Message*"
