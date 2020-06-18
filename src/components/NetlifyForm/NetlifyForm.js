@@ -17,7 +17,7 @@ const NetlifyForm = () => (<>
             id="contact"
             style={{ background: `black` }}
           >
-            <div className="max-w-twelve my-12 w-5/6 md:w-4/6 flex py-12 flex-col">
+            <div className="max-w-twelve mt-12 w-5/6 md:w-4/6 flex py-12 flex-col">
               <h2 className="text-center text-white text-3xl">Reach out.</h2>
               <h2 className="text-center text-white mb-6 text-lg">I normally respond within 24hrs.</h2>
               <div className="flex flex-col md:flex-row min-w-full justify-center">
@@ -26,7 +26,7 @@ const NetlifyForm = () => (<>
                   style={{
                     width: "100%",
                     paddingRight: "5px",
-                    maxWidth: "349px",
+
                   }}
                 >
                   <input
@@ -42,7 +42,7 @@ const NetlifyForm = () => (<>
                   style={{
                     width: "100%",
                     paddingLeft: "5px",
-                    maxWidth: "349px",
+
                   }}
                 >
                   <input

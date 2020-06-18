@@ -6,7 +6,7 @@ import img3 from "../images/migrate.png"
 class Services extends React.Component {
   render() {
     return (
-      <div className="justify-center bg-black text-white flex pb-20">
+      <div className="justify-center bg-black text-white flex pb-20 flex-col lg:flex-row items-center">
         <div className="flex flex-col md:flex-row max-w-twelve justify-center">
           <div className="flex flex-col items-center text-center w-64 mx-8">
             <img src={img3} style={{ filter: "invert()" }} />
@@ -22,7 +22,7 @@ class Services extends React.Component {
             </p>
           </div>
         </div>
-        <div className="flex flex-col -mt-12 items-center text-center w-64 mx-8">
+        <div className="flex flex-col lg:-mt-12 items-center text-center w-64 mx-8">
           <img src={img1} style={{ filter: "invert()" }} />
           <h2 className="text-xl mt-3 font-bold">Headless CMS Customization</h2>
           <div className="border border-black border-1 w-20 mb-5 mt-2"></div>

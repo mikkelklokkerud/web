@@ -17,7 +17,7 @@ const DividerText = () => {
   console.log(data.file.childImageSharp.fluid)
   return (
     <div
-      className="flex py-24 -mt-10 items-center justify-center"
+      className="flex pt-12 lg:py-24 -mt-10 items-center justify-center"
       style={{
         background: "rgb(2,0,36)",
         background:
@@ -28,7 +28,7 @@ const DividerText = () => {
         <div className="w-32 mb-2 ml-4 rotate-45" style={{ filter: "invert()" }}>
           <Image fixed={data.file.childImageSharp.fixed} className="transform rotate-45" />
         </div>
-        <h2 className="text-3xl">Gatsby + Headless CMS = Win</h2>
+        <h2 className="text-3xl text-center">Gatsby + Headless CMS = Win</h2>
         <p className="max-w-lg text-center">
           I would argue Gatsby.js with a Headless CMS is THE best option in 2020
           for 90% of E-commerce and blogger websites.

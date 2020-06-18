@@ -30,8 +30,12 @@ const Layout = ({ children }) => {
 
 
         <main>{children}</main>
-        <footer className={styles.footer}>
-          
+        <footer className="flex items-center justify-center">
+          <div className="flex justify-center items-center flex-col md:flex-row">
+            <div className="flex max-w-md">
+                <p className="pt-0 mb-0 text-grey text-sm">Mikkel Klokkerud | Copyright 2020 | MikkelCodes.com </p>
+            </div>
+          </div>
         </footer>
 
     </>
