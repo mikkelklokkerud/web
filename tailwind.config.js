@@ -26,6 +26,7 @@ module.exports = {
       },
       maxWidth: {
         "twelve": "1200px",
+        "349px": "349px",
       },
       height: {
         sm: "640px",
