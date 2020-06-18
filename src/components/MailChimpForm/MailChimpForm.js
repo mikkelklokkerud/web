@@ -39,11 +39,8 @@ class MailChimpForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className={styles.emailListForm}>
-        <h2 className={styles.title}>Step-By-Step Migration Guide</h2>
-        <h3 className={styles.subtitle}>
-          Subscribers will get <span className="accent2">FREE</span> Access -
-          {this.state.msg}<span className="accent1"></span>
-        </h3>
+        
+        <h2 className="text-2xl mb-1 text-center">10 Must-Know Tips For An Instantaneous Page-Load</h2>
         <div className={styles.wrapper}>
           <input
             placeholder="Email address"
@@ -52,7 +49,7 @@ class MailChimpForm extends Component {
             onChange={this.handleEmailChange}
             value={this.state.email}
           />
-          <button className="theme-bg-accent2" type="submit">Teach Me</button>
+          <button className="theme-bg-accent2" type="submit">Get PDF</button>
         </div>
         <p className={styles.thankYou}>{this.state.thankYouMsg}</p>
       </form>

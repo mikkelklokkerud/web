@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
 import Services from "./../components/Services"
 import MailChimpForm from "./../components/MailChimpForm/MailChimpForm";
+import DividerText from "./../components/DividerText";
 import SEO from "./../components/seo";
 import NetlifyForm from "./../components/NetlifyForm/NetlifyForm";
 import styles from "./index.module.css";
@@ -34,10 +35,11 @@ const IndexPage = ({ data }) => {
           page={"ARCHIVE"}
         />
 
+        <DividerText />
         <Services  />
         
         <div  id="signup" />
-        <MailChimpForm />
+        {/* <MailChimpForm /> */}
         <h1 className={styles.archive__Title} style={{ textAlign: "center", marginTop: "100px", marginBottom: "0px" }}>Archive</h1>    
         {allPosts.map(post => (
           <Post
