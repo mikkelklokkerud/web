@@ -10,7 +10,7 @@ const DividerText = () => {
         edges {
           node {
             childImageSharp {
-              fluid {
+              fluid(quality: 99, maxWidth: 1920)  {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }
@@ -22,19 +22,19 @@ const DividerText = () => {
 
   console.log(data.allFile.edges)
   return (
-    <div className="flex pt-12 lg:py-24 lg:-mt-20 items-center justify-center bg-black relative">
+    <div className="flex pt-12 lg:py-24  items-center justify-center bg-black relative">
       <div className="absolute hidden md:block top-0">
         <BackgroundImage
           fluid={data.allFile.edges[1].node.childImageSharp.fluid}
-          className="bg-repeat bg-repeat bg-contain bg-center h-349px"
-          style={{ filter: "grayscale(100%)", backgroundAttachment: "fixed" }}
+          className=" bg-fixed bg-center h-sm "
+          style={{ filter: "grayscale(100%)", }}
         >
           <div
-            className="h-xs w-screen"
+            className="h-sm w-screen"
             style={{
               background:
                 "linear-gradient(0deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%)",
-              filter: "grayscale(100%)",
+              
             }}
           ></div>
         </BackgroundImage>

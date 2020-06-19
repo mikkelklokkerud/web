@@ -9,9 +9,9 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 const introText1 =
   "Hi, my name is Mikkel. I am a Gatsby Developer from Norway."
 const introText2 =
-  "In short, I create blazing fast web apps and sites using JamStack and Server-Side Rendering technology. My preferred jam involves Gatsby.js and GraphQL, combined with Netlify for hosting and automation."
+  "In short, I customize blazing fast web apps and sites using Gatsby.js, Headless CMSes and typically Netlify for hosting."
 const introText3 =
-  "Want an ultra fast and reliable website, coupled with a headless CMS 2020-style? Then, this technology is likely your best bet. And I can help you out."
+  "If you want an ultra fast, reliable and secure website in 2020, this tech is the way to go. Contact me on UpWork, I'd be happy to put together a carefully customised solution according to your specific needs."
 const introText4 = `Contact`
 const introTitle = "About"
 
@@ -54,10 +54,11 @@ const AboutIntro = () => {
         <div className={styles.containerbelow}>
           <div className={styles.belowcontainer__textcontainer}>
             <h1 className={styles.textcontainer__title}>
-              <span className="accent1">{`#me #jamstack #ssr`}</span>
+              #me #headless #webdev
             </h1>
             <p className={styles.textcontainer__text}>{introText2}</p>
             <p className={styles.textcontainer__text}>{introText3}</p>
+            <a href="https://www.upwork.com/fl/mikkelklokkerud"><button className="mt-5 py-3 px-5 bg-black text-white rounded w-full pointer hover:bg-gray-800">Mikkel On UpWork</button></a>
           </div>
         </div>
       </div>
