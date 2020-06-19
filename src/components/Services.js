@@ -7,8 +7,8 @@ class Services extends React.Component {
   render() {
     return (
       <div className="justify-center bg-black text-white flex pb-20 lg:-mt-6 flex-col lg:flex-row items-center">
-        <div className="flex flex-col md:flex-row max-w-twelve justify-center">
-          <div className="flex flex-col items-center text-center w-64 mx-8">
+        <div className="flex flex-col md:flex-row max-w-twelve justify-center xl:mx-8">
+          <div className="flex flex-col items-center text-center w-64">
             <img src={img3} style={{ filter: "invert()" }} />
             <h2 className="text-xl mt-3 font-bold">Migration To Gatsby.js</h2>
             <div className="border border-black border-1 w-20 mb-5 mt-2"></div>
@@ -22,7 +22,7 @@ class Services extends React.Component {
             </p>
           </div>
         </div>
-        <div className="flex flex-col lg:-mt-20 items-center text-center w-64 mx-8">
+        <div className="flex flex-col lg:-mt-20 items-center text-center w-64 mx-3 xl:mx-8">
           <img src={img1} style={{ filter: "invert()" }} />
           <h2 className="text-xl mt-3 font-bold">Headless CMS Customization</h2>
           <div className="border border-black border-1 w-20 mb-5 mt-2"></div>
@@ -32,11 +32,11 @@ class Services extends React.Component {
           </p>
           <p className="pt-3 text-base leading-normal">
             I can help you select the perfect Headless CMS plaform for YOUR
-            needs, and customize it to YOUR exact requirements. Using APIs/GraphQL, JSX and CSS I can also help style how content is presented
+            needs, and customize it to YOUR exact requirements. Using APIs/GraphQL, JSX and CSS/TailwindCSS I can also style/format how content is presented.
           </p>
         </div>
         <div>
-          <div className="flex flex-col items-center text-center w-64 mx-8">
+          <div className="flex flex-col items-center text-center w-64 xl:mx-8">
             <img src={img2} style={{ filter: "invert()" }} />
             <h2 className="text-xl mt-3 font-bold">Gatsby.js Optimisation</h2>
             <div className="border border-black border-1 w-20 mb-5 mt-2"></div>
