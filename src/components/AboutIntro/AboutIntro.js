@@ -12,7 +12,6 @@ const introText2 =
   "In short, I customize blazing fast web apps and sites using Gatsby.js, Headless CMSes and typically Netlify for hosting."
 const introText3 =
   "If you want an ultra fast, reliable and secure website in 2020, this tech is the way to go. Contact me on UpWork, I'd be happy to put together a carefully customised solution according to your specific needs."
-const introText4 = `Contact`
 const introTitle = "About"
 
 
@@ -40,6 +39,7 @@ const AboutIntro = () => {
               fluid={data.file.childImageSharp.fluid}
               className={styles.leftcontainer__img1}
               backgroundColor={"black"}
+              alt="mikkel klokkerud"
             />
           </div>
           <div className={styles.container__rightcontainer}>

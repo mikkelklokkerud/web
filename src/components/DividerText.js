@@ -28,6 +28,7 @@ const DividerText = () => {
           fluid={data.allFile.edges[1].node.childImageSharp.fluid}
           className=" bg-fixed bg-center h-sm "
           style={{ filter: "grayscale(100%)", }}
+          alt="stars"
         >
           <div
             className="h-sm w-screen"
@@ -48,6 +49,7 @@ const DividerText = () => {
             fluid={data.allFile.edges[0].node.childImageSharp.fluid}
             className="transform rotate-45"
             className="w-24 rotate-45"
+            alt="rocket"
           />
         </div>
         <h2 className="lg:text-3xl text-2xl text-center z-20">

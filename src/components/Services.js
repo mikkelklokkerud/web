@@ -9,7 +9,7 @@ class Services extends React.Component {
       <div className="justify-center bg-black text-white flex pb-20 lg:-mt-6 flex-col lg:flex-row items-center">
         <div className="flex flex-col md:flex-row max-w-twelve justify-center xl:mx-8">
           <div className="flex flex-col items-center text-center w-64">
-            <img src={img3} style={{ filter: "invert()" }} />
+            <img src={img3} style={{ filter: "invert()" }} alt="migration icon" />
             <h2 className="text-xl mt-3 font-bold">Migration To Gatsby.js</h2>
             <div className="border border-black border-1 w-20 mb-5 mt-2"></div>
             <p className="pt-0 mb-0 text-base leading-normal italic">
@@ -23,7 +23,7 @@ class Services extends React.Component {
           </div>
         </div>
         <div className="flex flex-col lg:-mt-20 items-center text-center w-64 mx-3 xl:mx-8">
-          <img src={img1} style={{ filter: "invert()" }} />
+          <img src={img1} style={{ filter: "invert()" }} alt="customisation icon" />
           <h2 className="text-xl mt-3 font-bold">Headless CMS Customization</h2>
           <div className="border border-black border-1 w-20 mb-5 mt-2"></div>
           <p className="pt-0 mb-0 text-base leading-normal italic">
@@ -37,7 +37,7 @@ class Services extends React.Component {
         </div>
         <div>
           <div className="flex flex-col items-center text-center w-64 xl:mx-8">
-            <img src={img2} style={{ filter: "invert()" }} />
+            <img src={img2} style={{ filter: "invert()" }} alt="optimisation icon" />
             <h2 className="text-xl mt-3 font-bold">Gatsby.js Optimisation</h2>
             <div className="border border-black border-1 w-20 mb-5 mt-2"></div>
             <p className="pt-0 mb-0 text-base leading-normal italic">
