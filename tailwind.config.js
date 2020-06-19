@@ -33,6 +33,10 @@ module.exports = {
         xs: "500px",
         "2xs": "350px",
       },
+      width: {
+        "twelve": "1200px",
+        "sixteen": "1600px",
+      },
       spacing: {
         "25": "100px",
         "50": "200px",

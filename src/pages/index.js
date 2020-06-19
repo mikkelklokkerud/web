@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
         
         <div  id="signup" />
         {/* <MailChimpForm /> */}
-        <h1 className={styles.archive__Title} style={{ textAlign: "center", marginTop: "100px", marginBottom: "0px" }}>Archive</h1>    
+        <h2 className={styles.archive__Title} style={{ textAlign: "center", marginTop: "100px", marginBottom: "0px" }}>Archive</h2>    
         {allPosts.map(post => (
           <Post
             key={post.node.id}
