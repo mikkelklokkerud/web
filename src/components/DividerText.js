@@ -26,8 +26,8 @@ const DividerText = () => {
       <div className="absolute hidden md:block top-0">
         <BackgroundImage
           fluid={data.allFile.edges[1].node.childImageSharp.fluid}
-          className="bg-repeat-x bg-contain bg-center h-349px"
-          style={{ filter: "grayscale(100%)" }}
+          className="bg-repeat bg-repeat bg-contain bg-center h-349px"
+          style={{ filter: "grayscale(100%)", backgroundAttachment: "fixed" }}
         >
           <div
             className="h-xs w-screen"
@@ -53,7 +53,7 @@ const DividerText = () => {
         <h2 className="lg:text-3xl text-2xl text-center z-20">
           Gatsby + Headless CMS = Win
         </h2>
-        <p className="max-w-lg text-center">
+        <p className="max-w-lg text-center pt-4">
           I would argue Gatsby.js with a Headless CMS is THE best option in 2020
           for 90% of E-commerce and blogger websites.
         </p>

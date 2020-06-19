@@ -8,7 +8,6 @@ import MailChimpForm from "./../components/MailChimpForm/MailChimpForm";
 import DividerText from "./../components/DividerText";
 import SEO from "./../components/seo";
 import NetlifyForm from "./../components/NetlifyForm/NetlifyForm";
-import styles from "./index.module.css";
 import Divider_Colors from "../components/Divider/Divider_Colors";
 
 
@@ -40,7 +39,7 @@ const IndexPage = ({ data }) => {
         
         <div  id="signup" />
         {/* <MailChimpForm /> */}
-        <h2 className={styles.archive__Title} style={{ textAlign: "center", marginTop: "100px", marginBottom: "0px" }}>Archive</h2>    
+        <h2 className="text-2xl underline lg:text-3xl mt-12 lg:mt-20" style={{ textAlign: "center", }}>Archive</h2>    
         {allPosts.map(post => (
           <Post
             key={post.node.id}
