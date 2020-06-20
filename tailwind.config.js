@@ -44,6 +44,9 @@ module.exports = {
         "349px": "349px",
         "720px": "720px",
       },
+      backgroundOpacity: {
+        "65": "0.65"
+      },
       height: {
         sm: "640px",
         xs: "500px",

@@ -8,7 +8,6 @@ class Post extends Component {
       published,
       title,
       slug,
-      featuredImage,
       shortDescription,
     } = this.props
 

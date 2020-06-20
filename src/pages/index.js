@@ -51,7 +51,6 @@ const IndexPage = ({ data }) => {
             published={post.node.publishedDate}
             shortDescription={post.node.shortDescription}
             publishedDate={post.node.publishedDate}
-            featuredImage={post.node.featuredImage.resize.src}
           />
         ))}
         </div>
@@ -72,11 +71,6 @@ export const pageQuery = graphql`
           publishedDate(formatString: "MMMM Do, YYYY")
           featured
           shortDescription
-          featuredImage {
-            resize(height: 400) {
-              src
-            }
-            }
           }
         }
       }

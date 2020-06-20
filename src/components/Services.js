@@ -41,10 +41,8 @@ class Services extends React.Component {
               authoring flow?
             </p>
             <p className="pt-3 text-base leading-normal">
-              I can help you select the perfect Headless CMS plaform for YOUR
-              needs, and customize it to YOUR exact requirements. Using
-              APIs/GraphQL, JSX and CSS/TailwindCSS I can also style/format how
-              content is presented.
+              I can help you select the perfect Headless CMS plaform for your
+              needs, and customize it to your exact requirements.
             </p>
           </div>
           <div>

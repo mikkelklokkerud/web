@@ -5,7 +5,6 @@ import SEO from "./../components/seo"
 import Layout from "./../components/layout"
 import { DiscussionEmbed } from "disqus-react"
 import { Link } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 import Image from "gatsby-image"
 import "../components/layout.css"
 
@@ -26,7 +25,7 @@ export const query = graphql`
       }
       seoTitle
       featuredImage {
-        resize(width: 1500, height: 750) {
+        resize(width: 1600, height: 800) {
           src
         }
       }
@@ -104,14 +103,17 @@ const Blog = props => {
           <div
             style={{
               backgroundImage: `url(${contentful.featuredImage.resize.src})`,
-              backgroundSize: "cover",
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
               height: "75vh",
               position: "relative",
+              filter: "grayscale(100%)"
             }}
             className="flex items-center justify-center mb-10"
           >
             <div></div>
-            <div className="text-white text-center flex flex-col max-w-twelve px-20 bg-black bg-opacity-50 p-12">
+            <div className="text-white text-center flex flex-col max-w-twelve px-20 bg-black bg-opacity-65 p-12">
               <h2 className="text-2xl mb-2">
                 {props.data.contentfulBlogPost.title}
               </h2>

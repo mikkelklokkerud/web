@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import styles from "./Header_Simple.module.css"
 import Link from "gatsby-link"
 import { window } from "browser-monads"
-import logo from "./MikkelCodes.png"
 import { slide as Menu } from 'react-burger-menu'
 import "./burger.css"
 
