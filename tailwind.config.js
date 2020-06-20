@@ -1,4 +1,19 @@
 module.exports = {
+  purge: {
+    enabled: true,
+    content: [
+      "./src/components/layout.js",
+      "./src/components/Post.js",
+      "./src/components/Services.js",
+      "./src/components/DividerText.js",
+      "./src/components/AboutImage.js",
+      "./src/components/AboutIntro/AboutIntro.js",
+      "./src/components/NetlifyForm/NetlifyForm.js",
+      "./src/templates/blog.js",
+      "./src/pages/about.js",
+      "./src/pages/index.js",
+    ]
+  },
   theme: {
     screens: {
       sm: '640px',
