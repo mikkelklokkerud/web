@@ -10,8 +10,8 @@ const DividerText = () => {
         edges {
           node {
             childImageSharp {
-              fluid(quality: 99, maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_tracedSVG
+              fluid(maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
