@@ -1,8 +1,8 @@
 import React, { Component } from "react"
-import styles from "./Post_Smashing.module.css"
+import styles from "./Post.module.css"
 import Link from "gatsby-link"
 
-class Post_Smashing extends Component {
+class Post extends Component {
   render() {
     const {
       published,
@@ -22,15 +22,14 @@ class Post_Smashing extends Component {
             />
             <div className={styles.content}>
               <div className={styles.respOverlay}>
-                <h2 className={styles.title}>{title}</h2>
-                <div className={styles.writtenByDate}>
-                  <small>Published: {published}</small>
-                  {/* <small className={styles.date}>
-                    Written by: Mikkel Klokkerud
-                  </small> */}
-                </div>
-                <div className={styles.excerpt}>{shortDescription}</div>
+              <h2 className={styles.title}>{title}</h2>
+              <div className={styles.writtenByDate}>
+                <small className={styles.date}>
+                {published}
+                </small>
               </div>
+              <div className={styles.excerpt}>{shortDescription}</div>
+            </div>
             </div>
           </div>
         </div>
@@ -39,4 +38,4 @@ class Post_Smashing extends Component {
   }
 }
 
-export default Post_Smashing
+export default Post

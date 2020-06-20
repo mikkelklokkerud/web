@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import styles from "./Post.module.css"
 import Link from "gatsby-link"
+import Image from "gatsby-image"
 
 class Post extends Component {
   render() {
@@ -11,24 +11,20 @@ class Post extends Component {
       featuredImage,
       shortDescription,
     } = this.props
+
     return (
       <Link to={`/blog/${slug}`}>
-        <div className={styles.container}>
-          <div className={styles.subcontainer}>
-            {/* <img
-              className={styles.img}
-              src={`https:${featuredImage}`}
-              alt={title.rendered}
-            /> */}
-            <div className={styles.content}>
-              <div className={styles.respOverlay}>
-              <h2 className={styles.title}>{title}</h2>
-              <div className={styles.writtenByDate}>
-                <small className={styles.date}>
+        <div className="md:max-w-xs px-5  py-5  lg:h-2xs">
+          <div className="">
+            <div className="">
+              <div className="">
+              <h2 className="text-xl font-bold leading-tight mb-2">{title}</h2>
+              <div className=" mb-2">
+                <small className="text-sm text-gray">
                 {published}
                 </small>
               </div>
-              <div className={styles.excerpt}>{shortDescription}</div>
+              <div className="text-base">{shortDescription}</div>
             </div>
             </div>
           </div>

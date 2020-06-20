@@ -96,8 +96,9 @@ const Blog = props => {
           >
             <Link to="/">
             <div>
-              <Image fixed={props.data.file.childImageSharp.fixed} alt="logo"  />
+              <Image fixed={props.data.file.childImageSharp.fixed} alt="logo" className="mb-0 pb-0"  />
             </div>
+            <div className="text-sm text-center -mt-2 font-thin">Gatsby + Headless CMS Customization</div>
             </Link>
           </div>
           <div
@@ -121,7 +122,7 @@ const Blog = props => {
           </div>
         </div>
 
-        <div className={styles.container}>
+        <div className="max-w-twelve mx-auto">
           <div className={styles.content}>
             {documentToReactComponents(
               props.data.contentfulBlogPost.body.json,

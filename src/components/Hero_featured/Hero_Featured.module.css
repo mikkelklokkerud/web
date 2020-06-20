@@ -12,7 +12,7 @@
   font-size: 30px;
   position: relative;
   text-align: center;
-  margin-top: -0.5rem;
+  margin-top: -0.8rem;
 
 }
 
@@ -123,11 +123,11 @@ p.link-more {
   
   .tagline {
     font-size: 20px; 
-
   }
 
   .subtitle {
     font-size: 18px;
+    
   }
 
   .content {
