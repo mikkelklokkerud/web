@@ -7,9 +7,9 @@ class Services extends React.Component {
   render() {
     return (
       <a href="https://www.upwork.com/fl/mikkelklokkerud">
-        <div className="justify-center bg-black text-white flex pb-20 mt-8 flex-col lg:flex-row items-center">
-          <div className="flex flex-col md:flex-row max-w-twelve justify-center xl:mx-8 mb-8">
-            <div className="flex flex-col items-center text-center w-64 z-10">
+        <div className="justify-center bg-black text-white flex pb-20 md:mt-8 flex-col lg:flex-row items-center">
+          <div className="flex flex-col md:flex-row max-w-twelve mt-10 md:mt-0 justify-center md:pt-8 xl:mx-8 mb-8">
+            <div className="flex flex-col items-center text-center w-64 mb-5 z-10">
               <img
                 src={img3}
                 style={{ filter: "invert()" }}
@@ -26,7 +26,7 @@ class Services extends React.Component {
               </p>
             </div>
           </div>
-          <div className="flex flex-col lg:-mt-20 items-center text-center w-64 mx-3 xl:mx-8 mb-8">
+          <div className="flex flex-col lg:-mt-20 items-center text-center w-64 mx-3 xl:mx-8 mb-10">
             <img
               src={img1}
               style={{ filter: "invert()" }}
