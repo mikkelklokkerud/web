@@ -49,11 +49,11 @@ module.exports = {
       },
     },
     {
-        resolve: "gatsby-source-contentful",
-        options: {
-          spaceId: process.env.CONTENTFUL_SPACE_ID,
-          accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        }
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
@@ -62,13 +62,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/`,
         name: "src",
-      }
+      },
     },
     {
-      resolve: 'gatsby-background-image',
+      resolve: "gatsby-background-image",
       options: {
         // add your own characters to escape, replacing the default ':/'
-        specialChars: '/:',
+        specialChars: "/:",
       },
     },
     {
@@ -78,36 +78,22 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-          endpoint: `https://mikkelcodes.us19.list-manage.com/subscribe/post?u=a6380a8628ee8997c2d6805c7&amp;id=f0c9f84372`,
+        endpoint: `https://mikkelcodes.us19.list-manage.com/subscribe/post?u=a6380a8628ee8997c2d6805c7&amp;id=f0c9f84372`,
       },
-  },
-  {
-    resolve: `gatsby-plugin-prefetch-google-fonts`,
-    options: {
-      fonts: [
-                {
-          family: `Saira`,
-          variants: [`400`, `700`],
-        },
-      ],
-      fontDisplay: "swap",
     },
-  },
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `mikkelcodes`
-      }
+        shortname: `mikkelcodes`,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          `gatsby-remark-prismjs`,
-        ]
-      }
+        plugins: [`gatsby-remark-prismjs`],
+      },
     },
     `gatsby-plugin-smoothscroll`,
     `gatsby-transformer-sharp`,
@@ -127,6 +113,4 @@ module.exports = {
       },
     },
   ],
-  
 }
-
