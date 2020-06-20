@@ -6,26 +6,21 @@ html {
 	font-weight: 300;
 	font-size: 18px;
 }
-
 * {
 	line-height: 1.5em;
-	font-family: "Saira";
+	font-family: "Saira", Arial, Helvetica, sans-serif;
 }
-
 body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.5;
 }
-
 ul li {
 	list-style-type: disc;
 }
-
 ol li {
 	list-style-type: decimal;
 }
-
 ol li, ul li {
 	margin-left: 23px;
 }
