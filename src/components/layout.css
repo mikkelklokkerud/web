@@ -5,10 +5,11 @@
 html {
 	font-weight: 300;
 	font-size: 18px;
+	font-family: sans-serif;
 }
 * {
 	line-height: 1.5em;
-	font-family: "Saira", Arial, Helvetica, sans-serif;
+	/* font-family: "Saira", Arial, Helvetica, sans-serif; */
 }
 body {
 	margin: 0;
