@@ -1,6 +1,4 @@
 import React from "react"
-import styles from "./NetlifyForm.module.css"
-import ReCAPTCHA from "react-google-recaptcha";
 
 const NetlifyForm = () => (<>
   

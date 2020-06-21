@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header_Simple from "./Header_Simple/Header_Simple";
 import "./layout.css"
 

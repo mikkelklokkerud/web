@@ -6,7 +6,7 @@ import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
 import Services from "./../components/Services"
 import DividerText from "./../components/DividerText"
 import SEO from "./../components/seo"
-import NetlifyForm from "./../components/NetlifyForm/NetlifyForm"
+import NetlifyForm from "./../components/NetlifyForm"
 
 const IndexPage = ({ data }) => {
   const featuredType = "Post"

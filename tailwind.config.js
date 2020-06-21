@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    enabled: true,
+    enabled: false,
     content: [
       "./src/components/layout.js",
       "./src/components/Post.js",
@@ -8,7 +8,7 @@ module.exports = {
       "./src/components/DividerText.js",
       "./src/components/AboutImage.js",
       "./src/components/AboutIntro/AboutIntro.js",
-      "./src/components/NetlifyForm/NetlifyForm.js",
+      "./src/components/NetlifyForm.js",
       "./src/templates/blog.js",
       "./src/pages/about.js",
       "./src/pages/index.js",

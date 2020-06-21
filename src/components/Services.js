@@ -6,7 +6,7 @@ import img3 from "../images/migrate.png"
 class Services extends React.Component {
   render() {
     return (
-        <div className="flex flex-col bg-black pb-5">
+      <div className="flex flex-col bg-black pb-5">
         <div className="justify-center bg-black text-white flex pb-20 md:mt-3 flex-col lg:flex-row items-center">
           <div className="flex flex-col md:flex-row max-w-twelve mt-10 md:mt-0 justify-center md:pt-8 xl:mx-8 mb-8">
             <div className="flex flex-col items-center text-center w-64 mb-5 z-10">
@@ -15,7 +15,9 @@ class Services extends React.Component {
                 style={{ filter: "invert()" }}
                 alt="migration icon"
               />
-              <h2 className="text-xl mt-4 mb-3 font-bold">Migration To Gatsby.js</h2>
+              <h2 className="text-xl mt-4 mb-3 font-bold">
+                Migration To Gatsby.js
+              </h2>
               <p className="pt-0 mb-0 text-base leading-normal italic">
                 Planning to migrate your existing website over to Gatsby.js?
               </p>
@@ -65,8 +67,15 @@ class Services extends React.Component {
             </div>
           </div>
         </div>
-          <a href="https://www.upwork.com/fl/mikkelklokkerud" className="mx-auto mb-24 -mt-10 md:-mt-20"><button className="hover:bg-white rounded py-3 px-6 bg-black border-white hover:text-black border-2 border text-white w-56">Hire On UpWork</button></a>
-        </div>
+        <a
+          href="https://www.upwork.com/fl/mikkelklokkerud"
+          className="mx-auto mb-24 -mt-10 md:-mt-20"
+        >
+          <button className="hover:bg-white rounded py-3 bg-black border-white hover:text-black border border-4 text-white w-48 font-bold">
+            Hire On UpWork
+          </button>
+        </a>
+      </div>
     )
   }
 }

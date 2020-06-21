@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Layout from "./../components/layout"
 import AboutIntro from "./../components/AboutIntro/AboutIntro"
-import NetlifyForm from "./../components/NetlifyForm/NetlifyForm"
+import NetlifyForm from "./../components/NetlifyForm"
 
 const AboutPage = () => {
 
