@@ -6,8 +6,8 @@ import img3 from "../images/migrate.png"
 class Services extends React.Component {
   render() {
     return (
-      <a href="https://www.upwork.com/fl/mikkelklokkerud">
-        <div className="justify-center bg-black text-white flex pb-20 md:mt-8 flex-col lg:flex-row items-center">
+        <div className="flex flex-col bg-black pb-5">
+        <div className="justify-center bg-black text-white flex pb-20 md:mt-3 flex-col lg:flex-row items-center">
           <div className="flex flex-col md:flex-row max-w-twelve mt-10 md:mt-0 justify-center md:pt-8 xl:mx-8 mb-8">
             <div className="flex flex-col items-center text-center w-64 mb-5 z-10">
               <img
@@ -65,7 +65,8 @@ class Services extends React.Component {
             </div>
           </div>
         </div>
-      </a>
+          <a href="https://www.upwork.com/fl/mikkelklokkerud" className="mx-auto mb-24 -mt-10 md:-mt-20"><button className="hover:bg-white rounded py-3 px-6 bg-black border-white hover:text-black border-2 border text-white w-56">Hire On UpWork</button></a>
+        </div>
     )
   }
 }
