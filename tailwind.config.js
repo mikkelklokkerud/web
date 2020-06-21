@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    enabled: false,
+    enabled: true,
     content: [
       "./src/components/layout.js",
       "./src/components/Post.js",
