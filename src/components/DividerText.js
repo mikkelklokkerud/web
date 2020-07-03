@@ -56,8 +56,7 @@ const DividerText = () => {
             Gatsby + Headless CMS = Win
           </h2>
           <p className="max-w-lg text-center pt-4">
-            I would argue Gatsby.js with a Headless CMS is THE best option in
-            2020 for 80% of E-commerce and blogger websites.
+            I would argue Gatsby.js with a Headless CMS is THE best option for most of E-commerce and blogger websites in 2020.
           </p>
         </div>
 
