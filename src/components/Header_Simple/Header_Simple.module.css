@@ -68,7 +68,16 @@
 }
 
 .link__active {
-  border-bottom: 2px solid black;
+  font-weight: 900;
+}
+.link__inactive {
+  font-weight: 300;
+}
+
+.active {
+  color: yellow;
+  height: 50px;
+  background: blue;
 }
 
 .leftcontainer p {

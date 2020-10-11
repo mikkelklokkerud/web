@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import styles from "./Header_Simple.module.css"
 import Link from "gatsby-link"
 import { window } from "browser-monads"
-import { slide as Menu } from 'react-burger-menu'
+import { slide as Menu } from "react-burger-menu"
 import "./burger.css"
 
 let menuColors = {
@@ -10,21 +10,22 @@ let menuColors = {
   mainNavBg: "white",
   mainNavColor: "black",
   displayTagline: "none",
-} 
+}
 
 class Header_Simple extends Component {
   render() {
     let menuColors = {}
     if (
       window.location.href.indexOf("about") < 1 ||
-      (window.location.href.indexOf("-") > 1 && window.location.href.indexOf("about") > 1)
+      (window.location.href.indexOf("-") > 1 &&
+        window.location.href.indexOf("about") > 1)
     ) {
-        menuColors = {
-            pageIsAbout: false,
-            mainNavBg: "white",
-            mainNavColor: "black",
-            displayTagline: "none",
-        }
+      menuColors = {
+        pageIsAbout: false,
+        mainNavBg: "white",
+        mainNavColor: "black",
+        displayTagline: "none",
+      }
     } else {
       menuColors = {
         pageIsAbout: true,
@@ -40,11 +41,11 @@ class Header_Simple extends Component {
           <div className={styles.container}>
             <div className={styles.subcontainer}>
               <div className={styles.leftcontainer}>
-                  <div className={styles.burger}>
-                <Menu right>
+                <div className={styles.burger}>
+                  <Menu right>
                     <Link to={"/"}>Archive</Link>
                     <Link to={"/about"}>About</Link>
-                </Menu>
+                  </Menu>
                 </div>
               </div>
               <nav
@@ -64,14 +65,15 @@ class Header_Simple extends Component {
                           : styles.link__inactive
                       }
                     >
-                      ARCHIVE
+                      Archive
                     </p>
                   </Link>
-                  <Link to={"/about"}>
+                  <Link to={"/about"}
+                  active={styles.active}
+                  >
                     <p
                       style={{
                         color: menuColors.mainNavColor,
-                        borderBottom: "1px solid white",
                       }}
                       className={
                         window.location.href.indexOf("about") > 0
@@ -79,7 +81,7 @@ class Header_Simple extends Component {
                           : styles.link__inactive
                       }
                     >
-                      ABOUT
+                      About
                     </p>
                   </Link>
                 </ul>
