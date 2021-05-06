@@ -39,19 +39,25 @@ class MailChimpForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className={styles.emailListForm}>
-        <h3 className="mt-5 text-xl max-w-xl leading-relaxed">
+        <h3 className="text-xl max-w-xl leading-relaxed">
           Course coming soon:
         </h3>
         <div className="text-red-300 font-bold text-3xl mb-8">
           KICKSTART YOUR CAREER CHANGE!
         </div>
-        <h2 className="text-xl mb-12 text-center max-w-xl leading-relaxed">
+        <h2 className="text-xl mb-10 text-center max-w-xl leading-relaxed">
           I learnt <span className="font-bold">how to code</span> from scratch
           and verifiably <span className="font-bold">earnt over $25'000</span>{" "}
           from freelancing as a React web app developer all{" "}
           <span className="font-bold underline">
-            within the first 12 months.
+            within the first 12 months!
           </span>{" "}
+        </h2>
+        <h2 className="text-xl text-center max-w-xl leading-relaxed text-lightgreen">
+          I believe you could do the same.
+        </h2>
+        <h2 className="text-xl mb-10 text-center leading-relaxed text-lightgreen">
+          Sign up and let me show you how on a free 3 part video course!
         </h2>
         <div className={styles.wrapper}>
           <input
@@ -62,10 +68,13 @@ class MailChimpForm extends Component {
             value={this.state.email}
           />
           <button className="theme-bg-accent2" type="submit">
-            Get PDF
+            Sign Up
           </button>
         </div>
         <p className={styles.thankYou}>{this.state.thankYouMsg}</p>
+        <p className="italic">
+          (currently in the making but you'll get it as soon as it's and ready)
+        </p>
       </form>
     )
   }

@@ -3,6 +3,7 @@ import styles from "./blog.module.css"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import SEO from "./../components/seo"
 import Layout from "./../components/layout"
+import MailChimpForm from "./../components/MailChimpForm/MailChimpForm"
 import { DiscussionEmbed } from "disqus-react"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
@@ -88,16 +89,21 @@ const Blog = props => {
       />
       <Layout>
         <div className="">
-          
           <div
             className="absolute image flex items-center"
             style={{ top: "0px", left: "8vw", height: "12vh", zIndex: "100" }}
           >
             <Link to="/">
-            <div>
-              <Image fixed={props.data.file.childImageSharp.fixed} alt="logo" className="mb-0 pb-0"  />
-            </div>
-            <div className="text-sm text-center -mt-2 font-thin">Gatsby + Headless CMS Customization</div>
+              <div>
+                <Image
+                  fixed={props.data.file.childImageSharp.fixed}
+                  alt="logo"
+                  className="mb-0 pb-0"
+                />
+              </div>
+              <div className="text-sm text-center -mt-2 font-thin">
+                Gatsby + Headless CMS Customization
+              </div>
             </Link>
           </div>
           <div
@@ -108,7 +114,7 @@ const Blog = props => {
               backgroundRepeat: "no-repeat",
               height: "75vh",
               position: "relative",
-              filter: "grayscale(100%)"
+              filter: "grayscale(100%)",
             }}
             className="flex items-center justify-center mb-10"
           >
@@ -124,7 +130,7 @@ const Blog = props => {
           </div>
         </div>
 
-        <div className="max-w-twelve mx-auto">
+        <div className="max-w-twelve mx-auto lg:mb-20 sm:mb-12">
           <div className={styles.content}>
             {documentToReactComponents(
               props.data.contentfulBlogPost.body.json,
@@ -134,14 +140,7 @@ const Blog = props => {
           </div>
         </div>
 
-        <div className={styles.disqus__container}>
-          <div className={styles.disqus__content}>
-            <DiscussionEmbed
-              shortname={disqusShortname}
-              config={disqusConfig}
-            />
-          </div>
-        </div>
+        <MailChimpForm />
       </Layout>
     </>
   )
