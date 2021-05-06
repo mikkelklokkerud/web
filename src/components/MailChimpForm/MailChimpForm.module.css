@@ -4,12 +4,17 @@
   justify-content: space-between;
   text-align: center;
   align-items: center;
-
   background: black;
   color: white;
-
   font-family: -apple-system, Helvetica, Arial, sans-serif;
-  padding: 8vw 10%;
+}
+
+.arrow {
+  filter: invert(100%);
+  transform: scaleY(-1) rotate(50deg) translateY(160px) translateX(-80px);
+  position: absolute;
+  left: 0;
+  height: 45px;
 }
 
 .thankYou {
@@ -43,11 +48,9 @@
 
 .emailListForm button,
 .emailListForm input {
-
   margin-bottom: 0;
   padding: 12px 1rem;
   font-size: 18px;
-
 }
 
 .emailListForm button {
@@ -74,7 +77,6 @@
   }
   .emailListForm button,
   .emailListForm input {
-    padding: 8px 1rem;
     height: auto;
     font-size: 16px;
   }
@@ -87,7 +89,6 @@
 @media only screen and (max-width: 1000px) {
   .emailListForm button,
   .emailListForm input {
-    padding: 40px 20px;
     height: auto;
     font-size: 16px;
   }
@@ -95,13 +96,12 @@
     width: 90%;
   }
   .wrapper button {
-    min-width: 115px; 
+    min-width: 115px;
   }
 }
 
 @media only screen and (max-width: 759px) {
-
-  .title  {
+  .title {
     margin-top: 20px;
   }
 
@@ -110,9 +110,6 @@
     max-width: unset;
   }
 
-  .emailListForm {
-    padding: 5%;
-  }
   .emailListForm button,
   .emailListForm input {
     height: auto;
@@ -129,6 +126,4 @@
     letter-spacing: -1px;
     font-size: 20px;
   }
-
-
 }

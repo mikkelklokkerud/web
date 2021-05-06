@@ -3,26 +3,32 @@
 @tailwind utilities;
 
 html {
-	font-weight: 300;
-	font-size: 18px;
-	font-family: sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: sans-serif;
 }
 
 img {
-	filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 ul li {
-	list-style-type: disc;
+  list-style-type: disc;
 }
 ol li {
-	list-style-type: decimal;
+  list-style-type: decimal;
 }
-ol li, ul li {
-	margin-left: 23px;
+ol li,
+ul li {
+  margin-left: 23px;
+}
+
+ol,
+ul {
+  margin-top: 0px !important;
 }
