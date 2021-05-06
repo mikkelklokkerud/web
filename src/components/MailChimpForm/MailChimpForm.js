@@ -53,11 +53,11 @@ class MailChimpForm extends Component {
             within the first 12 months!
           </span>{" "}
         </h2>
-        <h2 className="text-xl text-center max-w-xl leading-relaxed text-lightgreen">
-          I believe you could do the same.
+        <h2 className="text-lg text-center max-w-xl leading-relaxed">
+          And, I believe you can do the same.
         </h2>
-        <h2 className="text-xl mb-10 text-center leading-relaxed text-lightgreen">
-          Sign up and let me show you how on a free 3 part video course!
+        <h2 className="text-lg mb-10 text-center leading-relaxed">
+          Sign up and I'll send you a video with my step-by-step approach.
         </h2>
         <div className={styles.wrapper}>
           <input
@@ -73,7 +73,7 @@ class MailChimpForm extends Component {
         </div>
         <p className={styles.thankYou}>{this.state.thankYouMsg}</p>
         <p className="italic">
-          (currently in the making but you'll get it as soon as it's and ready)
+          (Currently in the making but you'll get it as soon as it's and ready!)
         </p>
       </form>
     )
