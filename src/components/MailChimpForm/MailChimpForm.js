@@ -75,6 +75,7 @@ class MailChimpForm extends Component {
         <p className="italic">
           (Currently in the making but you'll get it as soon as it's and ready!)
         </p>
+        <p className="italic">ETA: 10th of May :)</p>
       </form>
     )
   }
