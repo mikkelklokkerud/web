@@ -8,7 +8,7 @@ class MailChimpForm extends Component {
     this.state = {
       email: "",
       setEmail: false,
-      msg: " Sign Up Now!",
+      msg: false,
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleEmailChange = this.handleEmailChange.bind(this)
@@ -22,7 +22,7 @@ class MailChimpForm extends Component {
           this.setState({
             email: "",
             setEmail: true,
-            msg: " Subscribed. THANKS!",
+            msg: true,
           })
         )
 
@@ -40,21 +40,58 @@ class MailChimpForm extends Component {
     return (
       <div className="bg-black py-20">
         <form onSubmit={this.handleSubmit} className={styles.emailListForm}>
-          <h3 className="text-xl max-w-xl leading-relaxed">
-            Course coming soon:
-          </h3>
-          <div className="text-red-300 font-bold text-3xl mb-8">
+          <h3 className="text-xl max-w-xl leading-relaxed">Coming soon:</h3>
+          <div className="text-red-300 font-bold text-3xl">
             KICKSTART YOUR CAREER CHANGE!
           </div>
-          <h2 className="text-xl mb-10 text-center max-w-xl leading-relaxed">
-            I learnt <span className="font-bold">how to code</span> from scratch
-            and verifiably <span className="font-bold">earnt over $25'000</span>{" "}
-            from freelancing as a React web app developer all{" "}
-            <span className="font-bold underline">
-              within the first 12 months!
-            </span>{" "}
-          </h2>
-
+          <div className="border-2 border-white p-6 my-8 bg-gray-900 rounded-lg">
+            <div className="text-xl font-bold underline">
+              In 12 months I was able to:
+            </div>
+            <ul className="pt-3 text-left">
+              <li>
+                Become "good enough" in{" "}
+                <span className="font-bold text-green-300">
+                  HTML, CSS and JS
+                </span>{" "}
+                in 3 months
+              </li>
+              <li>
+                Become "good enough" in{" "}
+                <span className="font-bold text-green-300">
+                  React, Gatsby and Headless CMS
+                </span>{" "}
+                in 2 months
+              </li>
+              <li>
+                Earn{" "}
+                <span className="font-bold text-green-300">over $28'000</span>{" "}
+                in my first 7 months of freelancing
+              </li>
+              <li>
+                Create a{" "}
+                <span className="font-bold text-green-300">
+                  location independent
+                </span>{" "}
+                job for myself
+              </li>
+              <li>
+                Become a web developer{" "}
+                <span className="font-bold text-green-300">
+                  WITHOUT spending{" "}
+                </span>
+                thousands on a bootcamp
+              </li>
+            </ul>
+          </div>
+          <div className="mb-6">
+            <h2 className="text-lg text-center max-w-xl leading-relaxed font-bold text-red-300">
+              And, I believe you can do the same.
+            </h2>
+            <h2 className="text-lg mb-2 text-center leading-relaxed">
+              Sign up and I'll send you a video with my detailed approach.
+            </h2>
+          </div>
           <div className={styles.wrapper}>
             <input
               placeholder="Email address"
@@ -62,22 +99,22 @@ class MailChimpForm extends Component {
               type="text"
               onChange={this.handleEmailChange}
               value={this.state.email}
+              className="rounded-lg"
             />
-            <button className="theme-bg-accent2 ml-4" type="submit">
+            <button className="theme-bg-accent2 ml-4 hover:bg-lightgreen hover:text-black rounded-lg" type="submit">
               Continue
             </button>
           </div>
 
-          <h2 className="mt-5 text-lg text-center max-w-xl leading-relaxed">
-            I believe you can do the same.
-          </h2>
-
-          <h2 className="text-lg mb-2 text-center leading-relaxed">
-            Sign up and I'll send you a video with my detailed approach.
-          </h2>
-          <p className={styles.thankYou}>{this.state.thankYouMsg}</p>
-          <p className="italic">
+          <p className="italic -mt-2">
             (Currently in the making but you'll get it as soon as it's ready!)
+          </p>
+          <p
+            className={`transform font-bold ${
+              this.state.msg ? "opacity-100 translate-y-5" : "opacity-0"
+            } transition duration-300`}
+          >
+            Subscribed, thanks. Check the email for details.
           </p>
         </form>
       </div>
