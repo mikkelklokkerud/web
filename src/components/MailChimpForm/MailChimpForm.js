@@ -57,7 +57,7 @@ class MailChimpForm extends Component {
           And, I believe you can do the same.
         </h2>
         <h2 className="text-lg mb-10 text-center leading-relaxed">
-          Sign up and I'll send you a video with my step-by-step approach.
+          Sign up and I'll send you a video with my detailed approach.
         </h2>
         <div className={styles.wrapper}>
           <input

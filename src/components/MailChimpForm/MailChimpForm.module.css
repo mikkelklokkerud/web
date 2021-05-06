@@ -87,7 +87,7 @@
 @media only screen and (max-width: 1000px) {
   .emailListForm button,
   .emailListForm input {
-    padding: 8px 12px;
+    padding: 40px 20px;
     height: auto;
     font-size: 16px;
   }
@@ -115,7 +115,6 @@
   }
   .emailListForm button,
   .emailListForm input {
-    padding: 4px 8px;
     height: auto;
     font-size: 16px;
     margin-top: 0;
