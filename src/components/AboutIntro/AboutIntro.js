@@ -2,16 +2,15 @@ import React from "react"
 import styles from "./AboutIntro.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import scrollTo from 'gatsby-plugin-smoothscroll';
 
 
 
 const introText1 =
   "Hi, my name is Mikkel. I am a Gatsby Developer from Norway."
 const introText2 =
-  "In short, I customize blazing fast web apps and sites using Gatsby.js, Headless CMSes and typically Netlify for hosting. If you want an ultra fast, reliable and secure website in 2020, this tech is the way to go. "
+  "In short, I make blazing fast websites using Gatsby.js, typically coupled with a Headless CMS. If you want an ultra fast, reliable and secure website in 2021, this tech is the way to go. "
 const introText3 =
-  "Contact me on UpWork, I'd be happy to put together a customized JAMstack solution according to your specific needs. Let's chat."
+  "Contact me on UpWork or through the contact form below, I'd be happy to put together a customized JAMstack solution for you, according to your specific needs. Let's chat."
 const introTitle = "About"
 
 
@@ -21,7 +20,7 @@ const AboutIntro = () => {
       file(relativePath: { eq: "images/about2bw.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid
           }
           }
       }

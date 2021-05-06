@@ -17,16 +17,16 @@ class MailChimpForm extends Component {
   handleSubmit(e) {
     e.preventDefault()
     if (!this.state.setEmail) {
-    addToMailchimp(this.state.email)
-      .then(
-        this.setState({
-          email: "",
-          setEmail: true,
-          msg: " Subscribed. THANKS!",
-        })
-      )
+      addToMailchimp(this.state.email)
+        .then(
+          this.setState({
+            email: "",
+            setEmail: true,
+            msg: " Subscribed. THANKS!",
+          })
+        )
 
-      .catch(err => console.log(err))
+        .catch(err => console.log(err))
     }
   }
 
@@ -39,8 +39,20 @@ class MailChimpForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className={styles.emailListForm}>
-        
-        <h2 className="text-2xl mb-1 text-center">10 Must-Know Tips For An Instantaneous Page-Load</h2>
+        <h3 className="mt-5 text-xl max-w-xl leading-relaxed">
+          Course coming soon:
+        </h3>
+        <div className="text-red-300 font-bold text-3xl mb-8">
+          KICKSTART YOUR CAREER CHANGE!
+        </div>
+        <h2 className="text-xl mb-12 text-center max-w-xl leading-relaxed">
+          I learnt <span className="font-bold">how to code</span> from scratch
+          and verifiably <span className="font-bold">earnt over $25'000</span>{" "}
+          from freelancing as a React web app developer all{" "}
+          <span className="font-bold underline">
+            within the first 12 months.
+          </span>{" "}
+        </h2>
         <div className={styles.wrapper}>
           <input
             placeholder="Email address"
@@ -49,7 +61,9 @@ class MailChimpForm extends Component {
             onChange={this.handleEmailChange}
             value={this.state.email}
           />
-          <button className="theme-bg-accent2" type="submit">Get PDF</button>
+          <button className="theme-bg-accent2" type="submit">
+            Get PDF
+          </button>
         </div>
         <p className={styles.thankYou}>{this.state.thankYouMsg}</p>
       </form>

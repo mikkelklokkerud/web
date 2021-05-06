@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
         <footer className="flex items-center justify-center">
           <div className="flex justify-center items-center flex-col md:flex-row">
             <div className="flex max-w-md h-20 items-center">
-                <p className="pt-0 mb-0 text-grey text-base">Mikkel Klokkerud | Copyright 2019-2020 | MikkelCodes.com </p>
+                <p className="pt-0 mb-0 text-grey text-base">Mikkel Klokkerud | Copyright 2019-2021 | MikkelCodes.com </p>
             </div>
           </div>
         </footer>

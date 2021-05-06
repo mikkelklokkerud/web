@@ -6,6 +6,7 @@ import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
 import Services from "./../components/Services"
 import DividerText from "./../components/DividerText"
 import SEO from "./../components/seo"
+import MailChimpForm from "../components/MailChimpForm/MailChimpForm"
 import NetlifyForm from "./../components/NetlifyForm"
 
 const IndexPage = ({ data }) => {
@@ -34,8 +35,26 @@ const IndexPage = ({ data }) => {
         <DividerText />
         <Services />
 
+        <h2
+          className="text-2xl underline lg:text-3xl mt-12 lg:mt-20"
+          style={{ textAlign: "center" }}
+        >
+          Latest articles
+        </h2>
+        <div className="max-w-twelve mx-auto flex flex-wrap justify-center mt-10 mb-20">
+          {allPosts.slice(0, 3).map(post => (
+            <Post
+              key={post.node.id}
+              title={post.node.title}
+              slug={post.node.slug}
+              published={post.node.publishedDate}
+              shortDescription={post.node.shortDescription}
+              publishedDate={post.node.publishedDate}
+            />
+          ))}
+        </div>
         <div id="signup" />
-        {/* <MailChimpForm /> */}
+        <MailChimpForm />
         <h2
           className="text-2xl underline lg:text-3xl mt-12 lg:mt-20"
           style={{ textAlign: "center" }}
@@ -43,16 +62,16 @@ const IndexPage = ({ data }) => {
           Latest Articles
         </h2>
         <div className="max-w-twelve mx-auto flex flex-wrap justify-center mt-10 mb-20">
-        {allPosts.map(post => (
-          <Post
-            key={post.node.id}
-            title={post.node.title}
-            slug={post.node.slug}
-            published={post.node.publishedDate}
-            shortDescription={post.node.shortDescription}
-            publishedDate={post.node.publishedDate}
-          />
-        ))}
+          {allPosts.slice(3, allPosts.length).map(post => (
+            <Post
+              key={post.node.id}
+              title={post.node.title}
+              slug={post.node.slug}
+              published={post.node.publishedDate}
+              shortDescription={post.node.shortDescription}
+              publishedDate={post.node.publishedDate}
+            />
+          ))}
         </div>
         <NetlifyForm />
       </Layout>
@@ -71,11 +90,10 @@ export const pageQuery = graphql`
           publishedDate(formatString: "MMMM Do, YYYY")
           featured
           shortDescription
-          }
         }
       }
     }
-  
+  }
 `
 
 export default IndexPage
