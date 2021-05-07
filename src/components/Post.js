@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import Link from "gatsby-link"
-import Image from "gatsby-image"
 
 class Post extends Component {
   render() {
@@ -13,7 +12,7 @@ class Post extends Component {
 
     return (
       <Link to={`/blog/${slug}`}>
-        <div className="md:max-w-xs px-5  py-5  lg:h-2xs">
+        <div className="md:max-w-xs px-5 py-5 lg:h-2xs">
           <div className="">
             <div className="">
               <div className="">

@@ -54,14 +54,19 @@ class MailChimpForm extends Component {
                 <span className="font-bold text-green-300">
                   HTML, CSS and JS
                 </span>{" "}
-                in 3 months
+                after 3 months
               </li>
               <li>
                 Become "good enough" in{" "}
                 <span className="font-bold text-green-300">
-                  React, Gatsby and Headless CMS
+                  React and Headless CMS
                 </span>{" "}
-                in 2 months
+                after 2 months
+              </li>
+              <li>
+                Become a web developer{" "}
+                <span className="font-bold text-green-300">WITHOUT </span>
+                spending thousands on a bootcamp
               </li>
               <li>
                 Earn{" "}
@@ -74,13 +79,6 @@ class MailChimpForm extends Component {
                   location independent
                 </span>{" "}
                 job for myself
-              </li>
-              <li>
-                Become a web developer{" "}
-                <span className="font-bold text-green-300">
-                  WITHOUT spending{" "}
-                </span>
-                thousands on a bootcamp
               </li>
             </ul>
           </div>
@@ -101,11 +99,13 @@ class MailChimpForm extends Component {
               value={this.state.email}
               className="rounded-lg"
             />
-            <button className="theme-bg-accent2 ml-4 hover:bg-lightgreen hover:text-black rounded-lg" type="submit">
+            <button
+              className="theme-bg-accent2 ml-4 hover:bg-lightgreen hover:text-black rounded-lg"
+              type="submit"
+            >
               Continue
             </button>
           </div>
-
           <p className="italic -mt-2">
             (Currently in the making but you'll get it as soon as it's ready!)
           </p>
