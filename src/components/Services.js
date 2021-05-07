@@ -17,8 +17,8 @@ const Services = () => {
             <h2 className="text-xl mt-4 mb-3 font-bold">
               Migration To Gatsby.js
             </h2>
-            <p className="pt-0 mb-0 text-base leading-normal italic">
-              Planning to migrate your existing website over to Gatsby.js?
+            <p className="pt-0 mb-1 text-base leading-normal italic">
+              Planning to migrate your existing website to Gatsby.js or Next.js?
             </p>
             <p className="pt-3 text-base leading-normal">
               Maintaining existing designs, content creation experience and SEO
@@ -37,7 +37,7 @@ const Services = () => {
           <h2 className="text-xl mt-4 font-bold z-10">
             Headless CMS Customization
           </h2>
-          <p className="pt-0 mt-4 mb-3 text-base leading-normal italic">
+          <p className="pt-0 mt-4 mb-1 text-base leading-normal italic">
             Need a clean and simple CMS tailored to your ideal content authoring
             flow?
           </p>
@@ -54,14 +54,14 @@ const Services = () => {
               alt="optimisation icon"
             />
             <h2 className="text-xl mt-4 font-bold">Gatsby.js Optimisation</h2>
-            <p className="pt-0 mt-4 mb-3 text-base leading-normal italic">
+            <p className="pt-0 mt-4 mb-1 text-base leading-normal italic">
               Not seeing incineratingly fast page-load speeds with your
-              gatsby.js website?
+              static website?
             </p>
             <p className="pt-3 text-base leading-normal">
-              Even though Gatsby.js sites are fast and secure out of the box,
-              there are several pitfalls to avoid in order to maintain this
-              security and performance. I can help optimise your Gatsby site.
+              Even though static sites are typically fast and secure out of the box,
+              there are several pitfalls to avoid in order for a site to remain
+              secure and performant throughout the development process. I can help optimise for this.
             </p>
           </div>
         </div>

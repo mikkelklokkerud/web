@@ -45,7 +45,7 @@ class Hero_Featured extends React.Component {
           
 
             <p className={styles.tagline}>
-              React/Gatsby + Headless CMS Customization
+              Gatsby or Next + Headless CMS
             </p>
           </div>
           <div className={styles.right}>

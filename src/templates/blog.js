@@ -90,8 +90,8 @@ const Blog = props => {
       <Layout>
         <div className="">
           <div
-            className="absolute image flex items-center"
-            style={{ top: "0px", left: "8vw", height: "12vh", zIndex: "100" }}
+            className="block image flex items-center max-w-4xl justify-center mx-auto"
+            style={{ height: "12vh" }}
           >
             <Link to="/">
               <div>
@@ -102,7 +102,7 @@ const Blog = props => {
                 />
               </div>
               <div className="text-sm text-center -mt-2 font-thin">
-                Gatsby + Headless CMS Customization
+                React + Headless CMS
               </div>
             </Link>
           </div>
@@ -112,21 +112,19 @@ const Blog = props => {
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              height: "75vh",
+              height: "50vh",
               position: "relative",
-              filter: "grayscale(100%)",
             }}
-            className="flex items-center justify-center mb-10"
-          >
-            <div></div>
-            <div className="text-white text-center flex flex-col max-w-twelve px-20 bg-black bg-opacity-65 p-12">
-              <h2 className="text-2xl mb-2">
-                {props.data.contentfulBlogPost.title}
-              </h2>
-              <small>
-                {props.data.contentfulBlogPost.publishedDate} | Mikkel Klokkerud
-              </small>
-            </div>
+            className="flex items-center justify-center mb-6"
+          />
+          <div></div>
+          <div className="text-center flex flex-col max-w-3xl mx-auto px-20 pb-6">
+            <h2 className="text-2xl mb-2 font-bold">
+              {props.data.contentfulBlogPost.title}
+            </h2>
+            <small>
+              {props.data.contentfulBlogPost.publishedDate} | Mikkel Klokkerud
+            </small>
           </div>
         </div>
 

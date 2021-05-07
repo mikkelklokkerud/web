@@ -52,11 +52,11 @@ const DividerText = () => {
           s
         </div>
         <h2 className="lg:text-3xl text-2xl text-center z-20">
-          Gatsby.js + Headless CMS = Win
+          Gatsby or Next + Headless CMS
         </h2>
         <p className="max-w-lg text-center pt-4">
           If you're building a new website in 2021, choose Gatsby.js for simple
-          sites and choose Next.js for the others. Simple as that.
+          sites and choose Next.js for the others. Simple and optimal.
         </p>
       </div>
     </div>

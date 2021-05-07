@@ -28,7 +28,11 @@ ul li {
   margin-left: 23px;
 }
 
+li {
+  padding-top: 0 !important;
+}
+
 ol,
 ul {
-  margin-top: 0px !important;
+  margin-top: -5px !important;
 }
