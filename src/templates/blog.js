@@ -119,9 +119,9 @@ const Blog = props => {
           />
           <div></div>
           <div className="text-center flex flex-col max-w-3xl mx-auto px-20 pb-6">
-            <h2 className="text-2xl mb-2 font-bold">
+            <h1 className="text-2xl mb-2 font-bold">
               {props.data.contentfulBlogPost.title}
-            </h2>
+            </h1>
             <small>
               {props.data.contentfulBlogPost.publishedDate} | Mikkel Klokkerud
             </small>
@@ -138,7 +138,7 @@ const Blog = props => {
           </div>
         </div>
 
-        <MailChimpForm />
+        {/* <MailChimpForm /> */}
       </Layout>
     </>
   )
