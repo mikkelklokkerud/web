@@ -1,5 +1,5 @@
 import React from "react"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const SeoComponent = ({
@@ -29,60 +29,68 @@ export const SeoComponent = ({
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const metaAuthor = author || site.siteMetadata.author
+  const metaImage = image || site.siteMetadata.image
+  const metaAuthor = "Mikkel Klokkerud"
+  const metaTitle = title || site.siteMetadata.title
   return (
-    <div />
-    // <Helmet
-    //   htmlAttributes={{
-    //     lang,
-    //   }}
-    //   title={title}
-    //   link={[
-    //     {
-    //       rel: "image",
-    //       href: `https:${image}`,
-    //     },
-    //     {
-    //       rel: "canonical",
-    //       href: `https://mikkelcodes.com`,
-    //     },
-    //     {
-    //       rel: "alternate",
-    //       href: `https://mikkelcodes.com`,
-    //       hreflang: "en",
-    //     },
-    //   ]}
-    //   titleTemplate={`%s | ${site.siteMetadata.title}`}
-    //   meta={[
-    //     {
-    //       name: `description`,
-    //       content: metaDescription,
-    //     },
-    //     {
-    //       property: `og:title`,
-    //       content: title,
-    //     },
-    //     {
-    //       property: `og:description`,
-    //       content: metaDescription,
-    //     },
-    //     {
-    //       property: `og:image`,
-    //       content: `https:${image}`,
-    //     },
-    //     {
-    //       property: `og:type`,
-    //       content: `website`,
-    //     },
-    //     {
-    //       name: `keywords`,
-    //       content: keywords,
-    //     },
-    //     {
-    //       name: "author",
-    //       content: metaAuthor,
-    //     },
-    //   ].concat(meta)}
-    // />
+    <Helmet
+      htmlAttributes={{
+        lang,
+      }}
+      title={title}
+      link={[
+        {
+          rel: "image",
+          href: `https:${image}`,
+        },
+        {
+          rel: "canonical",
+          href: `https://mikkelcodes.com`,
+        },
+        {
+          rel: "alternate",
+          href: `https://mikkelcodes.com`,
+          hreflang: "en",
+        },
+      ]}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: `https:${image}`,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `keywords`,
+          content: keywords,
+        },
+        {
+          name: "author",
+          content: metaAuthor,
+        },
+      ].concat(meta)}
+    >
+      {metaDescription && (
+        <meta property="og:description" content={metaDescription} />
+      )}
+      {metaTitle && <meta property="og:title" content={metaTitle} />}
+      {(title ? true : null) && <meta property="og:type" content="article" />}
+      {url && <meta property="og:url" content={url} />}
+      <meta name="image" content={metaImage} />
+    </Helmet>
   )
 }

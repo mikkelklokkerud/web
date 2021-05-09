@@ -40,12 +40,12 @@ const DividerText = () => {
       </div>
       <div className="max-w-twelve flex flex-col justify-center items-center px-10 text-white z-10">
         <div
-          className="w-32 mb-2 ml-10 mb-5 rotate-45"
+          className="w-32 mb-2 mb-5 transform scale-75"
           style={{ filter: "invert()" }}
         >
           <Image
             fluid={data.allFile.edges[0].node.childImageSharp.fluid}
-            className="transform rotate-45"
+            className=""
             alt="rocket"
           />
         </div>
