@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Seo } from "../components/Seo"
+import { SEO } from "../components/SEO"
 import Posts from "./../components/Posts"
 import Layout from "../components/Layout"
 import Services from "./../components/Services"
@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Layout>
-        <Seo title="Blog" keywords={keywords} />
+        <SEO title="Blog" keywords={keywords} />
         <Hero
           key={id}
           title={title}

@@ -3,7 +3,7 @@ import * as styles from "./blog.module.css"
 import Image from "gatsby-image"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import { Seo } from "../components/Seo"
+import { SEO } from "../components/SEO"
 import Layout from "../components/Layout"
 import { Link, graphql } from "gatsby"
 
@@ -76,7 +76,7 @@ const Blog = props => {
 
   return (
     <>
-      <Seo
+      <SEO
         title={props.data.contentfulBlogPost.seoTitle}
         description={props.data.contentfulBlogPost.seoDescription}
         keywords={props.data.contentfulBlogPost.seoKeywords}
