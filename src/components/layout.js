@@ -21,10 +21,10 @@ const Layout = ({ children }) => {
 
 
         <main>{children}</main>
-        <footer className="flex items-center justify-center">
+        <footer className="flex items-center justify-center bg-black">
           <div className="flex justify-center items-center flex-col md:flex-row">
             <div className="flex max-w-md h-20 items-center">
-                <p className="pt-0 mb-0 text-grey text-base">Mikkel Klokkerud | Copyright 2019-2021 | MikkelCodes.com </p>
+                <p className="pt-0 mb-0 text-white text-base tracking-wide text-xs">Mikkel Klokkerud | ©2019-2021 | MikkelCodes.com </p>
             </div>
           </div>
         </footer>

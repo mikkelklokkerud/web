@@ -17,7 +17,47 @@ class Hero_Featured extends React.Component {
     } = this.props
     return (
       <div>
-        <div className={styles.container}>
+        <div className="h-screen grid grid-cols-2 items-center sm:px-10 px-5">
+          <div className="text-center">
+            <StaticQuery
+              query={graphql`
+                query LogoQuery {
+                  file(name: { eq: "logo-white-bg" }) {
+                    childImageSharp {
+                      fluid {
+                        ...GatsbyImageSharpFluid_tracedSVG
+                      }
+                    }
+                  }
+                }
+              `}
+              render={data => (
+                <Image
+                  fluid={data.file.childImageSharp.fluid}
+                  style={{
+                    width: "75%",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                  }}
+                  alt="MikkelCodes-logo"
+                />
+              )}
+            />
+
+            <p className="">Gatsby & Next + Headless CMS</p>
+          </div>
+          <div className="border-l-2 border-black pl-10 lg:pr-10 py-16">
+            <Link key={key} to={`/blog/${slug}`}>
+              <div className="">
+                <h4 className="">Featured {featuredType}</h4>
+                <h2 className="text-2xl font-bold leading-tight mb-1">{title}</h2>
+                <small className="mt-3 mb-2 block">{publishedDate}</small>
+                <p className="font-normal">{shortDescription}</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+        {/* <div className={styles.container}>
           <div className={styles.left}>
           
          
@@ -59,7 +99,7 @@ class Hero_Featured extends React.Component {
               </div>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     )
   }

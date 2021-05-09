@@ -8,14 +8,14 @@ const Services = () => {
     <div className="flex flex-col bg-black pb-5">
       <div className="justify-center bg-black text-white flex pb-20 md:mt-3 flex-col lg:flex-row items-center">
         <div className="flex flex-col md:flex-row max-w-twelve mt-10 md:mt-0 justify-center md:pt-8 xl:mx-8 mb-8">
-          <div className="flex flex-col items-center text-center w-64 mb-5 z-10">
+          <div className="flex flex-col items-center text-center w-64 my-5 z-10">
             <img
               src={img3}
               style={{ filter: "invert()" }}
               alt="migration icon"
             />
             <h2 className="text-xl mt-4 mb-3 font-bold">
-              Migration To Gatsby.js
+              Platform migration
             </h2>
             <p className="pt-0 mb-1 text-base leading-normal italic">
               Planning to migrate your existing website to Gatsby.js or Next.js?
@@ -47,13 +47,13 @@ const Services = () => {
           </p>
         </div>
         <div>
-          <div className="flex flex-col items-center text-center w-64 xl:mx-8 mb-8">
+          <div className="flex flex-col items-center text-center mt-5 w-64 xl:mx-8 mb-8">
             <img
               src={img2}
               style={{ filter: "invert()" }}
               alt="optimisation icon"
             />
-            <h2 className="text-xl mt-4 font-bold">Gatsby.js Optimisation</h2>
+            <h2 className="text-xl mt-4 font-bold">Lighthouse Optimisation</h2>
             <p className="pt-0 mt-4 mb-1 text-base leading-normal italic">
               Not seeing incineratingly fast page-load speeds with your
               static website?
@@ -71,7 +71,7 @@ const Services = () => {
         className="mx-auto mb-24 -mt-10 md:-mt-20"
       >
         <button className="hover:bg-white rounded py-3 bg-black border-white hover:text-black border border-4 text-white w-48 font-bold">
-          Hire On UpWork
+          Hire me
         </button>
       </a>
     </div>

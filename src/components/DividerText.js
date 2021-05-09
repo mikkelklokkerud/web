@@ -56,7 +56,7 @@ const DividerText = () => {
         </h2>
         <p className="max-w-lg text-center pt-4">
           If you're building a new website in 2021, choose Gatsby.js for simple
-          sites and choose Next.js for the others. Simple and optimal.
+          sites and choose Next.js for the others. Simple as that.
         </p>
       </div>
     </div>

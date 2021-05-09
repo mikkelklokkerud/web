@@ -43,10 +43,11 @@
 }
 
 .content p {
+  font-weight: 400;
   padding: 0;
   line-height: 24px;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   font-size: 16px
 }
 
@@ -70,16 +71,17 @@
 
 .content li {
   padding-top: 10px;
+  font-weight: 400; 
 }
 
 .content ul p, .content ol p {
   margin-bottom: 0px;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-left: 10px
 }
 
-.content p {
-
+.content b {
+  font-weight: bold;
 }
 
 .content ol li {

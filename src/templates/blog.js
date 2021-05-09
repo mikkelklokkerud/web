@@ -128,7 +128,7 @@ const Blog = props => {
           </div>
         </div>
 
-        <div className="max-w-twelve mx-auto lg:mb-20 sm:mb-12">
+        <div className="max-w-twelve mx-auto lg:mb-12 sm:mb-12">
           <div className={styles.content}>
             {documentToReactComponents(
               props.data.contentfulBlogPost.body.json,
