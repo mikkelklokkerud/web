@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Seo from "./../components/Seo"
-import Post from "./../components/Post"
-import Layout from "../components/layout"
+import Posts from "./../components/Posts"
+import Layout from "../components/Layout"
 import Services from "./../components/Services"
 import DividerText from "./../components/DividerText"
 import NetlifyForm from "./../components/NetlifyForm"
@@ -33,35 +33,12 @@ const IndexPage = ({ data }) => {
         <Services />
         {/* <LatestArticles posts={allPosts} /> */}
         {/* <MailChimpForm /> */}
-        <AlsoRead posts={allPosts} />
+        <Posts posts={allPosts} title="Latest Articles" />
         <NetlifyForm />
       </Layout>
     </>
   )
 }
-
-const AlsoRead = ({ posts }) => (
-  <>
-    <h2
-      className="text-2xl underline lg:text-3xl mt-12 lg:mt-20"
-      style={{ textAlign: "center" }}
-    >
-      Latest articles
-    </h2>
-    <div className="max-w-twelve mx-auto flex flex-wrap justify-center mt-10 mb-20">
-      {posts.map(post => (
-        <Post
-          key={post.node.id}
-          title={post.node.title}
-          slug={post.node.slug}
-          published={post.node.publishedDate}
-          shortDescription={post.node.shortDescription}
-          publishedDate={post.node.publishedDate}
-        />
-      ))}
-    </div>
-  </>
-)
 
 export const pageQuery = graphql`
   query BlogPostsQuery {

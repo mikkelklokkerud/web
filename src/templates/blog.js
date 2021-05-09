@@ -6,7 +6,6 @@ import Seo from "./../components/Seo"
 import Layout from "./../components/layout"
 import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
-import "../components/layout.css"
 
 export const query = graphql`
   query($slug: String!) {
@@ -62,9 +61,7 @@ const Blog = props => {
         console.log(node)
         const alt = node.data.target.title["en-US"]
         const image = node.data.target.gatsbyImageData
-        return (
-          <GatsbyImage alt={alt} image={image} className="mt-2 mb-5"/>
-        )
+        return <GatsbyImage alt={alt} image={image} className="mt-2 mb-5" />
       },
     },
   }

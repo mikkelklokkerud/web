@@ -1,19 +1,8 @@
-.disqus__container {
-
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-
 .content h3 {
   padding-top: 15px;
   padding-bottom: 10px;
   font-size: 27px;
   font-weight: 700;
-}
-
-.disqus__content {
-  width: 650px;
 }
 
 .content li ul {
@@ -48,7 +37,7 @@
   line-height: 24px;
   margin-top: 0;
   margin-bottom: 24px;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .content ul img {
@@ -69,13 +58,14 @@
 
 .content li {
   padding-top: 10px;
-  font-weight: 400; 
+  font-weight: 400;
 }
 
-.content ul p, .content ol p {
+.content ul p,
+.content ol p {
   margin-bottom: 0px;
   padding-top: 5px;
-  padding-left: 10px
+  padding-left: 10px;
 }
 
 .content b {
@@ -89,7 +79,8 @@
   list-style-type: lower-greek;
 }
 
-.content ol, .content ul {
+.content ol,
+.content ul {
   margin: 20px 0;
 }
 
@@ -101,7 +92,8 @@
   list-style-type: circle;
 }
 
-.content ul li, .content ol li {
+.content ul li,
+.content ol li {
   font-size: 16px;
 }
 
@@ -110,36 +102,41 @@ blockquote {
 }
 
 @media only screen and (max-width: 759px) {
+  .content {
+    max-width: none;
+    margin: auto;
+  }
 
-    .content {
-        max-width: none;
-        margin: auto
-    }
+  .content p,
+  .content small,
+  .content ul,
+  .content ol,
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  figure {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .content p, .content small, .content ul, .content ol, .content h1, .content h2, .content h3, .content h4, figure {
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .content ul p,
+  .content ol p {
+    margin-left: 0px;
+  }
 
-    .content ul p, .content ol p {
-      margin-left: 0px
-    }
+  .content img {
+    max-width: 100%;
+    margin: 5% 0%;
+  }
 
-    .content img {
-        max-width: 100%;
-        margin: 5% 0%;
-    }
+  .content h1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
 
-    .content h1 {
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-
-    .content small {
-        font-size: 14px;
-    }
-
+  .content small {
+    font-size: 14px;
+  }
 }
-
-

@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "gatsby-link"
 import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Hero = ({
   key,
@@ -10,7 +10,6 @@ const Hero = ({
   slug,
   shortDescription,
   featuredType,
-  page,
 }) => {
   return (
     <div>
@@ -21,18 +20,16 @@ const Hero = ({
               query LogoQuery {
                 file(name: { eq: "logo-white-bg" }) {
                   childImageSharp {
-                    fluid {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                    }
+                    gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
                   }
                 }
               }
             `}
             render={data => (
-              <Image
-                fluid={data.file.childImageSharp.fluid}
+              <GatsbyImage
+                image={data.file.childImageSharp.gatsbyImageData}
                 className="mx-auto lg:w-9/12"
-                alt="MikkelCodes-logo"
+                alt="MikkelCodes logo"
               />
             )}
           />
