@@ -85,6 +85,7 @@ export const SeoComponent = ({
       ].concat(meta)}
     >
       <meta property="og:description" content={metaDescription} />
+      <meta property="description" content={metaDescription} />
       {metaTitle && <meta property="og:title" content={metaTitle} />}
       {(title ? true : null) && <meta property="og:type" content="article" />}
       {url && <meta property="og:url" content={url} />}
