@@ -46,7 +46,6 @@ const DividerText = () => {
           <Image
             fluid={data.allFile.edges[0].node.childImageSharp.fluid}
             className="transform rotate-45"
-            className="w-24 rotate-45"
             alt="rocket"
           />
           s

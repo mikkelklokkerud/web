@@ -50,7 +50,6 @@ const Services = () => {
           <div className="flex flex-col items-center text-center mt-5 w-64 xl:mx-8 mb-8">
             <img
               src={img2}
-              style={{ filter: "invert()" }}
               alt="optimisation icon"
             />
             <h2 className="text-xl mt-4 font-bold">Lighthouse Optimisation</h2>

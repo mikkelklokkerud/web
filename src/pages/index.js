@@ -1,12 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import SEO from "./../components/seo"
+import Seo from "./../components/Seo"
 import Post from "./../components/Post"
 import Layout from "../components/layout"
 import Services from "./../components/Services"
 import DividerText from "./../components/DividerText"
 import NetlifyForm from "./../components/NetlifyForm"
-import MailChimpForm from "../components/MailChimpForm/MailChimpForm"
 import Hero from "./../components/Hero"
 
 const IndexPage = ({ data }) => {
@@ -20,7 +19,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <Layout>
-        <SEO title="Blog" keywords={keywords} />
+        <Seo title="Blog" keywords={keywords} />
         <Hero
           key={id}
           title={title}
@@ -40,29 +39,6 @@ const IndexPage = ({ data }) => {
     </>
   )
 }
-
-const LatestArticles = ({ posts }) => (
-  <>
-    <h2
-      className="text-2xl underline lg:text-3xl mt-12 lg:mt-20"
-      style={{ textAlign: "center" }}
-    >
-      Latest articles
-    </h2>
-    <div className="max-w-twelve mx-auto flex flex-wrap justify-center mt-10 mb-20">
-      {posts.slice(0, 3).map(post => (
-        <Post
-          key={post.node.id}
-          title={post.node.title}
-          slug={post.node.slug}
-          published={post.node.publishedDate}
-          shortDescription={post.node.shortDescription}
-          publishedDate={post.node.publishedDate}
-        />
-      ))}
-    </div>
-  </>
-)
 
 const AlsoRead = ({ posts }) => (
   <>

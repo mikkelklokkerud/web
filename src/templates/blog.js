@@ -1,9 +1,10 @@
 import React from "react"
-import styles from "./blog.module.css"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import SEO from "./../components/seo"
+import * as styles from "./blog.module.css"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+import Seo from "./../components/Seo"
 import Layout from "./../components/layout"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../components/layout.css"
 
@@ -13,10 +14,16 @@ export const query = graphql`
       id
       title
       publishedDate(formatString: "MMMM Do, YYYY")
-      body {
-        json
-      }
       seoUrl
+      body {
+        raw
+        references {
+          contentful_id
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+          title
+          __typename
+        }
+      }
       content {
         childMarkdownRemark {
           html
@@ -48,12 +55,16 @@ export const query = graphql`
 `
 
 const Blog = props => {
+  console.log(props.data.contentfulBlogPost.body)
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-        const alt = node.data.target.fields.title["en-US"]
-        const url = node.data.target.fields.file["en-US"].url
-        return <img alt={alt} src={url} />
+        console.log(node)
+        const alt = node.data.target.title["en-US"]
+        const image = node.data.target.gatsbyImageData
+        return (
+          <GatsbyImage alt={alt} image={image} className="mt-2 mb-5"/>
+        )
       },
     },
   }
@@ -63,20 +74,12 @@ const Blog = props => {
   } else {
     markdown = props.data.contentfulBlogPost.content.childMarkdownRemark.html
   }
-  const disqusShortname = `mikkelcodes`
-  const disqusConfig = {
-    identifier: props.data.contentfulBlogPost.id,
-    title: props.data.contentfulBlogPost.title.split(" ").join("-"),
-    url: `https://mikkelcodes.com/blog/${props.data.contentfulBlogPost.title
-      .split(" ")
-      .join("-")}`,
-  }
 
   let contentful = props.data.contentfulBlogPost
 
   return (
     <>
-      <SEO
+      <Seo
         title={props.data.contentfulBlogPost.seoTitle}
         description={props.data.contentfulBlogPost.seoDescription}
         keywords={props.data.contentfulBlogPost.seoKeywords}
@@ -127,15 +130,10 @@ const Blog = props => {
 
         <div className="max-w-twelve mx-auto lg:mb-12 sm:mb-12">
           <div className={styles.content}>
-            {documentToReactComponents(
-              props.data.contentfulBlogPost.body.json,
-              options
-            )}
+            {renderRichText(props.data.contentfulBlogPost.body, options)}
             <div dangerouslySetInnerHTML={{ __html: markdown }} />
           </div>
         </div>
-
-        {/* <MailChimpForm /> */}
       </Layout>
     </>
   )
