@@ -7,7 +7,7 @@ import Services from "./../components/Services"
 import DividerText from "./../components/DividerText"
 import NetlifyForm from "./../components/NetlifyForm"
 import MailChimpForm from "../components/MailChimpForm/MailChimpForm"
-import Hero_Featured from "./../components/Hero_featured/Hero_Featured"
+import Hero from "./../components/Hero"
 
 const IndexPage = ({ data }) => {
   const allPosts = data.allContentfulBlogPost.edges
@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
     <>
       <Layout>
         <SEO title="Blog" keywords={keywords} />
-        <Hero_Featured
+        <Hero
           key={id}
           title={title}
           slug={slug}
