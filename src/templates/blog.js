@@ -3,8 +3,6 @@ import styles from "./blog.module.css"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import SEO from "./../components/seo"
 import Layout from "./../components/layout"
-import MailChimpForm from "./../components/MailChimpForm/MailChimpForm"
-import { DiscussionEmbed } from "disqus-react"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
 import "../components/layout.css"
@@ -55,7 +53,6 @@ const Blog = props => {
       "embedded-asset-block": node => {
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
-
         return <img alt={alt} src={url} />
       },
     },
