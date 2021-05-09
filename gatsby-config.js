@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-source-contentful",
       options: {
@@ -53,7 +54,6 @@ module.exports = {
         shortname: `mikkelcodes`,
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-postcss`,
     // {
