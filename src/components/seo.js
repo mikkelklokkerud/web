@@ -3,7 +3,16 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, meta, title, keywords, image, author, url }) {
+const Seo = ({
+  description,
+  lang,
+  meta,
+  title,
+  keywords,
+  image,
+  author,
+  url,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,11 +29,10 @@ function Seo({ description, lang, meta, title, keywords, image, author, url }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description;
-  const metaAuthor = author || site.siteMetadata.author;
+  const metaDescription = description || site.siteMetadata.description
+  const metaAuthor = author || site.siteMetadata.author
   return (
-        <Helmet
-      
+    <Helmet
       htmlAttributes={{
         lang,
       }}
@@ -32,16 +40,16 @@ function Seo({ description, lang, meta, title, keywords, image, author, url }) {
       link={[
         {
           rel: "image",
-          href: `https:${image}`
+          href: `https:${image}`,
         },
         {
           rel: "canonical",
-          href: `https://mikkelcodes.com`
+          href: `https://mikkelcodes.com`,
         },
         {
           rel: "alternate",
           href: `https://mikkelcodes.com`,
-          hreflang: "en"
+          hreflang: "en",
         },
       ]}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
@@ -51,7 +59,7 @@ function Seo({ description, lang, meta, title, keywords, image, author, url }) {
           content: metaDescription,
         },
         {
-          property: `og:title`, 
+          property: `og:title`,
           content: title,
         },
         {
@@ -68,14 +76,13 @@ function Seo({ description, lang, meta, title, keywords, image, author, url }) {
         },
         {
           name: `keywords`,
-          content: keywords
+          content: keywords,
         },
         {
           name: "author",
-          content: metaAuthor
-        }
+          content: metaAuthor,
+        },
       ].concat(meta)}
-    
     />
   )
 }
@@ -91,7 +98,7 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  keywords: PropTypes.array
+  keywords: PropTypes.array,
 }
 
 export default Seo
