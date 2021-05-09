@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `MikkelCodes`,
-    description: `No more waiting with JAMstack apps. Learn how to create secure, dynamic and fast fast web apps with JAMstack technology.`,
+    description: `I am a React developer and I share my experiences working with Gatsby.js and Next.js on client projects on a daily basis. Tag along!`,
     author: `Mikkel Klokkerud`,
     url: "https://mikkelcodes.com",
     image: "src/images/MikkelCodes.png",
