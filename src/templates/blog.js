@@ -3,8 +3,8 @@ import * as styles from "./blog.module.css"
 import Image from "gatsby-image"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import { SEO } from "../components/SEO"
-import Layout from "../components/Layout"
+import { SeoComponent } from "../components/SeoComponent"
+import { LayoutComponent } from "../components/LayoutComponent"
 import { Link, graphql } from "gatsby"
 
 export const query = graphql`
@@ -76,7 +76,7 @@ const Blog = props => {
 
   return (
     <>
-      <SEO
+      <SeoComponent
         title={props.data.contentfulBlogPost.seoTitle}
         description={props.data.contentfulBlogPost.seoDescription}
         keywords={props.data.contentfulBlogPost.seoKeywords}
@@ -84,7 +84,7 @@ const Blog = props => {
         author={props.data.contentfulBlogPost.seoAuthor}
         image={props.data.contentfulBlogPost.seoImage.fluid.src}
       />
-      <Layout>
+      <LayoutComponent>
         <div className="">
           <div
             className="block image flex items-center max-w-4xl justify-center mx-auto"
@@ -131,7 +131,7 @@ const Blog = props => {
             <div dangerouslySetInnerHTML={{ __html: markdown }} />
           </div>
         </div>
-      </Layout>
+      </LayoutComponent>
     </>
   )
 }

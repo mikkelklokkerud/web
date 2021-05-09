@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { SEO } from "../components/SEO"
+import { SeoComponent } from "../components/SeoComponent"
 import Posts from "./../components/Posts"
-import Layout from "../components/Layout"
+import { LayoutComponent } from "../components/LayoutComponent"
 import Services from "./../components/Services"
 import DividerText from "./../components/DividerText"
 import NetlifyForm from "./../components/NetlifyForm"
@@ -18,8 +18,8 @@ const IndexPage = ({ data }) => {
   const featuredType = "Post"
   return (
     <>
-      <Layout>
-        <SEO title="Blog" keywords={keywords} />
+      <LayoutComponent>
+        <SeoComponent title="Blog" keywords={keywords} />
         <Hero
           key={id}
           title={title}
@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
         {/* <MailChimpForm /> */}
         <Posts posts={allPosts} title="Latest Articles" />
         <NetlifyForm />
-      </Layout>
+      </LayoutComponent>
     </>
   )
 }

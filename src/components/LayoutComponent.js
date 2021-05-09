@@ -1,6 +1,6 @@
 import React from "react"
 
-const Layout = ({ children }) => {
+export const LayoutComponent = ({ children }) => {
   return (
     <>
       <main>{children}</main>
@@ -16,5 +16,3 @@ const Layout = ({ children }) => {
     </>
   )
 }
-
-export default Layout
