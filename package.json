@@ -9,7 +9,7 @@
     "body-parser": "^1.19.0",
     "browser-monads": "^1.0.0",
     "disqus-react": "^1.0.11",
-    "dotenv": "^8.6.0",
+    "dotenv": "^9.0.1",
     "env-cmd": "^10.1.0",
     "express": "^4.17.1",
     "gatsby": "^3.4.2",
@@ -20,7 +20,7 @@
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^1.4.1",
     "gatsby-plugin-mailchimp": "^5.2.2",
-    "gatsby-plugin-offline": "^3.10.2",
+    "gatsby-plugin-offline": "^4.4.0",
     "gatsby-plugin-preload-fonts": "^1.9.1",
     "gatsby-plugin-react-helmet": "^4.4.0",
     "gatsby-plugin-sharp": "^3.4.2",
@@ -48,7 +48,7 @@
     "gatsby-plugin-postcss": "^4.4.0",
     "nodemon": "^2.0.7",
     "postcss": "^8.2.14",
-    "prettier": "2.0.5",
+    "prettier": "^2.2.1",
     "tailwindcss": "^2.1.2"
   },
   "keywords": [
