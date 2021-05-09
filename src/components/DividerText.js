@@ -1,6 +1,6 @@
 import React from "react"
-import Image from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
 const DividerText = () => {
@@ -48,7 +48,6 @@ const DividerText = () => {
             className="transform rotate-45"
             alt="rocket"
           />
-          s
         </div>
         <h2 className="lg:text-3xl text-2xl text-center z-20">
           Gatsby or Next + Headless CMS

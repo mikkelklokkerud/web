@@ -3,7 +3,7 @@ import * as styles from "./blog.module.css"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Seo from "./../components/Seo"
-import Layout from "./../components/layout"
+import Layout from "./../components/Layout"
 import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
 

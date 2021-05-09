@@ -11,6 +11,9 @@ module.exports = {
     image: "src/images/MikkelCodes.png",
   },
   plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: "gatsby-source-contentful",
       options: {
@@ -19,7 +22,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -53,8 +55,6 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-smoothscroll`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
