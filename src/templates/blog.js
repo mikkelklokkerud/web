@@ -1,15 +1,16 @@
-import React from "react"
-import * as styles from "./blog.module.css"
-import Image from "gatsby-image"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { renderRichText } from "gatsby-source-contentful/rich-text"
-import { SeoComponent } from "../components/SeoComponent"
-import { LayoutComponent } from "../components/LayoutComponent"
-import { Link, graphql } from "gatsby"
-import { SocialShare } from "../components/SocialShare"
+import React from "react";
+import * as styles from "./blog.module.css";
+import Image from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { SeoComponent } from "../components/SeoComponent";
+import { LayoutComponent } from "../components/LayoutComponent";
+import { Link, graphql } from "gatsby";
+import { SocialShare } from "../components/SocialShare";
+import { SignUp } from "../components/SignUp";
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       id
       title
@@ -52,40 +53,34 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const Blog = props => {
-  console.log(props.data.contentfulBlogPost.body)
+  console.log(props.data.contentfulBlogPost.body);
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-        console.log(node)
-        const alt = node.data.target.title["en-US"]
-        const image = node.data.target.gatsbyImageData
-        return <GatsbyImage alt={alt} image={image} className="mt-2 mb-5" />
+        console.log(node);
+        const alt = node.data.target.title["en-US"];
+        const image = node.data.target.gatsbyImageData;
+        return <GatsbyImage alt={alt} image={image} className="mt-2 mb-5" />;
       },
     },
-  }
-  let markdown
+  };
+  let markdown;
   if (!props.data.contentfulBlogPost.content) {
-    markdown = "<div></div>"
+    markdown = "<div></div>";
   } else {
-    markdown = props.data.contentfulBlogPost.content.childMarkdownRemark.html
+    markdown = props.data.contentfulBlogPost.content.childMarkdownRemark.html;
   }
 
-  let contentful = props.data.contentfulBlogPost
+  let contentful = props.data.contentfulBlogPost;
 
-  const {
-    seoKeywords,
-    seoDescription,
-    seoTitle,
-    seoUrl,
-    seoImage,
-    id,
-  } = props?.data?.contentfulBlogPost
+  const { seoKeywords, seoDescription, seoTitle, seoUrl, seoImage, id } =
+    props?.data?.contentfulBlogPost;
 
-  const twitterHandle = "MikkelCodes"
-  const seoAuthor = "Mikkel Klokkerud"
+  const twitterHandle = "MikkelCodes";
+  const seoAuthor = "Mikkel Klokkerud";
 
   return (
     <>
@@ -140,7 +135,7 @@ const Blog = props => {
                   className="max-w-3xl mx-auto border-l-2 border-r-2 border-t-2 border-black shadow-xl rounded-t-md"
                   alt={seoTitle}
                 />
-                <div className="text-center flex flex-col max-w-3xl bg-white border-l-2 border-r-2 border-black shadow-xl mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6">
+                <div className="text-center flex flex-col max-w-3xl bg-white border-l-2 border-r-2 border-b-2 rounded-b-md border-black shadow-xl mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6 mb-8">
                   <h1 className="text-2xl mb-2 font-bold">
                     {props.data.contentfulBlogPost.title}
                   </h1>
@@ -159,6 +154,7 @@ const Blog = props => {
                     </div>
                   </div>
                 </div>
+                <SignUp path={window.location.pathname} />
               </div>
               <div />
             </div>
@@ -166,7 +162,7 @@ const Blog = props => {
         </div>
       </LayoutComponent>
     </>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

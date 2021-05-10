@@ -54,6 +54,13 @@ module.exports = {
         shortname: `mikkelcodes`,
       },
     },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint: process.env.MAILCHIMP_ENDPOINT,
+        timeout: 3500,
+      },
+    },
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-postcss`,
     // {
