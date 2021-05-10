@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import addToMailchimp from "gatsby-plugin-mailchimp";
-import bg1 from "../images/gr.jpeg";
-import bg2 from "../images/grunge2.jpeg";
-import bg3 from "../images/grunge3.jpeg";
 
 export const SignUp = ({ path }) => {
   const [email, setEmail] = useState("");
