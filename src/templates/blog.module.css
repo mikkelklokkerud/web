@@ -1,4 +1,5 @@
-.content h3 {
+.content h3,
+.content h4 {
   padding-top: 15px;
   padding-bottom: 10px;
   font-size: 27px;
