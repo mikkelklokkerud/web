@@ -19,8 +19,8 @@ export const SignUp = ({ path }) => {
   };
   return (
     <div className="my-8">
-      <form className="border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white p-8 shadow-xl">
-        <h4 className="mb-8 text-2xl">
+      <form className="border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white lg:p-8 p-5 shadow-xl">
+        <h4 className="mb-8 lg:text-2xl text-xl">
           Sign up to get my <span className="font-bold">Free Gatsby Guide</span>{" "}
           on Google Lighthouse optimisation!
         </h4>

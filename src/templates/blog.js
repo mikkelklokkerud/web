@@ -33,6 +33,7 @@ export const query = graphql`
       }
       seoTitle
       featuredImage {
+        gatsbyImageData
         resize(width: 1600, height: 800) {
           src
         }
@@ -106,7 +107,7 @@ const Blog = props => {
         image={seoImage.fluid.src}
       />
       <LayoutComponent>
-        <div className="bg-gray-100 w-full">
+        <div className="bg-gray-100 w-full px-5">
           <div>
             <div
               className="block image flex items-center max-w-3xl justify-center mx-auto "
@@ -144,12 +145,13 @@ const Blog = props => {
                 </div>
               </div>
               <div>
-                <img
-                  src={contentful.featuredImage.resize.src}
-                  className="max-w-3xl mx-auto border-l-2 border-r-2 border-t-2 border-black shadow-xl rounded-t-md"
-                  alt={seoTitle}
-                />
-                <div className="text-center flex flex-col max-w-3xl bg-white border-l-2 border-r-2 border-b-2 rounded-b-md border-black shadow-xl mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6 mb-8">
+                <div className="max-w-3xl mx-auto border-l-2 border-r-2 border-t-2 border-black shadow-xl rounded-t-md overflow-hidden -mb-3 relative z-10">
+                  <GatsbyImage
+                    image={contentful.featuredImage.gatsbyImageData}
+                    alt={seoTitle}
+                  />
+                </div>
+                <div className="z-20 relative text-center flex flex-col max-w-3xl bg-white border-l-2 border-r-2 border-b-2 rounded-b-md border-black shadow-xl mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6 mb-8">
                   <h1 className="text-2xl mb-2 font-bold">
                     {props.data.contentfulBlogPost.title}
                   </h1>
@@ -183,7 +185,7 @@ const Blog = props => {
                 </div>
                 <SignUp path={window.location.pathname} />
                 <div className="mt-8 pb-8">
-                  <div className="mx-auto max-w-3xl grid grid-cols-3 gap-x-4">
+                  <div className="mx-auto max-w-3xl grid sm:grid-cols-3 grid-cols-1 gap-y-3 gap-x-4">
                     {posts &&
                       props?.data?.allContentfulBlogPost?.edges
                         .slice(0, 3)
@@ -193,7 +195,7 @@ const Blog = props => {
                             className="border-2 border-black rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
                           >
                             <div className="text-sm mb-1 italic">
-                              {el.node.publishedDate}
+                              <span className="sm:hidden">Published: </span>{el.node.publishedDate}
                             </div>
                             <div className="font-bold">{el.node.title}</div>
                           </Link>

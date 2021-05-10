@@ -22,7 +22,7 @@ export const SocialShare = ({
   <div
     className={`grid
   ${
-    vertical ? " grid-cols-1" : "grid-cols-4 w-56 transform translate-x-3"
+    vertical ? " grid-cols-1 ml-6" : "grid-cols-4 w-56 transform translate-x-3"
   } grid-cols-1 gap-y-3 mr-5 `}
   >
     <div className="">
