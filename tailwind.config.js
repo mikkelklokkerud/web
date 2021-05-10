@@ -16,6 +16,7 @@ module.exports = {
   },
   theme: {
     screens: {
+      xs: "420px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
@@ -31,9 +32,9 @@ module.exports = {
     },
     borderWidth: {
       default: "1px",
-      "0": "0",
-      "2": "2px",
-      "4": "4px",
+      0: "0",
+      2: "2px",
+      4: "4px",
     },
     extend: {
       colors: {
@@ -46,7 +47,12 @@ module.exports = {
         "720px": "720px",
       },
       backgroundOpacity: {
-        "65": "0.65",
+        65: "0.65",
+      },
+      gridTemplateColumns: {
+        "articles-lg": "345px 345px 345px",
+        "articles-sm": "350px 350px",
+        signup: "75% auto",
       },
       height: {
         sm: "640px",
@@ -61,12 +67,12 @@ module.exports = {
       spacing: {
         "2px": "2px",
         "6px": "6px",
-        "18": "72px",
-        "25": "100px",
-        "50": "200px",
-        "96": "24rem",
-        "128": "32rem",
+        18: "72px",
+        25: "100px",
+        50: "200px",
+        96: "24rem",
+        128: "32rem",
       },
     },
   },
-}
+};

@@ -1,15 +1,15 @@
-import React from "react"
-import Post from "./Post"
+import React from "react";
+import Post from "./Post";
 
 const Posts = ({ posts, title }) => (
   <>
     <h2
-      className="text-2xl underline lg:text-3xl mt-12 lg:mt-20"
+      className="text-2xl font-bold lg:text-3xl mt-12 lg:mt-20"
       style={{ textAlign: "center" }}
     >
       {title}
     </h2>
-    <div className="max-w-twelve mx-auto flex flex-wrap justify-center mt-10 mb-20">
+    <div className="max-w-twelve mx-auto grid md:grid-cols-articles-sm lg:grid-cols-articles-lg mt-10 mb-20 justify-center">
       {posts.map(post => (
         <Post
           key={post.node.id}
@@ -22,6 +22,6 @@ const Posts = ({ posts, title }) => (
       ))}
     </div>
   </>
-)
+);
 
-export default Posts
+export default Posts;

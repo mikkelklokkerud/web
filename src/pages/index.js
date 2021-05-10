@@ -1,21 +1,21 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { SeoComponent } from "../components/SeoComponent"
-import Posts from "./../components/Posts"
-import { LayoutComponent } from "../components/LayoutComponent"
-import Services from "./../components/Services"
-import DividerText from "./../components/DividerText"
-import NetlifyForm from "./../components/NetlifyForm"
-import Hero from "./../components/Hero"
+import React from "react";
+import { graphql } from "gatsby";
+import { SeoComponent } from "../components/SeoComponent";
+import Posts from "./../components/Posts";
+import { LayoutComponent } from "../components/LayoutComponent";
+import Services from "./../components/Services";
+import DividerText from "./../components/DividerText";
+import NetlifyForm from "./../components/NetlifyForm";
+import Hero from "./../components/Hero";
 
 const IndexPage = ({ data }) => {
-  const allPosts = data.allContentfulBlogPost.edges
+  const allPosts = data.allContentfulBlogPost.edges;
   const featured = data.allContentfulBlogPost.edges.filter(
     edge => edge.node.featured
-  )
-  const { id, title, slug, publishedDate, shortDescription } = featured[0].node
-  const keywords = ["web developer", "developer", "React", "gatsby"]
-  const featuredType = "Post"
+  );
+  const { id, title, slug, publishedDate, shortDescription } = featured[0].node;
+  const keywords = ["web developer", "developer", "React", "gatsby"];
+  const featuredType = "Post";
   return (
     <>
       <LayoutComponent>
@@ -24,6 +24,7 @@ const IndexPage = ({ data }) => {
           key={id}
           title={title}
           slug={slug}
+          image={data.file.childImageSharp.gatsbyImageData}
           publishedDate={publishedDate}
           shortDescription={shortDescription}
           featuredType={featuredType}
@@ -37,8 +38,8 @@ const IndexPage = ({ data }) => {
         <NetlifyForm />
       </LayoutComponent>
     </>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query BlogPostsQuery {
@@ -54,7 +55,12 @@ export const pageQuery = graphql`
         }
       }
     }
+    file(name: { eq: "logo-white-bg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+      }
+    }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

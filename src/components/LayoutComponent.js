@@ -1,6 +1,7 @@
-import React from "react"
+import React from "react";
 
 export const LayoutComponent = ({ children }) => {
+
   return (
     <>
       <main>{children}</main>
@@ -14,5 +15,5 @@ export const LayoutComponent = ({ children }) => {
         </div>
       </footer>
     </>
-  )
-}
+  );
+};

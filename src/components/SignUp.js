@@ -19,7 +19,7 @@ export const SignUp = ({ path }) => {
   };
   return (
     <div className="my-8">
-      <form className="rgb border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white lg:px-8 px-5 py-8 shadow-xl">
+      <form className="rgb xs:border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white lg:px-8 px-5 py-8 shadow-xl">
         <h4 className="mb-4 lg:text-2xl sm:text-xl text-lg">
           SEO essentials: get my{" "}
           <span className="font-bold">Free Gatsby Guide</span> on optimising for{" "}
@@ -36,10 +36,7 @@ export const SignUp = ({ path }) => {
             <span className="block mt-1">100</span>
           </div>
         </div>
-        <div
-          className="grid gap-x-2 w-4/6 mx-auto"
-          style={{ gridTemplateColumns: "75% auto" }}
-        >
+        <div className="grid gap-x-2 sm:w-4/6 mx-auto xs:grid-cols-signup grid-cols-1 gap-y-2 w-full">
           <input
             type="text"
             name="email"

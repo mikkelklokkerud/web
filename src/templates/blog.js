@@ -107,10 +107,10 @@ const Blog = props => {
         image={seoImage.fluid.src}
       />
       <LayoutComponent>
-        <div className="bg-gray-100 w-full px-5">
+        <div className="bg-gray-100 w-full xs:px-5">
           <div>
             <div
-              className="block image flex items-center max-w-3xl justify-center mx-auto "
+              className="block image flex items-center max-w-3xl justify-center mx-auto"
               style={{ height: "12vh" }}
             >
               <Link to="/">
@@ -145,7 +145,7 @@ const Blog = props => {
                 </div>
               </div>
               <div>
-                <div className="border-2 border-black rounded-md overflow-hidden rgb">
+                <div className="xs:border-2 border-black rounded-md overflow-hidden rgb">
                   <div className="rgb max-w-3xl mx-auto overflow-hidden -mb-3 relative z-10">
                     <GatsbyImage
                       image={contentful.featuredImage.gatsbyImageData}
@@ -154,7 +154,7 @@ const Blog = props => {
                     />
                   </div>
                   <div className="rgb z-20 relative text-center flex flex-col max-w-3xl bg-white mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6">
-                    <h1 className="text-2xl mb-2 font-bold">
+                    <h1 className="text-2xl mb-2 font-bold px-5">
                       {props.data.contentfulBlogPost.title}
                     </h1>
                     <small>
@@ -173,7 +173,7 @@ const Blog = props => {
                     </div>
                     <div className="lg:hidden mx-auto transform -translate-y-6 text-center">
                       <div className="w-full bg-black h-px mb-5 opacity-30" />
-                      <div className="">
+                      <div className="transform scale-75 -translate-x-5 xs:scale-100 -translate-x-0">
                         <SocialShare
                           url={seoUrl}
                           title={seoTitle}
@@ -195,7 +195,7 @@ const Blog = props => {
                         .map(el => (
                           <Link
                             to={`/blog/${el.node.slug}`}
-                            className="border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
+                            className="xs:border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
                           >
                             <div className="text-sm mb-1 italic">
                               <span className="sm:hidden">Published: </span>
@@ -208,7 +208,7 @@ const Blog = props => {
                 </div>
                 <Link
                   to="/#contact"
-                  className="text-center mx-auto max-w-3xl block w-full border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
+                  className="text-center mx-auto max-w-3xl block w-full xs:border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
                 >
                   <div className="font-bold text-xl">Contact Me</div>{" "}
                   <div className="text-sm">I normally respond in 24h</div>
