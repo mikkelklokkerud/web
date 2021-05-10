@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import addToMailchimp from "gatsby-plugin-mailchimp";
+import bg1 from "../images/gr.jpeg";
+import bg2 from "../images/grunge2.jpeg";
+import bg3 from "../images/grunge3.jpeg";
 
 export const SignUp = ({ path }) => {
   const [email, setEmail] = useState("");
@@ -18,12 +21,24 @@ export const SignUp = ({ path }) => {
       .catch(() => {});
   };
   return (
-    <div className="my-8">
+    <div className="my-8 rgb rounded-md">
       <form className="border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white lg:p-8 p-5 shadow-xl">
-        <h4 className="mb-8 lg:text-2xl text-xl">
+        <h4 className="mb-4 lg:text-2xl sm:text-xl text-lg">
           Sign up to get my <span className="font-bold">Free Gatsby Guide</span>{" "}
-          on Google Lighthouse optimisation!
+          on optimising for{" "}
+          <span className="font-bold">Google Lighthouse!</span>
         </h4>
+        <div className="mb-8 flex justify-center">
+          <div className="animate-medium bg-black text-white bg-green-500 font-bold text-lg shadow-lg border-2 h-12 w-12 border-green-500 rounded-full flex items-center justify-center ">
+            <span className="block mt-1">100</span>
+          </div>
+          <div className="animate-slow mx-5 font-bold text-lg text-green-500 shadow-lg border-2 border-green-500 w-12 h-12 rounded-full flex items-center justify-center ">
+            <span className="block mt-1">100</span>
+          </div>
+          <div className="animate-fast font-bold bg-green-500 text-lg text-white shadow-lg border-green-500 border-2 w-12 h-12 rounded-full flex items-center justify-center ">
+            <span className="block mt-1">100</span>
+          </div>
+        </div>
         <div
           className="grid gap-x-2 w-4/6 mx-auto"
           style={{ gridTemplateColumns: "75% auto" }}
@@ -43,7 +58,9 @@ export const SignUp = ({ path }) => {
             Continue
           </button>
         </div>
-        <div className="mt-3 italic text-sm">Currently in the making as of May 2021 :-)</div>
+        <div className="mt-3 italic text-sm">
+          Currently in the making as of May 2021 :-)
+        </div>
         {response && (
           <div
             className={`mx-auto font-bold mt-1 ${

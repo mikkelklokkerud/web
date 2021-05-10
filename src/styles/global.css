@@ -6,6 +6,21 @@
   .invert {
     filter: invert(100%);
   }
+  .animate-medium {
+    animation: spin 8s linear infinite;
+    animation-direction: reverse;
+  }
+  .animate-fast {
+    animation: spin 6.5s linear infinite;
+    animation-direction: reverse;
+  }
+  .animate-slow {
+    animation: spin 9s linear infinite;
+    animation-direction: reverse;
+  }
+  .rgb {
+    box-shadow: 5px 5px rgba(0,0,0,0.5), 10px 10px rgba(0,0,0,0.3), 15px 15px rgba(0,0,0,0.2);
+  }
 }
 
 html {
@@ -37,4 +52,13 @@ li {
 ol,
 ul {
   margin-top: -5px !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -145,13 +145,14 @@ const Blog = props => {
                 </div>
               </div>
               <div>
-                <div className="max-w-3xl mx-auto border-l-2 border-r-2 border-t-2 border-black shadow-xl rounded-t-md overflow-hidden -mb-3 relative z-10">
+                <div className="rgb max-w-3xl mx-auto border-l-2 border-r-2 border-t-2 border-black shadow-xl rounded-t-md overflow-hidden -mb-3 relative z-10">
                   <GatsbyImage
                     image={contentful.featuredImage.gatsbyImageData}
+                    className="w-full"
                     alt={seoTitle}
                   />
                 </div>
-                <div className="z-20 relative text-center flex flex-col max-w-3xl bg-white border-l-2 border-r-2 border-b-2 rounded-b-md border-black shadow-xl mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6 mb-8">
+                <div className="rgb z-20 relative text-center flex flex-col max-w-3xl bg-white border-l-2 border-r-2 border-b-2 rounded-b-md border-black shadow-xl mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6 mb-8">
                   <h1 className="text-2xl mb-2 font-bold">
                     {props.data.contentfulBlogPost.title}
                   </h1>
@@ -160,7 +161,7 @@ const Blog = props => {
                     Klokkerud
                   </small>
 
-                  <div className="text-left mx-auto lg:mb-12 sm:mb-12 mt-8">
+                  <div className="text-left mx-auto lg:mb-12 mb-10 mt-8">
                     <div className={`${styles.content}`}>
                       {renderRichText(
                         props.data.contentfulBlogPost.body,
@@ -192,7 +193,7 @@ const Blog = props => {
                         .map(el => (
                           <Link
                             to={`/blog/${el.node.slug}`}
-                            className="border-2 border-black rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
+                            className="border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
                           >
                             <div className="text-sm mb-1 italic">
                               <span className="sm:hidden">Published: </span>{el.node.publishedDate}
