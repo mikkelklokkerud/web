@@ -20,11 +20,11 @@ export const SignUp = ({ path }) => {
   return (
     <div className="my-8">
       <form className="rgb xs:border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white lg:px-8 px-5 py-8 shadow-xl">
-        <h4 className="mb-4 lg:text-2xl sm:text-xl text-lg">
+        <h2 className="mb-4 lg:text-2xl sm:text-xl text-lg">
           SEO essentials: get my{" "}
           <span className="font-bold">Free Gatsby Guide</span> on optimising for{" "}
           <span className="font-bold">Google Lighthouse!</span>
-        </h4>
+        </h2>
         <div className="mb-8 flex justify-center">
           <div className="animate-medium bg-black text-white bg-black font-bold text-lg shadow-lg border-2 h-12 w-12 border-black rounded-full flex items-center justify-center ">
             <span className="block mt-1">100</span>

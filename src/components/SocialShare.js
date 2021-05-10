@@ -80,7 +80,7 @@ export const SocialShare = ({
                   <div className="relative" style={{ fontSize: "40px" }}>
                     <button
                       onClick={handlePress}
-                      className="opacity-80 hover:opacity-100 transition duration-100"
+                      className="opacity-100 hover:opacity-80 transition duration-100"
                       disabled={isLoading}
                       style={{ filter: "saturate(120%) contrast(110%)" }}
                     >
