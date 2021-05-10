@@ -18,11 +18,11 @@ export const SignUp = ({ path }) => {
       .catch(() => {});
   };
   return (
-    <div className="my-8 rgb rounded-md">
-      <form className="border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white lg:p-8 p-5 shadow-xl">
+    <div className="my-8">
+      <form className="rgb border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white lg:p-8 p-5 shadow-xl">
         <h4 className="mb-4 lg:text-2xl sm:text-xl text-lg">
-          Sign up to get my <span className="font-bold">Free Gatsby Guide</span>{" "}
-          on optimising for{" "}
+          SEO essentials: get my{" "}
+          <span className="font-bold">Free Gatsby Guide</span> on optimising for{" "}
           <span className="font-bold">Google Lighthouse!</span>
         </h4>
         <div className="mb-8 flex justify-center">

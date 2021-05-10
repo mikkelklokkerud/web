@@ -206,11 +206,12 @@ const Blog = props => {
                 </div>
                 <Link
                   to="/#contact"
-                  className="text-center block w-full border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100 mb-12"
+                  className="text-center block w-full border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
                 >
                   <div className="font-bold text-xl">Contact Me</div>{" "}
                   <div className="text-sm">I normally respond in 24h</div>
                 </Link>
+                <div className="pb-12" />
               </div>
               <div />
             </div>
