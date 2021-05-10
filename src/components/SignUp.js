@@ -19,7 +19,7 @@ export const SignUp = ({ path }) => {
   };
   return (
     <div className="my-8">
-      <form className="rgb border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white lg:p-8 p-5 shadow-xl">
+      <form className="rgb border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white lg:px-8 px-5 py-8 shadow-xl">
         <h4 className="mb-4 lg:text-2xl sm:text-xl text-lg">
           SEO essentials: get my{" "}
           <span className="font-bold">Free Gatsby Guide</span> on optimising for{" "}
@@ -29,7 +29,7 @@ export const SignUp = ({ path }) => {
           <div className="animate-medium bg-black text-white bg-black font-bold text-lg shadow-lg border-2 h-12 w-12 border-black rounded-full flex items-center justify-center ">
             <span className="block mt-1">100</span>
           </div>
-          <div className="animate-slow mx-5 font-bold text-lg text-black shadow-lg border-2 border-black w-12 h-12 rounded-full flex items-center justify-center ">
+          <div className="mx-5 animate-slow bg-black text-white bg-black font-bold text-lg shadow-lg border-2 h-12 w-12 border-black rounded-full flex items-center justify-center ">
             <span className="block mt-1">100</span>
           </div>
           <div className="animate-fast font-bold bg-black text-lg text-white shadow-lg border-black border-2 w-12 h-12 rounded-full flex items-center justify-center ">

@@ -7,16 +7,16 @@
     filter: invert(100%);
   }
   .animate-medium {
-    animation: spin 8s linear infinite;
-    animation-direction: reverse;
+    animation: spin 2s linear infinite;
+    animation-direction: alternate-reverse;
   }
   .animate-fast {
-    animation: spin 6s linear infinite;
-    animation-direction: reverse;
+    animation: spin 2.5s linear infinite;
+    animation-direction: alternate-reverse;
   }
   .animate-slow {
-    animation: spin 10s linear infinite;
-    animation-direction: reverse;
+    animation: spin 3s linear infinite;
+    animation-direction: alternate-reverse;
   }
   .rgb {
     box-shadow: 5px 5px rgba(0, 0, 0, 0.5), 10px 10px rgba(0, 0, 0, 0.3),
@@ -56,16 +56,11 @@ ul {
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
+  from {
+    color: white;
+    background-color: green;
+    border-color: green;
   }
-  20% {
-    transform: rotate(10deg);
-  }
-  40% {
-    transform: rotate(230deg);
-  }
-  100% {
-    transform: rotate(360deg);
+  to {
   }
 }
