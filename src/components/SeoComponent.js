@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby";
 
 export const SeoComponent = ({
   description,
-  lang,
   meta,
   title,
   keywords,
@@ -36,7 +35,7 @@ export const SeoComponent = ({
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: "en",
       }}
       title={title}
       link={[
