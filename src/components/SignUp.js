@@ -9,11 +9,9 @@ export const SignUp = ({ path }) => {
     setEmail(e.target.value);
   };
 
-  useEffect(() => console.log(response.msg), [response]);
-
   const handleSubmit = e => {
     e.preventDefault();
-    addToMailchimp(email, { PATHNAME: path }) // listFields are optional if you are only capturing the email address.
+    addToMailchimp(email, { PATHNAME: path })
       .then(data => {
         setResponse(data);
       })
@@ -45,9 +43,7 @@ export const SignUp = ({ path }) => {
             Continue
           </button>
         </div>
-        <div className="mt-3">
-          Currently in the making as of May 2021 :-)
-        </div>
+        <div className="mt-3">Currently in the making as of May 2021 :-)</div>
         {response && (
           <div
             className={`mx-auto font-bold mt-1 ${

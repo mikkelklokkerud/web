@@ -53,15 +53,25 @@ export const query = graphql`
         }
       }
     }
+    allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+      edges {
+        node {
+          id
+          title
+          slug
+          publishedDate(formatString: "MMMM Do, YYYY")
+          featured
+          shortDescription
+        }
+      }
+    }
   }
 `;
 
 const Blog = props => {
-  console.log(props.data.contentfulBlogPost.body);
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-        console.log(node);
         const alt = node.data.target.title["en-US"];
         const image = node.data.target.gatsbyImageData;
         return <GatsbyImage alt={alt} image={image} className="mt-2 mb-5" />;
@@ -79,6 +89,8 @@ const Blog = props => {
 
   const { seoKeywords, seoDescription, seoTitle, seoUrl, seoImage, id } =
     props?.data?.contentfulBlogPost;
+
+  const posts = props?.data?.allContentfulBlogPost?.edges;
 
   const twitterHandle = "MikkelCodes";
   const seoAuthor = "Mikkel Klokkerud";
@@ -156,6 +168,24 @@ const Blog = props => {
                   </div>
                 </div>
                 <SignUp path={window.location.pathname} />
+                <div className="my-8">
+                  <div className="mx-auto max-w-3xl grid grid-cols-3 gap-x-4">
+                    {posts &&
+                      props?.data?.allContentfulBlogPost?.edges
+                        .slice(0, 3)
+                        .map(el => (
+                          <Link
+                            to={`/blog/${el.node.slug}`}
+                            className="border-2 border-black rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
+                          >
+                            <div className="text-sm mb-1 italic">
+                              {el.node.publishedDate}
+                            </div>
+                            <div className="font-bold">{el.node.title}</div>
+                          </Link>
+                        ))}
+                  </div>
+                </div>
               </div>
               <div />
             </div>
