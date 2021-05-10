@@ -161,7 +161,6 @@ const Blog = props => {
                       {props.data.contentfulBlogPost.publishedDate} | Mikkel
                       Klokkerud
                     </small>
-
                     <div className="text-left mx-auto lg:mb-12 mb-10 mt-8">
                       <div className={`${styles.content}`}>
                         {renderRichText(
