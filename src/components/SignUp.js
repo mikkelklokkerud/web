@@ -19,7 +19,7 @@ export const SignUp = ({ path }) => {
   };
   return (
     <div className="my-8">
-      <form className="border-2 border-black rounded-md max-w-3xl flex flex-col text-center bg-white p-8 shadow-xl">
+      <form className="border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white p-8 shadow-xl">
         <h4 className="mb-8 text-2xl">
           Sign up to get my <span className="font-bold">Free Gatsby Guide</span>{" "}
           on Google Lighthouse optimisation!
@@ -43,7 +43,7 @@ export const SignUp = ({ path }) => {
             Continue
           </button>
         </div>
-        <div className="mt-3">Currently in the making as of May 2021 :-)</div>
+        <div className="mt-3 italic text-sm">Currently in the making as of May 2021 :-)</div>
         {response && (
           <div
             className={`mx-auto font-bold mt-1 ${

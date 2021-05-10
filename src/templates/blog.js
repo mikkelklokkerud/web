@@ -126,7 +126,7 @@ const Blog = props => {
               </Link>
             </div>
             <div
-              className="lg:grid grid-cols-3 max-auto"
+              className="lg:grid grid-cols-3 mx-auto"
               style={{ gridTemplateColumns: "1fr minmax(500px, 865px) 1fr" }}
             >
               <div className="lg:flex hidden h-full justify-end items-center relative">
@@ -139,6 +139,7 @@ const Blog = props => {
                     tags={seoKeywords}
                     description={seoDescription}
                     id={id}
+                    vertical
                   />
                 </div>
               </div>
@@ -166,9 +167,22 @@ const Blog = props => {
                       <div dangerouslySetInnerHTML={{ __html: markdown }} />
                     </div>
                   </div>
+                  <div className="lg:hidden mx-auto transform -translate-y-6 text-center">
+                    <div className="w-full bg-black h-px mb-5 opacity-30" />
+                    <div className="">
+                      <SocialShare
+                        url={seoUrl}
+                        title={seoTitle}
+                        twitterHandle={twitterHandle}
+                        tags={seoKeywords}
+                        description={seoDescription}
+                        id={id}
+                      />
+                    </div>
+                  </div>
                 </div>
                 <SignUp path={window.location.pathname} />
-                <div className="my-8">
+                <div className="mt-8 pb-8">
                   <div className="mx-auto max-w-3xl grid grid-cols-3 gap-x-4">
                     {posts &&
                       props?.data?.allContentfulBlogPost?.edges
