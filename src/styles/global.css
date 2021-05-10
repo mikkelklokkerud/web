@@ -11,11 +11,11 @@
     animation-direction: reverse;
   }
   .animate-fast {
-    animation: spin 6.5s linear infinite;
+    animation: spin 6s linear infinite;
     animation-direction: reverse;
   }
   .animate-slow {
-    animation: spin 9s linear infinite;
+    animation: spin 10s linear infinite;
     animation-direction: reverse;
   }
   .rgb {
