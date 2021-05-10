@@ -1,7 +1,7 @@
-import React from "react"
-import Link from "gatsby-link"
-import { StaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import React from "react";
+import Link from "gatsby-link";
+import { StaticQuery, graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const Hero = ({
   key,
@@ -13,7 +13,7 @@ const Hero = ({
 }) => {
   return (
     <div>
-      <div className="h-screen lg:grid grid-cols-2 items-center sm:px-10 px-5 flex items-center flex-col justify-center lg:text-left">
+      <div className="h-screen max-w-6xl mx-auto lg:grid grid-cols-2 items-center sm:px-10 px-5 flex items-center flex-col justify-center lg:text-left">
         <div className="text-center w-4/6 sm:w-1/2 lg:w-auto sm:relative absolute top-0 mt-5">
           <StaticQuery
             query={graphql`
@@ -50,7 +50,7 @@ const Hero = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
