@@ -1,9 +1,10 @@
-import React from "react"
+import React from "react";
 
 const NetlifyForm = () => (
   <>
     <form
       name="Contact Form"
+      id="contact"
       method="POST"
       data-netlify="true"
       action="/thank-you"
@@ -82,7 +83,7 @@ const NetlifyForm = () => (
             >
               {/* <ReCAPTCHA sitekey={process.env.GATSBY_RECAPTCHA_KEY} /> */}
               <button
-                className={` bg-orange text-white font-bold rounded-md w-full border-2 border-white transition duration-100 ease-in-out transform leading-none hover:bg-white hover:text-black`}
+                className={`bg-orange text-white font-bold rounded-md w-full border-2 border-white transition duration-100 ease-in-out transform leading-none hover:bg-white hover:text-black`}
                 style={{ padding: "15px 30px" }}
                 type="submit"
               >
@@ -94,6 +95,6 @@ const NetlifyForm = () => (
       </div>
     </form>
   </>
-)
+);
 
-export default NetlifyForm
+export default NetlifyForm;

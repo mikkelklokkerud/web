@@ -19,7 +19,8 @@
     animation-direction: reverse;
   }
   .rgb {
-    box-shadow: 5px 5px rgba(0,0,0,0.5), 10px 10px rgba(0,0,0,0.3), 15px 15px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.5), 10px 10px rgba(0, 0, 0, 0.3),
+      15px 15px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -55,10 +56,16 @@ ul {
 }
 
 @keyframes spin {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  20% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(230deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }

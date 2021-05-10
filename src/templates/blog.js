@@ -196,13 +196,21 @@ const Blog = props => {
                             className="border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
                           >
                             <div className="text-sm mb-1 italic">
-                              <span className="sm:hidden">Published: </span>{el.node.publishedDate}
+                              <span className="sm:hidden">Published: </span>
+                              {el.node.publishedDate}
                             </div>
                             <div className="font-bold">{el.node.title}</div>
                           </Link>
                         ))}
                   </div>
                 </div>
+                <Link
+                  to="/#contact"
+                  className="text-center block w-full border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100 mb-12"
+                >
+                  <div className="font-bold text-xl">Contact Me</div>{" "}
+                  <div className="text-sm">I normally respond in 24h</div>
+                </Link>
               </div>
               <div />
             </div>
