@@ -1,6 +1,6 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 export const SeoComponent = ({
   description,
@@ -9,7 +9,6 @@ export const SeoComponent = ({
   title,
   keywords,
   image,
-  author,
   url,
 }) => {
   const { site } = useStaticQuery(
@@ -26,12 +25,14 @@ export const SeoComponent = ({
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
-  const metaImage = image || site.siteMetadata.image
-  const metaAuthor = "Mikkel Klokkerud"
-  const metaTitle = title || site.siteMetadata.title
+  const metaDescription = description || site.siteMetadata.description;
+  const metaImage = image || site.siteMetadata.image;
+  const metaAuthor = "Mikkel Klokkerud";
+  const metaTitle = title || site.siteMetadata.title;
+
+  console.log(metaDescription);
   return (
     <Helmet
       htmlAttributes={{
@@ -84,12 +85,12 @@ export const SeoComponent = ({
         },
       ].concat(meta)}
     >
-      <meta property="og:description" content={metaDescription} />
-      <meta property="description" content={metaDescription} />
+      <meta name="og:description" content={metaDescription} />
+      <meta name="description" content={metaDescription} />
       {metaTitle && <meta property="og:title" content={metaTitle} />}
       {(title ? true : null) && <meta property="og:type" content="article" />}
       {url && <meta property="og:url" content={url} />}
       <meta name="image" content={metaImage} />
     </Helmet>
-  )
-}
+  );
+};
