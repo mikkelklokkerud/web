@@ -145,42 +145,44 @@ const Blog = props => {
                 </div>
               </div>
               <div>
-                <div className="rgb max-w-3xl mx-auto border-l-2 border-r-2 border-t-2 border-black shadow-xl rounded-t-md overflow-hidden -mb-3 relative z-10">
-                  <GatsbyImage
-                    image={contentful.featuredImage.gatsbyImageData}
-                    className="w-full"
-                    alt={seoTitle}
-                  />
-                </div>
-                <div className="rgb z-20 relative text-center flex flex-col max-w-3xl bg-white border-l-2 border-r-2 border-b-2 rounded-b-md border-black shadow-xl mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6 mb-8">
-                  <h1 className="text-2xl mb-2 font-bold">
-                    {props.data.contentfulBlogPost.title}
-                  </h1>
-                  <small>
-                    {props.data.contentfulBlogPost.publishedDate} | Mikkel
-                    Klokkerud
-                  </small>
-
-                  <div className="text-left mx-auto lg:mb-12 mb-10 mt-8">
-                    <div className={`${styles.content}`}>
-                      {renderRichText(
-                        props.data.contentfulBlogPost.body,
-                        options
-                      )}
-                      <div dangerouslySetInnerHTML={{ __html: markdown }} />
-                    </div>
+                <div className="border-2 border-black rounded-md overflow-hidden rgb">
+                  <div className="rgb max-w-3xl mx-auto overflow-hidden -mb-3 relative z-10">
+                    <GatsbyImage
+                      image={contentful.featuredImage.gatsbyImageData}
+                      className="w-full"
+                      alt={seoTitle}
+                    />
                   </div>
-                  <div className="lg:hidden mx-auto transform -translate-y-6 text-center">
-                    <div className="w-full bg-black h-px mb-5 opacity-30" />
-                    <div className="">
-                      <SocialShare
-                        url={seoUrl}
-                        title={seoTitle}
-                        twitterHandle={twitterHandle}
-                        tags={seoKeywords}
-                        description={seoDescription}
-                        id={id}
-                      />
+                  <div className="rgb z-20 relative text-center flex flex-col max-w-3xl bg-white mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6">
+                    <h1 className="text-2xl mb-2 font-bold">
+                      {props.data.contentfulBlogPost.title}
+                    </h1>
+                    <small>
+                      {props.data.contentfulBlogPost.publishedDate} | Mikkel
+                      Klokkerud
+                    </small>
+
+                    <div className="text-left mx-auto lg:mb-12 mb-10 mt-8">
+                      <div className={`${styles.content}`}>
+                        {renderRichText(
+                          props.data.contentfulBlogPost.body,
+                          options
+                        )}
+                        <div dangerouslySetInnerHTML={{ __html: markdown }} />
+                      </div>
+                    </div>
+                    <div className="lg:hidden mx-auto transform -translate-y-6 text-center">
+                      <div className="w-full bg-black h-px mb-5 opacity-30" />
+                      <div className="">
+                        <SocialShare
+                          url={seoUrl}
+                          title={seoTitle}
+                          twitterHandle={twitterHandle}
+                          tags={seoKeywords}
+                          description={seoDescription}
+                          id={id}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>

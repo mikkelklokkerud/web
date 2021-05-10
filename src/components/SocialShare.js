@@ -78,12 +78,20 @@ export const SocialShare = ({
               return (
                 <div className="relative">
                   <div className="relative" style={{ fontSize: "40px" }}>
-                    <button onClick={handlePress} disabled={isLoading}>
+                    <button
+                      onClick={handlePress}
+                      className="opacity-80 hover:opacity-100 transition duration-100"
+                      disabled={isLoading}
+                      style={{ filter: "saturate(120%) contrast(110%)" }}
+                    >
                       👏
                     </button>
                     <div className="absolute text-2xl top-0 right-0 transform  lg:text-xl translate-y-12 translate-x-10 w-20">
-                      {totalClaps > 0 && totalClaps}{" "}
-                      <span className="text-sm">claps!</span>
+                      {totalClaps > 0 && (
+                        <>
+                          {totalClaps} <span className="text-sm">claps!</span>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
