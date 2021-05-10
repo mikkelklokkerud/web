@@ -55,6 +55,7 @@ module.exports = {
       },
       width: {
         twelve: "1200px",
+        fourteen: "1440px",
         sixteen: "1600px",
       },
       spacing: {
