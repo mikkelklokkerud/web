@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import addToMailchimp from "gatsby-plugin-mailchimp";
-import { window } from "browser-monads";
 
 export const SignUp = ({ path }) => {
   const [email, setEmail] = useState("");

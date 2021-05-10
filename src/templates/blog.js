@@ -8,6 +8,7 @@ import { LayoutComponent } from "../components/LayoutComponent";
 import { Link, graphql } from "gatsby";
 import { SocialShare } from "../components/SocialShare";
 import { SignUp } from "../components/SignUp";
+import { window } from "browser-monads";
 
 export const query = graphql`
   query ($slug: String!) {
