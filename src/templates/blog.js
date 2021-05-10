@@ -81,6 +81,7 @@ const Blog = props => {
     seoTitle,
     seoUrl,
     seoImage,
+    id,
   } = props?.data?.contentfulBlogPost
 
   const twitterHandle = "MikkelCodes"
@@ -129,6 +130,7 @@ const Blog = props => {
                     twitterHandle={twitterHandle}
                     tags={seoKeywords}
                     description={seoDescription}
+                    id={id}
                   />
                 </div>
               </div>

@@ -59,6 +59,7 @@ module.exports = {
         sixteen: "1600px",
       },
       spacing: {
+        "18": "72px",
         "25": "100px",
         "50": "200px",
         "96": "24rem",
