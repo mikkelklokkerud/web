@@ -46,7 +46,7 @@ export const SignUp = ({ path }) => {
           </button>
         </div>
         <div className="mt-3">
-          Currently in the making as of 10th of May 2021 :-)
+          Currently in the making as of May 2021 :-)
         </div>
         {response && (
           <div
