@@ -36,7 +36,7 @@ export const SignUp = ({ path }) => {
             onChange={onChange}
           />
           <button
-            className="py-2 px-4 border-2 bg-white border-black font-bold focus:outline-none"
+            className="py-2 px-4 border-2 bg-white border-black font-bold focus:outline-none transition duration-100 hover:bg-black hover:text-white"
             type="submit"
             onClick={handleSubmit}
           >
