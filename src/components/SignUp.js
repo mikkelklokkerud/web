@@ -20,22 +20,15 @@ export const SignUp = ({ path }) => {
   return (
     <div className="my-8">
       <form className="rgb xs:border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white lg:px-8 px-5 py-8 shadow-xl">
-        <h2 className="mb-4 lg:text-2xl sm:text-xl text-lg">
-          SEO essentials: get my{" "}
-          <span className="font-bold">Free Gatsby Guide</span> on optimising for{" "}
+        <h2 className="mb-3 lg:text-2xl sm:text-xl text-lg">
+          <span className="font-bold">SEO essentials:</span> get my free Gatsby
+          Guideon optimising for{" "}
           <span className="font-bold">Google Lighthouse!</span>
         </h2>
-        <div className="mb-8 flex justify-center">
-          <div className="animate-medium bg-black text-white bg-black font-bold text-lg shadow-lg border-2 h-12 w-12 border-black rounded-full flex items-center justify-center ">
-            <span className="block mt-1">100</span>
-          </div>
-          <div className="mx-5 animate-slow bg-black text-white bg-black font-bold text-lg shadow-lg border-2 h-12 w-12 border-black rounded-full flex items-center justify-center ">
-            <span className="block mt-1">100</span>
-          </div>
-          <div className="animate-fast font-bold bg-black text-lg text-white shadow-lg border-black border-2 w-12 h-12 rounded-full flex items-center justify-center ">
-            <span className="block mt-1">100</span>
-          </div>
-        </div>
+        <img
+          src="https://cdn.shopify.com/s/files/1/0533/2089/files/rocketloop_86a71a9a-8dc3-49b1-8102-232ff41bfe30.gif?598"
+          className="h-20 w-20 mx-auto mb-5"
+        />
         <div className="grid gap-x-2 sm:w-4/6 mx-auto xs:grid-cols-signup grid-cols-1 gap-y-2 w-full">
           <input
             type="text"
