@@ -122,7 +122,7 @@ const Blog = props => {
                   />
                 </div>
                 <div className="text-sm text-center -mt-2 font-thin">
-                  React + Headless CMS
+                  Gatsby.js + Headless CMS
                 </div>
               </Link>
             </div>
