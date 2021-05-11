@@ -145,15 +145,15 @@ const Blog = props => {
                 </div>
               </div>
               <div>
-                <div className="xs:border-2 border-black rounded-md overflow-hidden rgb">
-                  <div className="rgb max-w-3xl mx-auto overflow-hidden -mb-3 relative z-10">
+                <div className="rgb max-w-3xl mx-auto xs:border-2 border-black rounded-md overflow-hidden">
+                  <div className="max-w-3xl mx-auto overflow-hidden -mb-3 relative z-10">
                     <GatsbyImage
                       image={contentful.featuredImage.gatsbyImageData}
                       className="w-full"
                       alt={seoTitle}
                     />
                   </div>
-                  <div className="rgb z-20 relative text-center flex flex-col max-w-3xl bg-white mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6">
+                  <div className="z-20 relative text-center flex flex-col max-w-3xl bg-white mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6">
                     <h1 className="text-2xl mb-2 font-bold px-5">
                       {props.data.contentfulBlogPost.title}
                     </h1>

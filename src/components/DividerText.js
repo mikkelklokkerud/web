@@ -50,7 +50,7 @@ const DividerText = () => {
           />
         </div>
         <h2 className="lg:text-3xl text-2xl text-center z-20">
-          Gatsby or Next + Headless CMS
+          Gatsby.js & Next.js + Headless CMS
         </h2>
         <p className="max-w-lg text-center pt-4">
           If you're building a new website in 2021, go with Gatsby.js for simple
