@@ -31,7 +31,6 @@ export const SeoComponent = ({
   const metaAuthor = "Mikkel Klokkerud";
   const metaTitle = title || site.siteMetadata.title;
 
-  console.log(metaDescription);
   return (
     <Helmet
       htmlAttributes={{

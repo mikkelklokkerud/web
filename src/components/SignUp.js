@@ -21,8 +21,8 @@ export const SignUp = ({ path }) => {
     <div className="my-8">
       <form className="rgb xs:border-2 border-black mx-auto rounded-md max-w-3xl flex flex-col text-center bg-white lg:px-8 px-5 py-8 shadow-xl">
         <h2 className="mb-3 lg:text-2xl sm:text-xl text-lg">
-          <span className="font-bold">SEO essentials:</span> get my free Gatsby
-          Guideon optimising for{" "}
+          <span className="font-bold">SEO essential:</span> get my free Gatsby
+          Guide on optimising for{" "}
           <span className="font-bold">Google Lighthouse!</span>
         </h2>
         <img
