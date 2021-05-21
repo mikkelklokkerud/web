@@ -12,15 +12,8 @@ import { window } from "browser-monads";
 
 const Blog = props => {
   const postDetails = props.data.contentfulBlogPost;
-  const {
-    seoKeywords,
-    seoDescription,
-    seoTitle,
-    seoUrl,
-    seoImage,
-    id,
-    content,
-  } = postDetails;
+  const { seoKeywords, seoDescription, seoTitle, seoUrl, seoImage, content } =
+    postDetails;
 
   const posts = props?.data?.allContentfulBlogPost?.edges;
   const twitterHandle = "MikkelCodes";
@@ -38,7 +31,7 @@ const Blog = props => {
   };
 
   return (
-    <>
+    <LayoutComponent gray>
       <SeoComponent
         title={seoTitle}
         description={seoDescription}
@@ -47,40 +40,19 @@ const Blog = props => {
         author={seoAuthor}
         image={seoImage.fluid.src}
       />
-      <LayoutComponent gray>
-        <BlogHeader image={props.data.file.childImageSharp.fixed} />
-        <div className="lg:grid mx-auto grid-cols-blog">
-          <div className="lg:flex hidden h-full justify-end items-center relative">
-            <div className="w-20" />
-            <div className="fixed top-1/2 transform -translate-y-1/2 mr-10">
-              <SocialShare
-                url={seoUrl}
-                title={seoTitle}
-                twitterHandle={twitterHandle}
-                tags={seoKeywords}
-                description={seoDescription}
-                id={id}
-                vertical
-              />
-            </div>
-          </div>
-          <div>
-            <BlogContent options={options} content={content} {...postDetails} />
-            <SignUp path={window.location.pathname} />
-            <ReadAlso posts={posts} />
-            <Link
-              to="/#contact"
-              className="text-center mx-auto max-w-3xl block w-full xs:border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
-            >
-              <div className="font-bold text-xl">Contact Me</div>{" "}
-              <div className="text-sm">I normally respond in 24h</div>
-            </Link>
-            <div className="pb-12" />
-          </div>
-          <div />
+      <BlogHeader image={props.data.file.childImageSharp.fixed} />
+      <BlogWrapper>
+        <SocialComponent {...postDetails} twitterHandle={twitterHandle} />
+        <div>
+          <BlogContent options={options} content={content} {...postDetails} />
+          <SignUp path={window.location.pathname} />
+          <ReadAlso posts={posts} />
+          <ContactButton />
+          <div className="pb-12" />
         </div>
-      </LayoutComponent>
-    </>
+        <div />
+      </BlogWrapper>
+    </LayoutComponent>
   );
 };
 
@@ -127,6 +99,44 @@ const BlogContent = ({
       </div>
     </div>
   </div>
+);
+
+const SocialComponent = ({
+  seoUrl,
+  seoTitle,
+  twitterHandle,
+  seoKeywords,
+  seoDescription,
+  id,
+}) => (
+  <div className="lg:flex hidden h-full justify-end items-center relative">
+    <div className="w-20" />
+    <div className="fixed top-1/2 transform -translate-y-1/2 mr-10">
+      <SocialShare
+        url={seoUrl}
+        title={seoTitle}
+        twitterHandle={twitterHandle}
+        tags={seoKeywords}
+        description={seoDescription}
+        id={id}
+        vertical
+      />
+    </div>
+  </div>
+);
+
+const ContactButton = () => (
+  <Link
+    to="/#contact"
+    className="text-center mx-auto max-w-3xl block w-full xs:border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
+  >
+    <div className="font-bold text-xl">Contact Me</div>{" "}
+    <div className="text-sm">I normally respond in 24h</div>
+  </Link>
+);
+
+const BlogWrapper = ({ children }) => (
+  <div className="lg:grid mx-auto grid-cols-blog">{children}</div>
 );
 
 const ReadAlso = ({ posts }) => (
