@@ -20,7 +20,7 @@ const Hero = ({
             className="mx-auto lg:w-9/12"
             alt="MikkelCodes logo"
           />
-          <h1 className="">Gatsby & Next + Headless CMS</h1>
+          <h1 className="">Gatsby.js + Headless CMS</h1>
         </div>
         <div className="lg:block  hidden lg:border-l-2 border-black lg:pl-10 pr-6 py-16 mt-10 lg:mt-0 font-normal lg:max-w-auto max-w-lg sm:text-center lg:text-left">
           <Link key={key} to={`/blog/${slug}`}>

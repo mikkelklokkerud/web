@@ -37,7 +37,7 @@ const Services = () => {
             />
             <h2 className="text-xl mt-4 mb-3 font-bold">Platform migration</h2>
             <p className="pt-0 mb-1 text-base leading-normal italic">
-              Planning to migrate your existing website to Gatsby.js or Next.js?
+              Planning to migrate your existing website to Gatsby.js?
             </p>
             <p className="pt-3 text-base leading-normal">
               Maintaining existing designs, content creation experience and SEO
@@ -74,7 +74,7 @@ const Services = () => {
             />
             <h2 className="text-xl mt-4 font-bold">Lighthouse Optimisation</h2>
             <p className="pt-0 mt-4 mb-1 text-base leading-normal italic">
-              Not seeing incineratingly fast page-load speeds with your static
+              Not seeing incineratingly fast page-load speeds with your gatsby.js
               website?
             </p>
             <p className="pt-3 text-base leading-normal">
