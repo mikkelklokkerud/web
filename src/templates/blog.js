@@ -79,20 +79,20 @@ const Blog = props => {
       },
     },
   };
-  let markdown;
-  if (!props.data.contentfulBlogPost.content) {
-    markdown = "<div></div>";
-  } else {
-    markdown = props.data.contentfulBlogPost.content.childMarkdownRemark.html;
-  }
 
-  let contentful = props.data.contentfulBlogPost;
-
-  const { seoKeywords, seoDescription, seoTitle, seoUrl, seoImage, id } =
-    props?.data?.contentfulBlogPost;
+  const {
+    seoKeywords,
+    seoDescription,
+    seoTitle,
+    seoUrl,
+    seoImage,
+    featuredImage,
+    id,
+    body,
+    content,
+  } = props?.data?.contentfulBlogPost;
 
   const posts = props?.data?.allContentfulBlogPost?.edges;
-
   const twitterHandle = "MikkelCodes";
   const seoAuthor = "Mikkel Klokkerud";
 
@@ -109,23 +109,7 @@ const Blog = props => {
       <LayoutComponent>
         <div className="bg-gray-100 w-full xs:px-5">
           <div>
-            <div
-              className="block image flex items-center max-w-3xl justify-center mx-auto"
-              style={{ height: "12vh" }}
-            >
-              <Link to="/">
-                <div>
-                  <Image
-                    fixed={props.data.file.childImageSharp.fixed}
-                    alt="logo"
-                    className="mb-0 pb-0"
-                  />
-                </div>
-                <div className="text-sm text-center -mt-2 font-thin">
-                  Gatsby.js + Headless CMS
-                </div>
-              </Link>
-            </div>
+            <BlogHeader image={props.data.file.childImageSharp.fixed} />
             <div
               className="lg:grid grid-cols-3 mx-auto"
               style={{ gridTemplateColumns: "1fr minmax(500px, 865px) 1fr" }}
@@ -148,7 +132,7 @@ const Blog = props => {
                 <div className="rgb max-w-3xl mx-auto xs:border-2 border-black rounded-md overflow-hidden">
                   <div className="max-w-3xl mx-auto overflow-hidden -mb-3 relative z-10">
                     <GatsbyImage
-                      image={contentful.featuredImage.gatsbyImageData}
+                      image={featuredImage.gatsbyImageData}
                       className="w-full"
                       alt={seoTitle}
                     />
@@ -161,15 +145,7 @@ const Blog = props => {
                       {props.data.contentfulBlogPost.publishedDate} | Mikkel
                       Klokkerud
                     </small>
-                    <div className="text-left mx-auto lg:mb-12 mb-10 mt-8">
-                      <div className={`${styles.content}`}>
-                        {renderRichText(
-                          props.data.contentfulBlogPost.body,
-                          options
-                        )}
-                        <div dangerouslySetInnerHTML={{ __html: markdown }} />
-                      </div>
-                    </div>
+                    <Body body={body} options={options} content={content} />
                     <div className="lg:hidden mx-auto transform -translate-y-6 text-center">
                       <div className="w-full bg-black h-px mb-5 opacity-30" />
                       <div className="transform scale-75 -translate-x-5 xs:scale-100 -translate-x-0">
@@ -186,25 +162,7 @@ const Blog = props => {
                   </div>
                 </div>
                 <SignUp path={window.location.pathname} />
-                <div className="mt-8 pb-8">
-                  <div className="mx-auto max-w-3xl grid sm:grid-cols-3 grid-cols-1 gap-y-3 gap-x-4">
-                    {posts &&
-                      props?.data?.allContentfulBlogPost?.edges
-                        .slice(0, 3)
-                        .map(el => (
-                          <Link
-                            to={`/blog/${el.node.slug}`}
-                            className="xs:border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
-                          >
-                            <div className="text-sm mb-1 italic">
-                              <span className="sm:hidden">Published: </span>
-                              {el.node.publishedDate}
-                            </div>
-                            <div className="font-bold">{el.node.title}</div>
-                          </Link>
-                        ))}
-                  </div>
-                </div>
+                <ReadAlso posts={posts} />
                 <Link
                   to="/#contact"
                   className="text-center mx-auto max-w-3xl block w-full xs:border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
@@ -224,3 +182,52 @@ const Blog = props => {
 };
 
 export default Blog;
+
+const ReadAlso = ({ posts }) => (
+  <div className="mt-8 pb-8">
+    <div className="mx-auto max-w-3xl grid sm:grid-cols-3 grid-cols-1 gap-y-3 gap-x-4">
+      {posts &&
+        posts.slice(0, 3).map(el => (
+          <Link
+            to={`/blog/${el.node.slug}`}
+            className="xs:border-2 border-black rgb rounded-md bg-white p-4 shadow-xl hover:bg-black hover:text-white transition duration-100"
+          >
+            <div className="text-sm mb-1 italic">
+              <span className="sm:hidden">Published: </span>
+              {el.node.publishedDate}
+            </div>
+            <div className="font-bold">{el.node.title}</div>
+          </Link>
+        ))}
+    </div>
+  </div>
+);
+
+const BlogHeader = ({ image }) => (
+  <div
+    className="block image flex items-center max-w-3xl justify-center mx-auto"
+    style={{ height: "12vh" }}
+  >
+    <Link to="/">
+      <div>
+        <Image fixed={image} alt="logo" className="mb-0 pb-0" />
+      </div>
+      <div className="text-sm text-center -mt-2 font-thin">
+        Gatsby.js + Headless CMS
+      </div>
+    </Link>
+  </div>
+);
+
+const Body = ({ body, options, content }) => (
+  <div className="text-left mx-auto lg:mb-12 mb-10 mt-8">
+    <div className={`${styles.content}`}>
+      {renderRichText(body, options)}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: content?.childMarkdownRemark?.html || "",
+        }}
+      />
+    </div>
+  </div>
+);
