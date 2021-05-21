@@ -1,10 +1,9 @@
 import React from "react";
 
-export const LayoutComponent = ({ children }) => {
-
+export const LayoutComponent = ({ children, gray }) => {
   return (
     <>
-      <main>{children}</main>
+      <main className={gray && "bg-gray-100 w-full xs:px-5"}>{children}</main>
       <footer className="flex items-center justify-center bg-black">
         <div className="flex justify-center items-center flex-col md:flex-row">
           <div className="flex max-w-md h-20 items-center">

@@ -52,6 +52,7 @@ module.exports = {
       gridTemplateColumns: {
         "articles-lg": "345px 345px 345px",
         "articles-sm": "350px 350px",
+        "blog": "1fr minmax(500px, 865px) 1fr",
         signup: "75% auto",
       },
       height: {
