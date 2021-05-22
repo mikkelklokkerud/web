@@ -71,7 +71,6 @@ export const SocialShare = ({
           },
         }}
       >
-        {/* <ClapButton id="blog" namespace={id} hideCounterIfLessThan={1} /> */}
         <span className="hidden lg:block">
           <ClapButton id="blog" namespace={id} hideCounterIfLessThan={1}>
             {({ handlePress, totalClaps, isLoading }) => {
@@ -84,7 +83,9 @@ export const SocialShare = ({
                       disabled={isLoading}
                       style={{ filter: "saturate(120%) contrast(110%)" }}
                     >
-                      👏
+                      <span role="img" aria-label="clap">
+                        👏
+                      </span>
                     </button>
                     <div className="absolute text-2xl top-0 right-0 transform  lg:text-xl translate-y-12 translate-x-10 w-20">
                       {totalClaps > 0 && (
@@ -109,23 +110,3 @@ export const SocialShare = ({
     </div>
   </div>
 );
-
-/* <ClapButton id="blog" namespace={id} hideCounterIfLessThan={1}>
-          {({ handlePress, totalClaps, userClaps, isLoading }) => {
-            return (
-              <div className="relative">
-                <div className="relative">
-                  <button onClick={handlePress} disabled={isLoading}>
-                    👏
-                  </button>
-                  <div className="absolute top-0 right-0 transform xl:translate-x-10 lg:translate-y-4 lg:translate-x-6 xl:text-2xl lg:text-xl xl:translate-y-2">
-                    {totalClaps > 0 && totalClaps}
-                  </div>
-                </div>
-                <div className="absolute text-base xl:w-32">
-                  {userClaps > 0 && <div>You clapped {userClaps} times!</div>}
-                </div>
-              </div>
-            );
-          }}
-        </ClapButton> */

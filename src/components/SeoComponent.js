@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 export const SeoComponent = ({
-  description,
   meta,
-  title,
-  keywords,
-  image,
-  url,
+  seoUrl,
+  seoImage,
+  seoTitle,
+  seoKeywords,
+  seoDescription,
 }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -26,21 +26,22 @@ export const SeoComponent = ({
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
-  const metaImage = image || site.siteMetadata.image;
   const metaAuthor = "Mikkel Klokkerud";
-  const metaTitle = title || site.siteMetadata.title;
+  const metaUrl = seoUrl || site.siteMetadata.url;
+  const metaImage = seoImage.fluid.src || site.siteMetadata.image;
+  const metaTitle = seoTitle || site.siteMetadata.title;
+  const metaDescription = seoDescription || site.siteMetadata.description;
 
   return (
     <Helmet
       htmlAttributes={{
         lang: "en",
       }}
-      title={title}
+      title={metaTitle}
       link={[
         {
           rel: "image",
-          href: `https:${image}`,
+          href: `https:${metaImage}`,
         },
         {
           rel: "canonical",
@@ -59,7 +60,7 @@ export const SeoComponent = ({
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -67,7 +68,7 @@ export const SeoComponent = ({
         },
         {
           property: `og:image`,
-          content: `https:${image}`,
+          content: `https:${metaImage}`,
         },
         {
           property: `og:type`,
@@ -75,7 +76,7 @@ export const SeoComponent = ({
         },
         {
           name: `keywords`,
-          content: keywords,
+          content: seoKeywords,
         },
         {
           name: "author",
@@ -86,8 +87,10 @@ export const SeoComponent = ({
       <meta name="og:description" content={metaDescription} />
       <meta name="description" content={metaDescription} />
       {metaTitle && <meta property="og:title" content={metaTitle} />}
-      {(title ? true : null) && <meta property="og:type" content="article" />}
-      {url && <meta property="og:url" content={url} />}
+      {(metaTitle ? true : null) && (
+        <meta property="og:type" content="article" />
+      )}
+      {metaUrl && <meta property="og:url" content={metaUrl} />}
       <meta name="image" content={metaImage} />
     </Helmet>
   );

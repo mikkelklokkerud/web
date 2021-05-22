@@ -27,10 +27,6 @@ export const SignUp = ({ path }) => {
           Get my free Gatsby Guide for a Perfect Google Lighthouse score in 5
           steps!
         </h2>
-        {/* <img
-          src="https://cdn.shopify.com/s/files/1/0533/2089/files/rocketloop_86a71a9a-8dc3-49b1-8102-232ff41bfe30.gif?598"
-          className="h-20 w-20 mx-auto mb-5"
-        /> */}
         <div className="sm:grid gap-x-2 sm:w-5/6 md:w-4/6 mx-auto xs:grid-cols-signup grid-cols-1 gap-y-2 w-full">
           <input
             type="text"

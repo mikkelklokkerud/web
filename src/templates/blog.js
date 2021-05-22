@@ -12,51 +12,42 @@ import { window } from "browser-monads";
 
 const Blog = props => {
   const postDetails = props.data.contentfulBlogPost;
-  const { seoKeywords, seoDescription, seoTitle, seoUrl, seoImage, content } =
-    postDetails;
+  const { content } = postDetails;
 
   const posts = props?.data?.allContentfulBlogPost?.edges;
   const twitterHandle = "MikkelCodes";
-  const seoAuthor = "Mikkel Klokkerud";
 
   // Use GatsbyImage for rich text images from Contenful CMS
   const options = {
     renderNode: {
-      "embedded-asset-block": node => {
-        const alt = node.data.target.title["en-US"];
-        const image = node.data.target.gatsbyImageData;
-        return <GatsbyImage alt={alt} image={image} className="mt-2 mb-5" />;
-      },
+      "embedded-asset-block": node => (
+        <GatsbyImage
+          alt={node.data.target.title["en-US"]}
+          image={node.data.target.gatsbyImageData}
+          className="mt-2 mb-5"
+        />
+      ),
     },
   };
 
   return (
     <LayoutComponent gray>
-      <SeoComponent
-        title={seoTitle}
-        description={seoDescription}
-        keywords={seoKeywords}
-        url={seoUrl}
-        author={seoAuthor}
-        image={seoImage.fluid.src}
-      />
+      <SeoComponent {...postDetails} />
       <BlogHeader image={props.data.file.childImageSharp.fixed} />
       <BlogWrapper>
         <SocialComponent {...postDetails} twitterHandle={twitterHandle} />
-        <div>
+        <Wrapper>
           <BlogContent options={options} content={content} {...postDetails} />
           <SignUp path={window.location.pathname} />
           <ReadAlso posts={posts} />
           <ContactButton />
-          <div className="pb-12" />
-        </div>
-        <div />
+          <Wrapper styles="pb-12" />
+        </Wrapper>
+        <Wrapper />
       </BlogWrapper>
     </LayoutComponent>
   );
 };
-
-export default Blog;
 
 const BlogContent = ({
   featuredImage,
@@ -83,7 +74,7 @@ const BlogContent = ({
     <div className="z-20 relative text-center flex flex-col max-w-3xl bg-white mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6">
       <h1 className="text-2xl mb-2 font-bold px-5">{title}</h1>
       <small>{publishedDate} | Mikkel Klokkerud</small>
-      <Body body={body} options={options} content={content} />
+      <BlogBody body={body} options={options} content={content} />
       <div className="lg:hidden mx-auto transform -translate-y-6 text-center">
         <div className="w-full bg-black h-px mb-5 opacity-30" />
         <div className="transform scale-75 -translate-x-5 xs:scale-100 -translate-x-0">
@@ -99,6 +90,10 @@ const BlogContent = ({
       </div>
     </div>
   </div>
+);
+
+const Wrapper = ({ children, styles }) => (
+  <div className={styles}>{children}</div>
 );
 
 const SocialComponent = ({
@@ -175,7 +170,7 @@ const BlogHeader = ({ image }) => (
   </div>
 );
 
-const Body = ({ body, options, content }) => (
+const BlogBody = ({ body, options, content }) => (
   <div className="text-left mx-auto lg:mb-12 mb-10 mt-8">
     <div className={`${styles.content}`}>
       {renderRichText(body, options)}
@@ -246,3 +241,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Blog;
