@@ -10,26 +10,16 @@ import { SocialShare } from "../components/SocialShare";
 import { SignUp } from "../components/SignUp";
 import { window } from "browser-monads";
 
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { MARKS, BLOCKS } from "@contentful/rich-text-types";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { obsidian } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
 const Blog = props => {
-  console.log(props);
   const postDetails = props.data.contentfulBlogPost;
   const { content } = postDetails;
-
   const posts = props?.data?.allContentfulBlogPost?.edges;
   const twitterHandle = "MikkelCodes";
-
-  // Use GatsbyImage for rich text images from Contenful CMS
-  const options = {
-    renderNode: {
-      "embedded-asset-block": node => (
-        <GatsbyImage
-          alt={node.data.target.title["en-US"]}
-          image={node.data.target.gatsbyImageData}
-          className="mt-2 mb-5"
-        />
-      ),
-    },
-  };
 
   return (
     <LayoutComponent gray>
@@ -38,7 +28,7 @@ const Blog = props => {
       <BlogWrapper>
         <SocialComponent {...postDetails} twitterHandle={twitterHandle} />
         <Wrapper>
-          <BlogContent options={options} content={content} {...postDetails} />
+          <BlogContent content={content} {...postDetails} />
           <SignUp path={window.location.pathname} />
           <ReadAlso posts={posts} />
           <ContactButton />
@@ -59,7 +49,6 @@ const BlogContent = ({
   twitterHandle,
   seoKeywords,
   body,
-  options,
   content,
   seoDescription,
   id,
@@ -75,7 +64,7 @@ const BlogContent = ({
     <div className="z-20 relative text-center flex flex-col max-w-3xl bg-white mx-auto xl:px-20 lg:px-16 sm:px-6 pt-6">
       <h1 className="text-2xl mb-2 font-bold px-5">{title}</h1>
       <small>{publishedDate} | Mikkel Klokkerud</small>
-      <BlogBody body={body} options={options} content={content} />
+      <BlogBody body={body} content={content} />
       <div className="lg:hidden mx-auto transform -translate-y-6 text-center">
         <div className="w-full bg-black h-px mb-5 opacity-30" />
         <div className="transform scale-75 -translate-x-5 xs:scale-100 -translate-x-0">
@@ -171,18 +160,57 @@ const BlogHeader = ({ image }) => (
   </div>
 );
 
-const BlogBody = ({ body, options, content }) => (
-  <div className="text-left mx-auto lg:mb-12 mb-10 mt-8">
-    <div className={`${styles.content}`}>
-      {renderRichText(body, options)}
-      <div
-        dangerouslySetInnerHTML={{
-          __html: content?.childMarkdownRemark?.html || "",
-        }}
-      />
+const BlogBody = ({ body, content }) => {
+  const options = {
+    renderNode: {
+      "embedded-asset-block": node => {
+        console.log(node);
+        return (
+          <GatsbyImage
+            alt={node.data.target.title["en-US"]}
+            image={node.data.target.gatsbyImageData}
+            className="mt-2 mb-5"
+          />
+        );
+      },
+      [BLOCKS.PARAGRAPH]: (node, children) => {
+        if (
+          node.content.length === 1 &&
+          node.content[0].marks.find(x => x.type === "code")
+        ) {
+          return <div>{children}</div>;
+        }
+        return <p>{children}</p>;
+      },
+    },
+    renderMark: {
+      [MARKS.CODE]: text => {
+        return (
+          <SyntaxHighlighter
+            language="javascript"
+            style={obsidian}
+            showLineNumbers
+          >
+            {text}
+          </SyntaxHighlighter>
+        );
+      },
+    },
+  };
+
+  return (
+    <div className="text-left mx-auto lg:mb-12 mb-10 mt-8">
+      <div className={`${styles.content}`}>
+        {renderRichText(body, options)}
+        <div
+          dangerouslySetInnerHTML={{
+            __html: content?.childMarkdownRemark?.html || "",
+          }}
+        />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export const query = graphql`
   query ($slug: String!) {
