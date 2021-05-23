@@ -11,6 +11,7 @@ import { SignUp } from "../components/SignUp";
 import { window } from "browser-monads";
 
 const Blog = props => {
+  console.log(props);
   const postDetails = props.data.contentfulBlogPost;
   const { content } = postDetails;
 

@@ -10,6 +10,7 @@ export const SeoComponent = ({
   seoKeywords,
   seoDescription,
 }) => {
+  console.log(seoImage);
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,7 +29,7 @@ export const SeoComponent = ({
 
   const metaAuthor = "Mikkel Klokkerud";
   const metaUrl = seoUrl || site.siteMetadata.url;
-  const metaImage = seoImage.fluid.src || site.siteMetadata.image;
+  const metaImage = seoImage?.fluid?.src || site.siteMetadata.image;
   const metaTitle = seoTitle || site.siteMetadata.title;
   const metaDescription = seoDescription || site.siteMetadata.description;
 
