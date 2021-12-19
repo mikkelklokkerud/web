@@ -37,12 +37,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-163172180-1",
-      },
-    },
-    {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint: `https://mikkelcodes.us19.list-manage.com/subscribe/post?u=a6380a8628ee8997c2d6805c7&amp;id=f0c9f84372`,
